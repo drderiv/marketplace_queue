@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marketplace Queue Search</title>
+<style>
+  /* Layout and colours follow the look of the HACS/Marketplace list inside Home Assistant (unofficial lookalike). */
+  :root {
+    --bg:#fff; --fg:#212121; --muted:#727272; --line:#e0e0e0; --group:#fafafa; --hover:#f0f0f0;
+    --accent:#03a9f4; --link:#0b6bcb; --warn-bg:#fff8c5; --warn-line:#d4a72c; --field-line:#d0d0d0;
+  }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+    --bg:#111111; --fg:#e1e1e1; --muted:#9b9b9b; --line:#2f2f2f; --group:#1a1a1a; --hover:#242424;
+    --accent:#03a9f4; --link:#58a6ff; --warn-bg:#3b2e00; --warn-line:#9e6a03; --field-line:#3a3a3a;
+  } }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:14px/1.5 Roboto, "Segoe UI", system-ui, sans-serif; letter-spacing:.01em; }
+  a { color:var(--link); text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  header { border-bottom:1px solid var(--line); padding:18px 24px; }
+  h1 { font-size:22px; font-weight:400; margin:0; }
+  .note { background:var(--warn-bg); border-bottom:1px solid var(--warn-line); padding:10px 24px; font-size:13px; }
+  .toolbar { display:flex; gap:12px; align-items:center; padding:12px 10px; border-bottom:1px solid var(--line); flex-wrap:wrap; }
+  .pill { font:inherit; color:var(--fg); background:var(--bg); border:1px solid var(--field-line); border-radius:12px; height:44px; padding:0 16px; }
+  button.pill { display:flex; align-items:center; gap:10px; cursor:pointer; }
+  #filterBtn { position:relative; }
+  #filterBtn.active { background:rgba(3,169,244,.16); border-color:rgba(3,169,244,.4); }
+  #filterBtn .badge { position:absolute; top:-8px; right:-8px; min-width:24px; height:24px; padding:0 6px; border-radius:12px;
+    background:var(--accent); color:#fff; font-size:14px; font-weight:500; line-height:24px; text-align:center; }
+  button.pill:hover, select.pill:hover { background:var(--hover); }
+  .search { flex:1 1 220px; display:flex; align-items:center; gap:14px; padding:0 14px; border:1px solid var(--field-line); border-radius:12px; height:44px; }
+  .search svg, button.pill svg { fill:currentColor; flex:none; }
+  .search input { flex:1; min-width:0; border:0; outline:0; background:transparent; font:inherit; font-size:16px; color:var(--fg); }
+  .search:focus-within { border-color:var(--accent); }
+  .filters { display:none; gap:12px; padding:12px 10px; border-bottom:1px solid var(--line); background:var(--group); flex-wrap:wrap; }
+  .filters.open { display:flex; }
+  table { width:100%; border-collapse:collapse; table-layout:fixed; }
+  th { text-align:left; font-weight:500; height:84px; padding:0 8px; border-bottom:1px solid var(--line); white-space:nowrap; }
+  th.sortable { cursor:pointer; user-select:none; }
+  td { height:78px; padding:0 8px; border-bottom:1px solid var(--line); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  tbody tr.item:hover { background:var(--hover); }
+  tr.group td { height:78px; background:var(--group); font-weight:500; padding-left:24px; }
+  tr.group { cursor:pointer; user-select:none; }
+  tr.group:hover td, tr.group:focus-visible td { background:var(--hover); }
+  tr.group:focus-visible { outline:2px solid var(--accent); outline-offset:-2px; }
+  tr.group svg { vertical-align:middle; margin-right:14px; fill:currentColor; transition:transform .15s; }
+  tr.group.collapsed svg { transform:rotate(180deg); }
+  .c-icon { width:76px; padding-left:20px; } .c-name { width:auto; }
+  .c-stars { width:90px; } .c-act { width:140px; } .c-type { width:120px; } .c-status { width:170px; }
+  .avatar { width:48px; height:48px; border-radius:4px; display:block; background:var(--line); }
+  .name { font-size:15px; color:var(--fg); font-weight:400; display:block; overflow:hidden; text-overflow:ellipsis; }
+  .desc { color:var(--muted); font-size:15px; display:block; overflow:hidden; text-overflow:ellipsis; }
+  .sub { font-size:12px; color:var(--muted); display:block; }
+  .meta, .empty { padding:12px 24px; color:var(--muted); font-size:13px; }
+  .more { display:block; margin:16px auto 32px; }
+  @media (max-width: 760px) {
+    .c-stars, .c-type, .c-act { display:none; }
+    .c-status { width:110px; } .c-icon { width:64px; padding-left:12px; }
+    header, .note { padding-left:14px; padding-right:14px; }
+  }
+</style>
+</head>
+<body>
+<header><h1>Marketplace Queue Search</h1></header>
+<div class="note"><strong>Unofficial.</strong> This is not part of Home Assistant or the Marketplace (formerly HACS) and does not endorse anything listed. Entries are pending pull requests on <a href="https://github.com/hacs/default/pulls">hacs/default</a>. A pending entry has not been approved, and a reviewer may or may not already have looked at it. To try one, add its repository as a custom repository (Settings → Marketplace → Add from link). An integration runs with full access to your Home Assistant, so it is best to test it in a separate, disposable instance (for example a throwaway Docker container) rather than on your production system. <a href="https://github.com/drderiv/marketplace_queue/blob/main/TESTING.md">Step-by-step guide</a>.</div>
+
+<div class="toolbar">
+  <button class="pill" id="filterBtn" aria-expanded="false" aria-controls="filters">
+    <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18h6v-2H3v2zM3 6v2h18V6H3zm0 7h12v-2H3v2z"/></svg>Filters<span class="badge" id="filterCount" hidden></span>
+  </button>
+  <label class="search">
+    <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+    <input type="search" id="q" placeholder="Search, e.g. sub-zero refrigerator" autofocus aria-label="Search terms">
+  </label>
+  <select class="pill" id="group" aria-label="Group by"><option value="status">Group by Status</option><option value="type">Group by Type</option><option value="none">No grouping</option></select>
+  <select class="pill" id="sort" aria-label="Sort by"><option value="relevance">Sort by Relevance</option><option value="newest">Sort by Newest PR</option><option value="stars">Sort by Stars</option><option value="activity">Sort by Activity</option><option value="name">Sort by Name</option></select>
+</div>
+<div class="filters" id="filters">
+  <select class="pill" id="category" aria-label="Category"><option value="">All types</option><option value="integration" selected>Integrations</option><option value="plugin">Plugins</option><option value="theme">Themes</option></select>
+  <select class="pill" id="state" aria-label="State"><option value="pending" selected>Pending (open or draft)</option><option value="">Any state</option><option value="merged">Recently merged into the Marketplace</option><option value="closed">Recently closed without merging</option></select>
+</div>
+
+<table>
+  <thead><tr>
+    <th class="c-icon"></th><th class="c-name">Repository name</th><th class="c-stars">Stars</th>
+    <th class="c-act">Activity</th><th class="c-type">Type</th><th class="c-status">Status</th>
+  </tr></thead>
+  <tbody id="rows"></tbody>
+</table>
+<div class="empty" id="empty" hidden>No matches.</div>
+<button class="pill more" id="more" hidden>Show more</button>
+<div class="meta" id="meta">Loading…</div>
+
+<script>
+// Scoring mirrors search.py
+const FIELDS = [["repo",3],["name",3],["domain",3],["topics",3],["description",2],["readme_excerpt",1]];
+const STATUS = {open:["Open", "Open: waiting for review"], draft:["Draft", "Draft: changes requested"],
+                merged:["In Marketplace", "Recently merged into the Marketplace"], closed:["Closed", "Recently closed without merging"]};
+const STATUS_ORDER = ["open","draft","merged","closed"];
+const PAGE = 50;
+const squash = s => String(s).toLowerCase().replace(/[^a-z0-9]/g, "");
+const $ = id => document.getElementById(id);
+const NS = "http://www.w3.org/2000/svg";
+let data = null, shown = PAGE;
+const collapsed = new Set();   // group keys the user has folded away
+
+function latestPerRepo(entries) {   // resubmissions create several PRs per repo; keep the newest
+  const newest = new Map();
+  for (const e of entries) { const k = e.repo.toLowerCase(); if (!newest.has(k) || e.pr > newest.get(k).pr) newest.set(k, e); }
+  return [...newest.values()];
+}
+function terms(query) {
+  const t = query.split(/\s+/).map(squash).filter(Boolean);
+  if (t.length > 1) t.push(t.join(""));
+  return t;
+}
+function score(e, t) {
+  let total = 0;
+  for (const term of t) for (const [f, w] of FIELDS) {
+    const v = e[f] || "";
+    if (squash(Array.isArray(v) ? v.join(" ") : v).includes(term)) total += w;
+  }
+  return total;
+}
+function ago(iso) {
+  if (!iso) return "-";
+  const secs = (new Date(iso) - Date.now()) / 1000, rtf = new Intl.RelativeTimeFormat("en", {numeric:"auto"});
+  for (const [unit, s] of [["year",31536000],["month",2592000],["week",604800],["day",86400],["hour",3600],["minute",60]])
+    if (Math.abs(secs) >= s) return rtf.format(Math.round(secs / s), unit);
+  return "just now";
+}
+function el(tag, cls, text) {
+  const n = document.createElement(tag);
+  if (cls) n.className = cls;
+  if (text !== undefined) n.textContent = text;   // never innerHTML: fields come from third-party repos
+  return n;
+}
+function link(href, text, cls) {
+  const a = el("a", cls || "", text);
+  if (/^https:\/\/github\.com\//.test(href)) a.href = href;
+  a.rel = "noopener noreferrer"; a.target = "_blank";
+  return a;
+}
+function chevron() {
+  const svg = document.createElementNS(NS, "svg");
+  svg.setAttribute("width", "24"); svg.setAttribute("height", "24"); svg.setAttribute("viewBox", "0 0 24 24");
+  const p = document.createElementNS(NS, "path"); p.setAttribute("d", "M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z");
+  svg.append(p); return svg;
+}
+function itemRow(e) {
+  const tr = el("tr", "item");
+  const owner = e.repo.split("/")[0];
+  const icon = el("td", "c-icon"), img = el("img", "avatar");
+  img.src = `https://github.com/${encodeURIComponent(owner)}.png?size=96`;
+  img.alt = ""; img.loading = "lazy"; img.referrerPolicy = "no-referrer";
+  img.onerror = () => { img.style.visibility = "hidden"; };
+  icon.append(img);
+  const name = el("td", "c-name");
+  name.append(link(`https://github.com/${e.repo}`, e.name || e.repo.split("/")[1], "name"));
+  const desc = el("span", "desc", e.description || e.repo);
+  desc.title = e.readme_excerpt || e.description || "";
+  name.append(desc);
+  const stars = el("td", "c-stars", e.stars === undefined ? "-" : String(e.stars));
+  const act = el("td", "c-act", ago(e.pushed_at));
+  const type = el("td", "c-type", e.category === "integration" ? "Integration" : e.category === "plugin" ? "Plugin" : e.category === "theme" ? "Theme" : e.category);
+  const status = el("td", "c-status");
+  status.append(el("span", "name", STATUS[e.state] ? STATUS[e.state][0] : e.state));
+  const sub = el("span", "sub"); sub.append(link(e.pr_url, `PR #${e.pr}`), document.createTextNode(` · ${e.submitter}`));
+  status.append(sub);
+  tr.append(icon, name, stars, act, type, status);
+  return tr;
+}
+function groupHeader(key, text) {
+  const tr = el("tr", "group"), td = el("td"); td.colSpan = 6;
+  const fold = collapsed.has(key);
+  tr.classList.toggle("collapsed", fold);
+  tr.tabIndex = 0; tr.setAttribute("role", "button"); tr.setAttribute("aria-expanded", String(!fold));
+  const toggle = () => { if (collapsed.has(key)) collapsed.delete(key); else collapsed.add(key); render(); };
+  tr.addEventListener("click", toggle);
+  tr.addEventListener("keydown", ev => { if (ev.key === "Enter" || ev.key === " ") { ev.preventDefault(); toggle(); } });
+  td.append(chevron(), document.createTextNode(text)); tr.append(td); return tr;
+}
+function render() {
+  if (!data) return;
+  const q = $("q").value, t = terms(q), cat = $("category").value, st = $("state").value;
+  let hits = latestPerRepo(data.entries).filter(e => (!cat || e.category === cat) &&
+    (!st || (st === "pending" ? (e.state === "open" || e.state === "draft") : e.state === st)));
+  const scores = new Map();
+  if (t.length) { hits = hits.filter(e => { const s = score(e, t); scores.set(e, s); return s; }); }
+  const sort = $("sort").value, by = {
+    relevance: (a, b) => (scores.get(b) || 0) - (scores.get(a) || 0) || b.pr - a.pr,
+    newest: (a, b) => b.pr - a.pr,
+    stars: (a, b) => (b.stars || 0) - (a.stars || 0),
+    activity: (a, b) => String(b.pushed_at || "").localeCompare(String(a.pushed_at || "")),
+    name: (a, b) => a.repo.toLowerCase().localeCompare(b.repo.toLowerCase()),
+  };
+  hits.sort(by[sort]);
+  const group = $("group").value, rows = $("rows");
+  rows.replaceChildren();
+  const visible = hits.slice(0, shown);
+  if (group === "none") for (const e of visible) rows.append(itemRow(e));
+  else {
+    const key = e => group === "status" ? e.state : e.category;
+    const order = group === "status" ? STATUS_ORDER : [...new Set(visible.map(key))].sort();
+    for (const k of order) {
+      const part = visible.filter(e => key(e) === k);
+      if (!part.length) continue;
+      const total = hits.filter(e => key(e) === k).length;
+      rows.append(groupHeader(group + ":" + k, `${group === "status" ? (STATUS[k] ? STATUS[k][1] : k) : k} (${total})`));
+      if (!collapsed.has(group + ":" + k)) for (const e of part) rows.append(itemRow(e));
+    }
+  }
+  $("empty").hidden = hits.length > 0;
+  $("more").hidden = hits.length <= shown;
+  const counts = STATUS_ORDER.map(k => [k, hits.filter(e => e.state === k).length]).filter(x => x[1]);
+  const breakdown = counts.length > 1 ? ` (${counts.map(([k, n]) => `${n} ${STATUS[k][0].toLowerCase()}`).join(", ")})` : "";
+  $("meta").textContent = `${hits.length} match${hits.length === 1 ? "" : "es"}${breakdown} · snapshot ${data.generated_at}` +
+    (data.complete ? "" : " · still filling in repository details");
+}
+function updateFilterBadge() {   // a filter set to "All"/"Any" is not active
+  const n = ["category", "state"].filter(id => $(id).value !== "").length;
+  $("filterCount").textContent = n; $("filterCount").hidden = n === 0;
+  $("filterBtn").classList.toggle("active", n > 0);
+}
+const reset = () => { shown = PAGE; render(); };
+for (const id of ["q", "category", "state", "group", "sort"]) $(id).addEventListener("input", reset);
+for (const id of ["category", "state"]) $(id).addEventListener("input", updateFilterBadge);
+updateFilterBadge();
+$("more").addEventListener("click", () => { shown += PAGE; render(); });
+$("filterBtn").addEventListener("click", () => {
+  const open = $("filters").classList.toggle("open");
+  $("filterBtn").setAttribute("aria-expanded", String(open));
+});
+fetch("queue.json").then(r => r.json()).then(d => { data = d; render(); })
+  .catch(() => { $("meta").textContent = "Could not load queue.json."; });
+</script>
+</body>
+</html>
