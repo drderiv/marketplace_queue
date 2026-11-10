@@ -18,8 +18,11 @@
   body { margin:0; background:var(--bg); color:var(--fg); font:14px/1.5 Roboto, "Segoe UI", system-ui, sans-serif; letter-spacing:.01em; }
   a { color:var(--link); text-decoration:none; }
   a:hover { text-decoration:underline; }
-  header { border-bottom:1px solid var(--line); padding:18px 24px; }
+  header { border-bottom:1px solid var(--line); padding:18px 24px; display:flex; align-items:baseline; justify-content:space-between; gap:16px; flex-wrap:wrap; }
   h1 { font-size:22px; font-weight:400; margin:0; }
+  #fresh { font-size:13px; color:var(--muted); white-space:nowrap; }
+  #fresh.stale { color:#b26a00; font-weight:500; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) #fresh.stale { color:#ffb74d; } }
   .note { background:var(--warn-bg); border-bottom:1px solid var(--warn-line); padding:10px 24px; font-size:13px; }
   .toolbar { display:flex; gap:12px; align-items:center; padding:12px 10px; border-bottom:1px solid var(--line); flex-wrap:wrap; }
   .pill { font:inherit; color:var(--fg); background:var(--bg); border:1px solid var(--field-line); border-radius:12px; height:44px; padding:0 16px; }
@@ -62,7 +65,7 @@
 </style>
 </head>
 <body>
-<header><h1>Marketplace Queue Search</h1></header>
+<header><h1>Marketplace Queue Search</h1><span id="fresh" aria-live="polite"></span></header>
 <div class="note"><strong>Unofficial.</strong> This is not part of Home Assistant or the Marketplace (formerly HACS) and does not endorse anything listed. Entries are pending pull requests on <a href="https://github.com/hacs/default/pulls">hacs/default</a>. A pending entry has not been approved, and a reviewer may or may not already have looked at it. To try one, add its repository as a custom repository (Settings → Marketplace → Add from link). An integration runs with full access to your Home Assistant, so it is best to test it in a separate, disposable instance (for example a throwaway Docker container) rather than on your production system. <a href="https://github.com/drderiv/marketplace_queue/blob/main/TESTING.md">Step-by-step guide</a>.</div>
 
 <div class="toolbar">
@@ -232,7 +235,19 @@ $("filterBtn").addEventListener("click", () => {
   const open = $("filters").classList.toggle("open");
   $("filterBtn").setAttribute("aria-expanded", String(open));
 });
-fetch("queue.json").then(r => r.json()).then(d => { data = d; render(); })
+const STALE_HOURS = 48;   // a nightly job that is 2+ days behind has probably failed
+function showFreshness(status) {
+  const when = (status && status.checked_at) || (data && data.generated_at);
+  if (!when) return;
+  const hours = (Date.now() - new Date(when)) / 36e5, box = $("fresh");
+  box.textContent = hours > STALE_HOURS ? `Data may be out of date: last updated ${ago(when)}` : `Data updated ${ago(when)}`;
+  box.title = `Last successful check: ${new Date(when).toLocaleString()}`;
+  box.classList.toggle("stale", hours > STALE_HOURS);
+}
+Promise.all([
+  fetch("queue.json").then(r => r.json()),
+  fetch("status.json").then(r => r.json()).catch(() => null),   // optional; older deployments lack it
+]).then(([d, status]) => { data = d; render(); showFreshness(status); })
   .catch(() => { $("meta").textContent = "Could not load queue.json."; });
 </script>
 </body>

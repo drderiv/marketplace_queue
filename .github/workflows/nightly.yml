@@ -23,13 +23,20 @@ jobs:
       - name: Build docs/queue.json
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python fetch_queue.py
+        run: |
+          # retry: a transient GitHub/network error should not cost a whole day
+          for attempt in 1 2 3; do
+            python fetch_queue.py && exit 0
+            echo "Attempt $attempt failed"
+            sleep 120
+          done
+          exit 1
       - name: Commit changes
         run: |
-          if [ -n "$(git status --porcelain docs/queue.json)" ]; then
+          if [ -n "$(git status --porcelain docs)" ]; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add docs/queue.json
+            git add docs/queue.json docs/status.json
             git commit -m "Refresh queue snapshot"
             # main may have moved while the (long) first fill ran; the fresh snapshot wins
             git pull --rebase -X theirs origin main

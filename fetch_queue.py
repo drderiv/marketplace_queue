@@ -13,6 +13,7 @@ treated as untrusted text: it is truncated and stored, never executed.
 from __future__ import annotations
 
 import argparse
+import http.client
 import json
 import os
 import re
@@ -31,6 +32,7 @@ OUTPUT = Path(__file__).parent / "docs" / "queue.json"
 CLOSED_WINDOW_DAYS = 90  # keep closed/merged PRs searchable for this long
 REFRESH_DAYS = 7  # re-fetch repo details at least this often
 MIN_API_REMAINING = 30  # stop enriching when the API budget drops to this
+MAX_ENRICH_FAILURES = 10  # stop enriching after this many repos fail in one run
 
 TITLE_RE = re.compile(
     r"^\s*add(?:s)?\s+(?:new\s+)?(?P<cat>[\w ]*?)\s*\[?(?P<repo>[\w.-]+/[\w.-]+)\]?\s*$",
@@ -46,6 +48,11 @@ CATEGORIES = (
     "template",
     "netdaemon",
 )
+
+# Everything a flaky connection can raise. urllib wraps some failures in URLError, but one that
+# happens while reading the reply (e.g. RemoteDisconnected) escapes as a bare OSError or
+# http.client exception, which is what failed the 2026-11-10 nightly run.
+NETWORK_ERRORS = (OSError, http.client.HTTPException)
 
 TOKEN = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
 rate_remaining: int | None = None
@@ -74,8 +81,12 @@ def _request(url: str, *, api: bool = True, accept: str | None = None) -> tuple[
             if err.code >= 500 and attempt < 2:
                 time.sleep(2 * (attempt + 1))
                 continue
+            if err.code in (403, 429) and api and attempt < 2:
+                # secondary rate limit: GitHub says how long to back off
+                time.sleep(min(int(err.headers.get("Retry-After") or 30), 90))
+                continue
             raise
-        except (urllib.error.URLError, TimeoutError):
+        except NETWORK_ERRORS:
             if attempt == 2:
                 raise
             time.sleep(2 * (attempt + 1))
@@ -219,6 +230,13 @@ def finalize(entry: dict) -> None:
             entry["category"] = "plugin"
 
 
+def write_status(path: Path, count: int, complete: bool) -> None:
+    """Record that a run finished. Unlike queue.json (only rewritten when something changed),
+    this changes every successful run, so the site can show how fresh the data is."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps({"checked_at": now_iso(), "entries": count, "complete": complete}) + "\n")
+
+
 def now_iso() -> str:
     return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
@@ -260,6 +278,9 @@ def main() -> int:
     except OutOfBudget:
         print("Rate limit hit while listing PRs; keeping previous data.", file=sys.stderr)
         return 1
+    except (*NETWORK_ERRORS, ValueError) as err:
+        print(f"Could not list PRs ({type(err).__name__}: {err}); keeping previous data.", file=sys.stderr)
+        return 1
     for pr in prs:
         entry = pr_entry(pr)
         if entry:
@@ -275,13 +296,25 @@ def main() -> int:
         (e for e in entries.values() if needs_refresh(previous.get(e["pr"]), e)),
         key=lambda e: (e["state"] not in ("open", "draft"), -e["pr"]),
     )
-    enriched = 0
+    enriched = failures = 0
     try:
         for entry in todo:
             if args.max_repos and enriched >= args.max_repos:
                 complete = False
                 break
-            enrich(entry)
+            try:
+                enrich(entry)
+            except OutOfBudget:
+                raise
+            except (*NETWORK_ERRORS, ValueError, KeyError, TypeError) as err:
+                # skip this repo for tonight (its old details stay searchable); give up if GitHub is unwell
+                failures += 1
+                complete = False
+                print(f"Skipping {entry['repo']}: {type(err).__name__}: {err}", file=sys.stderr)
+                if failures >= MAX_ENRICH_FAILURES:
+                    print("Too many failures; stopping early.", file=sys.stderr)
+                    break
+                continue
             enriched += 1
     except OutOfBudget:
         complete = False
@@ -295,6 +328,7 @@ def main() -> int:
         "source": f"https://github.com/{QUEUE_REPO}/pulls",
         "entries": sorted(entries.values(), key=lambda e: -e["pr"]),
     }
+    write_status(args.output.with_name("status.json"), len(entries), complete)
     if args.output.exists() and previous and significant(json.loads(args.output.read_text())) == significant(result):
         print("No changes.")
         return 0
