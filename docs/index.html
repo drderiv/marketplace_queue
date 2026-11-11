@@ -18,12 +18,18 @@
   body { margin:0; background:var(--bg); color:var(--fg); font:14px/1.5 Roboto, "Segoe UI", system-ui, sans-serif; letter-spacing:.01em; }
   a { color:var(--link); text-decoration:none; }
   a:hover { text-decoration:underline; }
+  /* Fixed region: the unofficial note, title, toolbar and column headings stay put while rows scroll.
+     JS publishes the measured heights as --note-h / --top-h so each layer sticks just below the previous one. */
+  :root { --note-h:0px; --top-h:0px; }
+  .top { position:sticky; top:var(--note-h); z-index:20; background:var(--bg); }
   header { border-bottom:1px solid var(--line); padding:18px 24px; display:flex; align-items:baseline; justify-content:space-between; gap:16px; flex-wrap:wrap; }
   h1 { font-size:22px; font-weight:400; margin:0; }
   #fresh { font-size:13px; color:var(--muted); white-space:nowrap; }
   #fresh.stale { color:#b26a00; font-weight:500; }
   @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) #fresh.stale { color:#ffb74d; } }
   .note { background:var(--warn-bg); border-bottom:1px solid var(--warn-line); padding:10px 24px; font-size:13px; }
+  /* On small screens the note would eat the page, so there it scrolls away with the content. */
+  @media (min-width:761px) and (min-height:561px) { .note { position:sticky; top:0; z-index:30; } }
   .toolbar { display:flex; gap:12px; align-items:center; padding:12px 10px; border-bottom:1px solid var(--line); flex-wrap:wrap; }
   .pill { font:inherit; color:var(--fg); background:var(--bg); border:1px solid var(--field-line); border-radius:12px; height:44px; padding:0 16px; }
   button.pill { display:flex; align-items:center; gap:10px; cursor:pointer; }
@@ -39,7 +45,10 @@
   .filters { display:none; gap:12px; padding:12px 10px; border-bottom:1px solid var(--line); background:var(--group); flex-wrap:wrap; }
   .filters.open { display:flex; }
   table { width:100%; border-collapse:collapse; table-layout:fixed; }
-  th { text-align:left; font-weight:500; height:84px; padding:0 8px; border-bottom:1px solid var(--line); white-space:nowrap; }
+  th { text-align:left; font-weight:500; height:84px; padding:0 8px; white-space:nowrap;
+       position:sticky; top:calc(var(--note-h) + var(--top-h)); z-index:10; background:var(--bg);
+       box-shadow:inset 0 -1px 0 var(--line); }   /* a shadow, not a border: borders of sticky cells scroll away in collapsed tables */
+  @media (max-height:700px) { th { height:56px; } }
   th.sortable { cursor:pointer; user-select:none; }
   td { height:78px; padding:0 8px; border-bottom:1px solid var(--line); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
   tbody tr.item:hover { background:var(--hover); }
@@ -56,18 +65,19 @@
   .desc { color:var(--muted); font-size:15px; display:block; overflow:hidden; text-overflow:ellipsis; }
   .sub { font-size:12px; color:var(--muted); display:block; }
   .meta, .empty { padding:12px 24px; color:var(--muted); font-size:13px; }
-  .more { display:block; margin:16px auto 32px; }
   @media (max-width: 760px) {
     .c-stars, .c-type, .c-act { display:none; }
     .c-status { width:110px; } .c-icon { width:64px; padding-left:12px; }
     header, .note { padding-left:14px; padding-right:14px; }
+    th { height:52px; }
   }
 </style>
 </head>
 <body>
-<header><h1>Marketplace Queue Search</h1><span id="fresh" aria-live="polite"></span></header>
-<div class="note"><strong>Unofficial.</strong> This is not part of Home Assistant or the Marketplace (formerly HACS) and does not endorse anything listed. Entries are pending pull requests on <a href="https://github.com/hacs/default/pulls">hacs/default</a>. A pending entry has not been approved, and a reviewer may or may not already have looked at it. To try one, add its repository as a custom repository (Settings → Marketplace → Add from link). An integration runs with full access to your Home Assistant, so it is best to test it in a separate, disposable instance (for example a throwaway Docker container) rather than on your production system. <a href="https://github.com/drderiv/marketplace_queue/blob/main/TESTING.md">Step-by-step guide</a>.</div>
+<div class="note" id="note"><strong>Unofficial.</strong> This is not part of Home Assistant or the Marketplace (formerly HACS) and does not endorse anything listed. Entries are pending pull requests on <a href="https://github.com/hacs/default/pulls">hacs/default</a>. A pending entry has not been approved, and a reviewer may or may not already have looked at it. To try one, add its repository as a custom repository (Settings → Marketplace → Add from link). An integration runs with full access to your Home Assistant, so it is best to test it in a separate, disposable instance (for example a throwaway Docker container) rather than on your production system. <a href="https://github.com/drderiv/marketplace_queue/blob/main/TESTING.md">Step-by-step guide</a>.</div>
 
+<div class="top" id="top">
+<header><h1>Marketplace Queue Search</h1><span id="fresh" aria-live="polite"></span></header>
 <div class="toolbar">
   <button class="pill" id="filterBtn" aria-expanded="false" aria-controls="filters">
     <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18h6v-2H3v2zM3 6v2h18V6H3zm0 7h12v-2H3v2z"/></svg>Filters<span class="badge" id="filterCount" hidden></span>
@@ -83,6 +93,7 @@
   <select class="pill" id="category" aria-label="Category"><option value="">All types</option><option value="integration" selected>Integrations</option><option value="plugin">Plugins</option><option value="theme">Themes</option></select>
   <select class="pill" id="state" aria-label="State"><option value="pending" selected>Pending (open or draft)</option><option value="">Any state</option><option value="merged">Recently merged into the Marketplace</option><option value="closed">Recently closed without merging</option></select>
 </div>
+</div>
 
 <table>
   <thead><tr>
@@ -92,7 +103,6 @@
   <tbody id="rows"></tbody>
 </table>
 <div class="empty" id="empty" hidden>No matches.</div>
-<button class="pill more" id="more" hidden>Show more</button>
 <div class="meta" id="meta">Loading…</div>
 
 <script>
@@ -101,11 +111,10 @@ const FIELDS = [["repo",3],["name",3],["domain",3],["topics",3],["description",2
 const STATUS = {open:["Open", "Open: waiting for review"], draft:["Draft", "Draft: changes requested"],
                 merged:["In Marketplace", "Recently merged into the Marketplace"], closed:["Closed", "Recently closed without merging"]};
 const STATUS_ORDER = ["open","draft","merged","closed"];
-const PAGE = 50;
 const squash = s => String(s).toLowerCase().replace(/[^a-z0-9]/g, "");
 const $ = id => document.getElementById(id);
 const NS = "http://www.w3.org/2000/svg";
-let data = null, shown = PAGE;
+let data = null;
 const collapsed = new Set();   // group keys the user has folded away
 
 function latestPerRepo(entries) {   // resubmissions create several PRs per repo; keep the newest
@@ -175,7 +184,7 @@ function itemRow(e) {
   return tr;
 }
 function groupHeader(key, text) {
-  const tr = el("tr", "group"), td = el("td"); td.colSpan = 6;
+  const tr = el("tr", "group"), td = el("td"); td.colSpan = visibleCols();
   const fold = collapsed.has(key);
   tr.classList.toggle("collapsed", fold);
   tr.tabIndex = 0; tr.setAttribute("role", "button"); tr.setAttribute("aria-expanded", String(!fold));
@@ -199,23 +208,24 @@ function render() {
     name: (a, b) => a.repo.toLowerCase().localeCompare(b.repo.toLowerCase()),
   };
   hits.sort(by[sort]);
-  const group = $("group").value, rows = $("rows");
-  rows.replaceChildren();
-  const visible = hits.slice(0, shown);
-  if (group === "none") for (const e of visible) rows.append(itemRow(e));
+  // Every matching row is rendered (avatars load lazily as rows near the screen), built off-screen
+  // in a fragment and swapped in once.
+  const group = $("group").value, frag = document.createDocumentFragment();
+  if (group === "none") for (const e of hits) frag.append(itemRow(e));
   else {
     const key = e => group === "status" ? e.state : e.category;
-    const order = group === "status" ? STATUS_ORDER : [...new Set(visible.map(key))].sort();
+    const buckets = new Map();
+    for (const e of hits) { const k = key(e); if (!buckets.has(k)) buckets.set(k, []); buckets.get(k).push(e); }
+    const order = group === "status" ? STATUS_ORDER : [...buckets.keys()].sort();
     for (const k of order) {
-      const part = visible.filter(e => key(e) === k);
-      if (!part.length) continue;
-      const total = hits.filter(e => key(e) === k).length;
-      rows.append(groupHeader(group + ":" + k, `${group === "status" ? (STATUS[k] ? STATUS[k][1] : k) : k} (${total})`));
-      if (!collapsed.has(group + ":" + k)) for (const e of part) rows.append(itemRow(e));
+      const part = buckets.get(k);
+      if (!part) continue;
+      frag.append(groupHeader(group + ":" + k, `${group === "status" ? (STATUS[k] ? STATUS[k][1] : k) : k} (${part.length})`));
+      if (!collapsed.has(group + ":" + k)) for (const e of part) frag.append(itemRow(e));
     }
   }
+  $("rows").replaceChildren(frag);
   $("empty").hidden = hits.length > 0;
-  $("more").hidden = hits.length <= shown;
   const counts = STATUS_ORDER.map(k => [k, hits.filter(e => e.state === k).length]).filter(x => x[1]);
   const breakdown = counts.length > 1 ? ` (${counts.map(([k, n]) => `${n} ${STATUS[k][0].toLowerCase()}`).join(", ")})` : "";
   $("meta").textContent = `${hits.length} match${hits.length === 1 ? "" : "es"}${breakdown} · snapshot ${data.generated_at}` +
@@ -226,15 +236,32 @@ function updateFilterBadge() {   // a filter set to "All"/"Any" is not active
   $("filterCount").textContent = n; $("filterCount").hidden = n === 0;
   $("filterBtn").classList.toggle("active", n > 0);
 }
-const reset = () => { shown = PAGE; render(); };
-for (const id of ["q", "category", "state", "group", "sort"]) $(id).addEventListener("input", reset);
+let typing;   // wait for a pause in typing so fast keystrokes don't rebuild thousands of rows
+$("q").addEventListener("input", () => { clearTimeout(typing); typing = setTimeout(render, 150); });
+for (const id of ["category", "state", "group", "sort"]) $(id).addEventListener("input", render);
 for (const id of ["category", "state"]) $(id).addEventListener("input", updateFilterBadge);
 updateFilterBadge();
-$("more").addEventListener("click", () => { shown += PAGE; render(); });
 $("filterBtn").addEventListener("click", () => {
   const open = $("filters").classList.toggle("open");
   $("filterBtn").setAttribute("aria-expanded", String(open));
 });
+// Group headers must span exactly the columns that are showing. On phones some columns are hidden
+// with CSS; a colspan larger than that adds phantom columns that squeeze the real ones.
+function visibleCols() {
+  return [...document.querySelectorAll("thead th")].filter(th => getComputedStyle(th).display !== "none").length || 1;
+}
+function layout() {   // heights of the fixed layers, as CSS variables for the sticky offsets
+  const note = $("note"), root = document.documentElement.style;
+  const noteH = getComputedStyle(note).position === "sticky" ? note.getBoundingClientRect().height : 0;
+  root.setProperty("--note-h", noteH + "px");
+  root.setProperty("--top-h", $("top").getBoundingClientRect().height + "px");
+  const cols = visibleCols();
+  for (const td of document.querySelectorAll("tr.group td")) td.colSpan = cols;
+}
+layout();
+window.addEventListener("resize", layout);
+if (window.ResizeObserver) { const ro = new ResizeObserver(layout); ro.observe($("note")); ro.observe($("top")); }
+
 const STALE_HOURS = 48;   // a nightly job that is 2+ days behind has probably failed
 function showFreshness(status) {
   const when = (status && status.checked_at) || (data && data.generated_at);
