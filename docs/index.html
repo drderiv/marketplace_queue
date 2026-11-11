@@ -60,7 +60,11 @@
   tr.group.collapsed svg { transform:rotate(180deg); }
   .c-icon { width:76px; padding-left:20px; } .c-name { width:auto; }
   .c-stars { width:90px; } .c-act { width:140px; } .c-type { width:120px; } .c-status { width:170px; }
-  .avatar { width:48px; height:48px; border-radius:4px; display:block; background:var(--line); }
+  .avatar-box { width:48px; height:48px; border-radius:4px; background:var(--line); display:flex; align-items:center;
+                justify-content:center; overflow:hidden; color:var(--muted); font-size:20px; font-weight:500; }
+  .avatar { width:48px; height:48px; display:block; }
+  .avatar-box.failed .avatar { display:none; }
+  .avatar-box.failed::after { content:attr(data-initial); }
   .name { font-size:15px; color:var(--fg); font-weight:400; display:block; overflow:hidden; text-overflow:ellipsis; }
   .desc { color:var(--muted); font-size:15px; display:block; overflow:hidden; text-overflow:ellipsis; }
   .sub { font-size:12px; color:var(--muted); display:block; }
@@ -160,14 +164,27 @@ function chevron() {
   const p = document.createElementNS(NS, "path"); p.setAttribute("d", "M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z");
   svg.append(p); return svg;
 }
+// Owner avatars come straight from GitHub's avatar CDN (github.com/<name>.png answers every request
+// with an uncacheable redirect). A failed load is retried a couple of times, then shows the owner's initial.
+function avatar(owner) {
+  const box = el("span", "avatar-box"), img = el("img", "avatar");
+  box.dataset.initial = owner.charAt(0).toUpperCase();
+  let tries = 0;
+  const load = () => { img.src = `https://avatars.githubusercontent.com/${encodeURIComponent(owner)}?s=96` + (tries ? `&retry=${tries}` : ""); };
+  img.alt = ""; img.loading = "lazy"; img.referrerPolicy = "no-referrer";
+  img.onerror = () => {
+    if (++tries <= 2) setTimeout(load, 1500 * tries + Math.random() * 1000);
+    else box.classList.add("failed");
+  };
+  load();
+  box.append(img);
+  return box;
+}
 function itemRow(e) {
   const tr = el("tr", "item");
   const owner = e.repo.split("/")[0];
-  const icon = el("td", "c-icon"), img = el("img", "avatar");
-  img.src = `https://github.com/${encodeURIComponent(owner)}.png?size=96`;
-  img.alt = ""; img.loading = "lazy"; img.referrerPolicy = "no-referrer";
-  img.onerror = () => { img.style.visibility = "hidden"; };
-  icon.append(img);
+  const icon = el("td", "c-icon");
+  icon.append(avatar(owner));
   const name = el("td", "c-name");
   name.append(link(`https://github.com/${e.repo}`, e.name || e.repo.split("/")[1], "name"));
   const desc = el("span", "desc", e.description || e.repo);
@@ -183,12 +200,17 @@ function itemRow(e) {
   tr.append(icon, name, stars, act, type, status);
   return tr;
 }
-function groupHeader(key, text) {
+function groupHeader(key, text, members) {   // members: the group's rows, filled in by render()
   const tr = el("tr", "group"), td = el("td"); td.colSpan = visibleCols();
   const fold = collapsed.has(key);
   tr.classList.toggle("collapsed", fold);
   tr.tabIndex = 0; tr.setAttribute("role", "button"); tr.setAttribute("aria-expanded", String(!fold));
-  const toggle = () => { if (collapsed.has(key)) collapsed.delete(key); else collapsed.add(key); render(); };
+  const toggle = () => {   // hide/show the existing rows: no rebuild, so no avatar reloads
+    const fold = !collapsed.has(key);
+    if (fold) collapsed.add(key); else collapsed.delete(key);
+    tr.classList.toggle("collapsed", fold); tr.setAttribute("aria-expanded", String(!fold));
+    for (const row of members) row.hidden = fold;
+  };
   tr.addEventListener("click", toggle);
   tr.addEventListener("keydown", ev => { if (ev.key === "Enter" || ev.key === " ") { ev.preventDefault(); toggle(); } });
   td.append(chevron(), document.createTextNode(text)); tr.append(td); return tr;
@@ -220,8 +242,13 @@ function render() {
     for (const k of order) {
       const part = buckets.get(k);
       if (!part) continue;
-      frag.append(groupHeader(group + ":" + k, `${group === "status" ? (STATUS[k] ? STATUS[k][1] : k) : k} (${part.length})`));
-      if (!collapsed.has(group + ":" + k)) for (const e of part) frag.append(itemRow(e));
+      const members = [], gk = group + ":" + k;
+      frag.append(groupHeader(gk, `${group === "status" ? (STATUS[k] ? STATUS[k][1] : k) : k} (${part.length})`, members));
+      for (const e of part) {
+        const row = itemRow(e);
+        row.hidden = collapsed.has(gk);   // rows of a folded group stay hidden, so their avatars never load
+        members.push(row); frag.append(row);
+      }
     }
   }
   $("rows").replaceChildren(frag);
