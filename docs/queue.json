@@ -1,8 +1,1594 @@
 {
- "generated_at": "2026-11-20T15:38:26Z",
+ "generated_at": "2026-11-21T14:46:58Z",
  "complete": true,
  "source": "https://github.com/hacs/default/pulls",
  "entries": [
+  {
+   "repo": "bukta-attila/ha-yoosee",
+   "category": "integration",
+   "pr": 14650,
+   "pr_url": "https://github.com/hacs/default/pull/14650",
+   "title": "Adds new integration [bukta-attila/ha-yoosee]",
+   "state": "open",
+   "submitter": "bukta-attila",
+   "created_at": "2026-11-21T14:26:09Z",
+   "updated_at": "2026-11-21T14:26:15Z",
+   "repo_status": "ok",
+   "description": "Unofficial Home Assistant integration for Yoosee (Gwell) cameras: live view and SD card playback",
+   "topics": [
+    "camera",
+    "gwell",
+    "hacs",
+    "hacs-integration",
+    "home-assistant",
+    "home-assistant-integration",
+    "homeassistant",
+    "yoosee"
+   ],
+   "stars": 0,
+   "pushed_at": "2026-11-21T14:34:19Z",
+   "homepage": "",
+   "readme_excerpt": "Unofficial Home Assistant integration for Yoosee / Gwell cameras. Not affiliated with, authorized, or endorsed by Yoosee or Gwell. Use at your own risk. It speaks the same cloud and local protocols as the Yoosee mobile app, so you do not need to set up RTSP or ONVIF separately. Live view (snapshot, HLS, WebRTC) with audio SD card playback with a draggable 24-hour timeline One account, each camera as its own device and sub-entry Local RTSP when the camera is reachable on the LAN, cloud otherwise Sidebar panel for live view and playback Contributions are welcome. If anything is missing or broken",
+   "domain": "yoosee_cloud",
+   "name": "Yoosee",
+   "iot_class": "cloud_polling",
+   "version": "1.0.1",
+   "fetched_at": "2026-11-21T14:45:25Z"
+  },
+  {
+   "repo": "rhnfzl/train-commute-companion",
+   "category": "integration",
+   "pr": 14649,
+   "pr_url": "https://github.com/hacs/default/pull/14649",
+   "title": "Adds new integration [rhnfzl/train-commute-companion]",
+   "state": "open",
+   "submitter": "rhnfzl",
+   "created_at": "2026-11-21T14:14:21Z",
+   "updated_at": "2026-11-21T14:14:27Z",
+   "repo_status": "ok",
+   "description": "NS train commute companion for Home Assistant, Telegram and webhooks",
+   "topics": [
+    "hacs",
+    "home-assistant",
+    "netherlands",
+    "ns",
+    "trains"
+   ],
+   "stars": 0,
+   "pushed_at": "2026-11-21T14:43:30Z",
+   "homepage": "",
+   "readme_excerpt": "Get an alert when delays, cancellations, platform changes or missed connections affect your usual train journey. Choose a fixed train or any train within a time window. Data: NS. You bring your own NS API key; none is bundled. This project is not made by or linked to NS. Follows your trains. You describe your usual trips once, in a small YAML file, with station names such as Utrecht Centraal or NS codes such as UT. On a travel day it picks your train and watches it. Tells you what changed. Delays, cancellations, platform changes, a train cut short, a new route, a transfer at risk or broken, an",
+   "domain": "train_commute_companion",
+   "name": "Train Commute Companion",
+   "iot_class": "cloud_polling",
+   "version": "0.6.0",
+   "fetched_at": "2026-11-21T14:45:26Z"
+  },
+  {
+   "repo": "WorlockM/datetime-stepper-card",
+   "category": "plugin",
+   "pr": 14648,
+   "pr_url": "https://github.com/hacs/default/pull/14648",
+   "title": "Adds new plugin [WorlockM/datetime-stepper-card]",
+   "state": "open",
+   "submitter": "WorlockM",
+   "created_at": "2026-11-21T13:10:42Z",
+   "updated_at": "2026-11-21T13:10:49Z",
+   "repo_status": "ok",
+   "description": "Home Assistant Lovelace card to set a date and time with plus and minus buttons",
+   "topics": [
+    "custom-card",
+    "dashboard",
+    "datetime-picker",
+    "hacs",
+    "home-assistant",
+    "homeassistant-custom-card",
+    "input-datetime",
+    "lovelace",
+    "lovelace-custom-card",
+    "time-picker"
+   ],
+   "stars": 1,
+   "pushed_at": "2026-11-21T13:10:07Z",
+   "homepage": "",
+   "readme_excerpt": "A Home Assistant Lovelace card to set a date and time with plus and minus buttons instead of a date picker and text fields. Built for touch screens and wall tablets: one tap per step, press and hold to keep stepping. Works with inputdatetime helpers (date + time, date only, time only) and datetime entities from integrations. row: a single compact line that fits where a regular entity row would go. Tap the hours or the minutes to choose what the time −/+ buttons change. card: large stepper columns for day, hour and minute, with optional Today/Tomorrow buttons. Steps work on the full date and ti",
+   "fetched_at": "2026-11-21T14:45:26Z"
+  },
+  {
+   "repo": "qu4nd/ha-todo-sync",
+   "category": "integration",
+   "pr": 14647,
+   "pr_url": "https://github.com/hacs/default/pull/14647",
+   "title": "Adds new integration [qu4nd/ha-todo-sync]",
+   "state": "open",
+   "submitter": "qu4nd",
+   "created_at": "2026-11-21T12:44:45Z",
+   "updated_at": "2026-11-21T12:44:51Z",
+   "repo_status": "ok",
+   "description": "Bidirectional sync of two Home Assistant to-do lists (e.g. Bring! and Alexa)",
+   "topics": [
+    "bring",
+    "hacs",
+    "hacs-integration",
+    "home-assistant",
+    "home-assistant-custom-component",
+    "home-assistant-integration",
+    "marketplace",
+    "todo"
+   ],
+   "stars": 2,
+   "pushed_at": "2026-11-21T12:22:25Z",
+   "homepage": "",
+   "readme_excerpt": "To-do Sync for Home Assistant Event-driven and periodic bidirectional sync between two Home Assistant todo entities. Purpose-built for Bring! ⇄ Alexa Shopping List. Designed for Home Assistant To-do entities; compatibility depends on the capabilities and behavior of each provider. 🔄 True Two-Way Sync: Adding an item or removing/completing an open item on either list is mirrored on the other, using a persistent three-way state snapshot. ⚖️ Smart Quantity & Details Bridging: Automatically translates between lists with item descriptions (e.g., Bring!) and lists without them (e.g., Alexa). Items w",
+   "domain": "todo_sync",
+   "name": "To-do Sync",
+   "iot_class": "local_push",
+   "version": "0.1.34",
+   "fetched_at": "2026-11-21T14:45:27Z"
+  },
+  {
+   "repo": "xphil-22/ha-beurer-healthmanager",
+   "category": "integration",
+   "pr": 14646,
+   "pr_url": "https://github.com/hacs/default/pull/14646",
+   "title": "Adds new integration [xphil-22/ha-beurer-healthmanager]",
+   "state": "open",
+   "submitter": "xphil-22",
+   "created_at": "2026-11-21T12:17:55Z",
+   "updated_at": "2026-11-21T12:20:48Z",
+   "repo_status": "ok",
+   "description": "Unofficial Home Assistant integration for the beurer HealthManager Pro cloud (scale, blood pressure, … incl. full history)",
+   "topics": [
+    "beurer",
+    "hacs",
+    "hacs-integration",
+    "health",
+    "home-assistant",
+    "homeassistant",
+    "smart-scale"
+   ],
+   "stars": 0,
+   "pushed_at": "2026-11-21T12:20:28Z",
+   "homepage": "",
+   "readme_excerpt": "beurer HealthManager Pro for Home Assistant Unofficial integration that brings your measurements from the beurer HealthManager Pro cloud into Home Assistant (cloud polling every 15 minutes). It works with every beurer device whose measurements end up in the HealthManager Pro app (Bluetooth, Wi‑Fi or \"Scan & Save\"). The app keeps working as usual. This project is not affiliated with, endorsed or supported by Beurer GmbH. \"beurer\" and \"HealthManager Pro\" are trademarks of Beurer GmbH and are used only to describe compatibility. It uses the same (undocumented) cloud interface as the app, which ma",
+   "domain": "beurer_healthmanager",
+   "name": "beurer HealthManager Pro",
+   "iot_class": "cloud_polling",
+   "version": "0.3.0",
+   "fetched_at": "2026-11-21T14:45:27Z"
+  },
+  {
+   "repo": "cameraui/homeassistant-integration",
+   "category": "integration",
+   "pr": 14645,
+   "pr_url": "https://github.com/hacs/default/pull/14645",
+   "title": "Adds new integration [cameraui/homeassistant-integration]",
+   "state": "open",
+   "submitter": "seydx",
+   "created_at": "2026-11-21T12:03:24Z",
+   "updated_at": "2026-11-21T12:03:30Z",
+   "repo_status": "ok",
+   "description": "Home Assistant integration for camera.ui: cameras, sensors and events as entities, the camera.ui interface in the sidebar and dashboard cards.",
+   "topics": [
+    "camera",
+    "camera-ui",
+    "hacs",
+    "home-assistant",
+    "home-assistant-custom-component",
+    "home-assistant-integration",
+    "homeassistant",
+    "integration",
+    "ip-camera",
+    "local-first",
+    "nvr"
+   ],
+   "stars": 4,
+   "pushed_at": "2026-11-16T14:23:40Z",
+   "homepage": "https://docs.cameraui.com/home-assistant/integration",
+   "readme_excerpt": "camera.ui for Home Assistant Home Assistant integration for camera.ui: cameras, sensors and detection events as entities, the full camera.ui interface in the sidebar, and dashboard cards with the camera.ui player and event dialog. 1. Use the button above, or in Home Assistant go to Settings → Marketplace → Add from link and enter the URL of this repository. A custom repository needs a GitHub connection, the Marketplace asks for it the first time. Before Home Assistant 2026.11, add it in HACS as a custom repository, category Integration. 2. Install camera.ui and restart Home Assistant. 3. Add i",
+   "domain": "cameraui",
+   "name": "camera.ui",
+   "iot_class": "local_push",
+   "version": "0.5.3",
+   "fetched_at": "2026-11-21T14:45:28Z"
+  },
+  {
+   "repo": "dswihart/ha-soilx",
+   "category": "integration",
+   "pr": 14644,
+   "pr_url": "https://github.com/hacs/default/pull/14644",
+   "title": "Adds new integration [dswihart/ha-soilx]",
+   "state": "open",
+   "submitter": "dswihart",
+   "created_at": "2026-11-21T11:58:47Z",
+   "updated_at": "2026-11-21T11:58:53Z",
+   "repo_status": "ok",
+   "description": "Home Assistant integration for the Mcbazel SoilX 6-in-1 Bluetooth soil meter",
+   "topics": [
+    "bluetooth",
+    "hacs",
+    "home-assistant",
+    "integration",
+    "soil-moisture"
+   ],
+   "stars": 0,
+   "pushed_at": "2026-11-21T12:02:40Z",
+   "homepage": "",
+   "readme_excerpt": "SoilX Soil Meter for Home Assistant A custom integration for the Mcbazel SoilX 6-in-1 Bluetooth soil meter (it advertises as SoilMonitoring; sold on Amazon as \"Mcbazel SoilX 6-in-1 Bluetooth pH Soil Meter\", item model gf-020981). It reads the meter locally over Bluetooth. No cloud, no Unofficial. Not affiliated with Mcbazel. The protocol was worked out from the meter's own app traffic, and the integration only ever sends the same \"read\" request the app sends. It never writes settings. Humidity | % | air humidity | Soil conductivity | µS/cm | right order of magnitude, but reads lower than the p",
+   "domain": "soilx",
+   "name": "SoilX Soil Meter",
+   "iot_class": "local_polling",
+   "version": "0.1.0",
+   "fetched_at": "2026-11-21T14:45:29Z"
+  },
+  {
+   "repo": "donthedandy/ha-ceny-paliv",
+   "category": "integration",
+   "pr": 14643,
+   "pr_url": "https://github.com/hacs/default/pull/14643",
+   "title": "Adds new integration [donthedandy/ha-ceny-paliv]",
+   "state": "open",
+   "submitter": "donthedandy",
+   "created_at": "2026-11-21T11:37:15Z",
+   "updated_at": "2026-11-21T11:37:19Z",
+   "repo_status": "ok",
+   "description": "Ceny paliv z mBenzin.cz v Home Assistantu: nejlevnější stanice ve vašem okolí, oblíbená stanice s trendy, průměrné ceny města, kraje a ČR, události o změně ceny a hotová karta s mapami, grafem za 30 dní a navigací.",
+   "topics": [
+    "custom-component",
+    "czech-republic",
+    "fuel-prices",
+    "hacs",
+    "home-assistant",
+    "lovelace-card",
+    "mbenzin"
+   ],
+   "stars": 9,
+   "pushed_at": "2026-11-21T11:41:05Z",
+   "homepage": "",
+   "readme_excerpt": "⛽ Ceny paliv – Czech fuel prices for Home Assistant A HACS integration that follows Czech fuel prices (mBenzin.cz) in Home Assistant: the cheapest stations around you for the fuel(s) you use — Natural 95, Diesel, LPG, CNG and more —, your favourite station with price history and trends, the average price of your town, your region and the country, and a ready-made dashboard card with maps, a 30-day graph, station details and one-tap navigation. Follow as many places as you like (a town, a point with a radius, or an area that moves with you), with automations and blueprints for price changes. Ev",
+   "domain": "ceny_paliv",
+   "name": "Ceny paliv",
+   "iot_class": "cloud_polling",
+   "version": "0.8.2",
+   "fetched_at": "2026-11-21T14:45:29Z"
+  },
+  {
+   "repo": "xCREAS/xcreas-home-assistant",
+   "category": "integration",
+   "pr": 14637,
+   "pr_url": "https://github.com/hacs/default/pull/14637",
+   "title": "Adds new integration [xCREAS/xcreas-home-assistant]",
+   "state": "closed",
+   "submitter": "tonis-xie",
+   "created_at": "2026-11-21T10:43:17Z",
+   "updated_at": "2026-11-21T10:57:29Z",
+   "repo_status": "ok",
+   "description": "xCREAS air purifier (V350s) integration for Home Assistant — cloud push, official OAuth2 PKCE flow",
+   "topics": [
+    "air-purifier",
+    "hacs",
+    "home-assistant",
+    "integration",
+    "xcreas"
+   ],
+   "stars": 0,
+   "pushed_at": "2026-11-21T13:31:31Z",
+   "homepage": "www.xcreas.com",
+   "readme_excerpt": "Official xCREAS integration for Home Assistant. Connect your xCREAS air purifier (V350s) through the xCREAS cloud: each authorized purifier appears as a fan with power, stepless 1–100% speed control and operating presets, alongside PM2.5, temperature and humidity sensors. Device changes are pushed into Home Assistant over a dedicated cloud channel — no inbound ports on your home network and nothing to poll manually. Authorization uses the OAuth2 authorization-code flow with PKCE (S256) against the xCREAS public client. The integration ships no client secret: you authorize per installation, cho",
+   "domain": "xcreas",
+   "name": "xCREAS",
+   "iot_class": "cloud_push",
+   "version": "1.0.0",
+   "fetched_at": "2026-11-21T14:46:30Z"
+  },
+  {
+   "repo": "SpaRtzZii/cospend-ha",
+   "category": "integration",
+   "pr": 14636,
+   "pr_url": "https://github.com/hacs/default/pull/14636",
+   "title": "Adds new integration [SpaRtzZii/cospend-ha]",
+   "state": "open",
+   "submitter": "SpaRtzZii",
+   "created_at": "2026-11-21T10:41:40Z",
+   "updated_at": "2026-11-21T10:41:46Z",
+   "repo_status": "ok",
+   "description": "Home Assistant integration and Lovelace cards for Nextcloud Cospend (shared budgets)",
+   "topics": [
+    "cospend",
+    "custom-component",
+    "hacs",
+    "home-assistant",
+    "lovelace",
+    "nextcloud"
+   ],
+   "stars": 0,
+   "pushed_at": "2026-11-21T10:17:00Z",
+   "homepage": "",
+   "readme_excerpt": "Home Assistant integration and Lovelace card for Nextcloud Cospend, the shared budget manager. The goal is the same experience as the Android app Cowspent, inside your dashboards and automations. Status: stable (1.0). The integration reads your projects (sensors, events), provides services to add, edit and delete expenses and to manage the project, and queues writes when Nextcloud is unreachable. Three Lovelace cards (expenses, charts, actions) follow your theme. With HACS (recommended): open HACS, search for Cospend, download it, then restart Home Assistant. If it does not appear in the list ",
+   "domain": "cospend",
+   "name": "Cospend",
+   "iot_class": "cloud_polling",
+   "version": "0.0.1",
+   "fetched_at": "2026-11-21T14:45:30Z"
+  },
+  {
+   "repo": "Geoffrey33/chauffage-intelligent",
+   "category": "integration",
+   "pr": 14630,
+   "pr_url": "https://github.com/hacs/default/pull/14630",
+   "title": "Adds new integration [Geoffrey33/chauffage-intelligent]",
+   "state": "open",
+   "submitter": "Geoffrey33",
+   "created_at": "2026-11-21T09:19:13Z",
+   "updated_at": "2026-11-21T09:19:19Z",
+   "repo_status": "ok",
+   "description": "Gestion intelligente du chauffage multizone pour Home Assistant : thermostat par pièce, plannings visuels, préchauffe apprise, absence, fenêtres, boost",
+   "topics": [
+    "climate",
+    "custom-component",
+    "hacs",
+    "hacs-integration",
+    "heat-pump",
+    "heating",
+    "home-assistant",
+    "home-automation",
+    "homeassistant",
+    "koolnova",
+    "thermostat"
+   ],
+   "stars": 0,
+   "pushed_at": "2026-11-21T09:23:54Z",
+   "homepage": "",
+   "readme_excerpt": "Intégration Home Assistant pour piloter un chauffage multizone (pensée pour une PAC gainable Koolnova, compatible avec toute entité climate) avec : un thermostat par pièce (climate. ) et une page appareil complète ; des plannings hebdomadaires visuels, avec une consigne par plage (Eco, Confort, Confort +, ou température personnalisée) ; une préchauffe progressive : les heures du planning sont celles où la température doit être atteinte. La consigne monte par paliers de 0,5 °C avant la plage, plus tôt quand il fait froid dehors. La vitesse de chauffe de chaque pièce s'apprend toute seule (mesur",
+   "domain": "chauffage_intelligent",
+   "name": "Chauffage intelligent",
+   "iot_class": "calculated",
+   "version": "1.3.1",
+   "fetched_at": "2026-11-21T14:45:31Z"
+  },
+  {
+   "repo": "badigit/hysen-homeassistant",
+   "category": "integration",
+   "pr": 14629,
+   "pr_url": "https://github.com/hacs/default/pull/14629",
+   "title": "Adds new integration [badigit/hysen-homeassistant]",
+   "state": "open",
+   "submitter": "badigit",
+   "created_at": "2026-11-21T09:18:14Z",
+   "updated_at": "2026-11-21T09:18:14Z",
+   "repo_status": "ok",
+   "description": "Local Home Assistant integration for Hysen HY02/HY03 Wi-Fi thermostats (Broadlink protocol)",
+   "topics": [
+    "climate",
+    "floureon",
+    "hacs",
+    "hacs-integration",
+    "home-assistant",
+    "homeassistant",
+    "hysen",
+    "thermostat"
+   ],
+   "stars": 0,
+   "pushed_at": "2026-11-21T09:19:01Z",
+   "homepage": "",
+   "readme_excerpt": "Hysen / Floureon Wi-Fi Thermostats for Home Assistant A local Home Assistant integration for Hysen HY02/HY03 Wi-Fi thermostats using the Broadlink UDP protocol. Thermostats based on this platform are sold under several brands, including Floureon, Beok (BeOK), Beca / Beca Energy, Decdeal, and others. Communication stays on your local network; no cloud account is required. The protocol matters, not the brand or appearance. This integration accepts thermostats reporting Broadlink device type 0x4EAD. A similar-looking device or one sold under a listed brand is not necessarily compatible; other Wi-",
+   "domain": "hysen",
+   "name": "Hysen Thermostat (Broadlink)",
+   "iot_class": "local_polling",
+   "version": "3.0.0",
+   "fetched_at": "2026-11-21T14:45:32Z"
+  },
+  {
+   "repo": "Upgreydd/lrt_wallbox_hacs",
+   "category": "integration",
+   "pr": 14628,
+   "pr_url": "https://github.com/hacs/default/pull/14628",
+   "title": "Adds Upgreydd/lrt_wallbox_hacs",
+   "state": "closed",
+   "submitter": "upgreydd",
+   "created_at": "2026-11-21T09:12:25Z",
+   "updated_at": "2026-11-21T09:12:30Z",
+   "repo_status": "ok",
+   "description": "LRT eMobility (and AEG rebrand) Wallbox HACS Integration ",
+   "topics": [
+    "aeg",
+    "hacs-default",
+    "home-assistant-custom-component",
+    "homeassistant-custom-component",
+    "integration",
+    "lrt",
+    "wallbox"
+   ],
+   "stars": 0,
+   "pushed_at": "2026-11-21T09:16:29Z",
+   "homepage": "",
+   "readme_excerpt": "Home Assistant LRT Wallbox Integration This is a custom integration for Home Assistant that allows you to control and monitor LRT Wallbox. It supports features such as starting and stopping charging, setting the maximum current, and monitoring the charging status. In order to use this integration, you need to have the following: Home Assistant installed and running. An LRT Wallbox with network connectivity. HACS (Home Assistant Community Store) installed. Search for \"LRT Wallbox\" in HACS and install the integration. Alternatively, you can manually add this repository url as a HACS custom repos",
+   "domain": "lrt_wallbox",
+   "name": "LRT Wallbox",
+   "iot_class": "local_polling",
+   "version": "0.2.2",
+   "fetched_at": "2026-11-21T14:46:31Z"
+  },
+  {
+   "repo": "JImmyB0nes/envertech_solar",
+   "category": "integration",
+   "pr": 14627,
+   "pr_url": "https://github.com/hacs/default/pull/14627",
+   "title": "Adds new integration [JImmyB0nes/envertech_solar]",
+   "state": "open",
+   "submitter": "JImmyB0nes",
+   "created_at": "2026-11-21T09:06:49Z",
+   "updated_at": "2026-11-21T09:06:55Z",
+   "repo_status": "ok",
+   "description": "Home Assistant integration for Envertech solar inverters – live power, yield, income and CO2 savings from the Envertech Solar Portal",
+   "topics": [
+    "energy-dashboard",
+    "envertech",
+    "envertech-solar",
+    "hacs",
+    "hass",
+    "home-assistant",
+    "home-assistant-integration",
+    "solar"
+   ],
+   "stars": 0,
+   "pushed_at": "2026-11-19T12:54:22Z",
+   "homepage": "",
+   "readme_excerpt": "Envertech Solar for Home Assistant Solar yield, power output and station information straight from the Envertech Solar Portal. Envertech Solar connects Home Assistant to the Envertech Solar Portal. Enter your station ID once and keep an eye on power, yield and station information. ☀️ Live solar power in real time 🔋 Daily, monthly, yearly and total yield ⚡ Daily peak power and all-time peak power 💶 Feed-in income and CO₂ savings, if configured in the portal 🔁 Adjustable polling interval directly in Home Assistant 🌍 Interface available in English, German, Dutch, Portuguese, Polish, Russian and C",
+   "domain": "envertech_solar",
+   "name": "Envertech Solar",
+   "iot_class": "cloud_polling",
+   "version": "1.4.5",
+   "fetched_at": "2026-11-21T14:45:32Z"
+  },
+  {
+   "repo": "JImmyB0nes/Envertech_local",
+   "category": "integration",
+   "pr": 14626,
+   "pr_url": "https://github.com/hacs/default/pull/14626",
+   "title": "Adds new integration [JImmyB0nes/Envertech_local]",
+   "state": "open",
+   "submitter": "JImmyB0nes",
+   "created_at": "2026-11-21T09:06:20Z",
+   "updated_at": "2026-11-21T09:19:24Z",
+   "repo_status": "ok",
+   "description": "EnverTech EAS-Local Home Assistant Integration",
+   "topics": [
+    "envertech",
+    "envertech-local",
+    "home-assistant",
+    "home-assistant-integration",
+    "microinverter"
+   ],
+   "stars": 1,
+   "pushed_at": "2026-11-19T17:45:54Z",
+   "homepage": "",
+   "readme_excerpt": "Envertech Local for Home Assistant Local, cloud-free monitoring of Envertech micro-inverters via their TCP interface. Envertech Local (integration domain envertechlocal) reads live data straight from your Envertech inverter/gateway on your local network. You don't need a cloud account, and nothing leaves your LAN. This fork is maintained by JimmyBones. It is based on Kaiserdragon2/Envertechlocal. 🏠 100 % local: a persistent TCP connection to the inverter (default port 14889), polled every 5 seconds (adjustable: 5/10/30 s) 🔍 Automatic discovery of inverters on your network (UDP broadcast), with",
+   "domain": "envertech_local",
+   "name": "Envertech Local",
+   "iot_class": "local_polling",
+   "version": "1.3.10",
+   "fetched_at": "2026-11-21T14:45:33Z"
+  },
+  {
+   "repo": "JImmyB0nes/Envertech_local",
+   "category": "integration",
+   "pr": 14625,
+   "pr_url": "https://github.com/hacs/default/pull/14625",
+   "title": "Adds new integration [JImmyB0nes/Envertech_local]",
+   "state": "closed",
+   "submitter": "JImmyB0nes",
+   "created_at": "2026-11-21T09:03:07Z",
+   "updated_at": "2026-11-21T09:03:12Z",
+   "repo_status": "ok",
+   "description": "EnverTech EAS-Local Home Assistant Integration",
+   "topics": [
+    "envertech",
+    "envertech-local",
+    "home-assistant",
+    "home-assistant-integration",
+    "microinverter"
+   ],
+   "stars": 1,
+   "pushed_at": "2026-11-19T17:45:54Z",
+   "homepage": "",
+   "readme_excerpt": "Envertech Local for Home Assistant Local, cloud-free monitoring of Envertech micro-inverters via their TCP interface. Envertech Local (integration domain envertechlocal) reads live data straight from your Envertech inverter/gateway on your local network. You don't need a cloud account, and nothing leaves your LAN. This fork is maintained by JimmyBones. It is based on Kaiserdragon2/Envertechlocal. 🏠 100 % local: a persistent TCP connection to the inverter (default port 14889), polled every 5 seconds (adjustable: 5/10/30 s) 🔍 Automatic discovery of inverters on your network (UDP broadcast), with",
+   "domain": "envertech_local",
+   "name": "Envertech Local",
+   "iot_class": "local_polling",
+   "version": "1.3.10",
+   "fetched_at": "2026-11-21T14:46:31Z"
+  },
+  {
+   "repo": "JImmyB0nes/envertech_solar",
+   "category": "integration",
+   "pr": 14624,
+   "pr_url": "https://github.com/hacs/default/pull/14624",
+   "title": "Adds new integration [JImmyB0nes/envertech_solar]",
+   "state": "closed",
+   "submitter": "JImmyB0nes",
+   "created_at": "2026-11-21T09:03:04Z",
+   "updated_at": "2026-11-21T09:03:09Z",
+   "repo_status": "ok",
+   "description": "Home Assistant integration for Envertech solar inverters – live power, yield, income and CO2 savings from the Envertech Solar Portal",
+   "topics": [
+    "energy-dashboard",
+    "envertech",
+    "envertech-solar",
+    "hacs",
+    "hass",
+    "home-assistant",
+    "home-assistant-integration",
+    "solar"
+   ],
+   "stars": 0,
+   "pushed_at": "2026-11-19T12:54:22Z",
+   "homepage": "",
+   "readme_excerpt": "Envertech Solar for Home Assistant Solar yield, power output and station information straight from the Envertech Solar Portal. Envertech Solar connects Home Assistant to the Envertech Solar Portal. Enter your station ID once and keep an eye on power, yield and station information. ☀️ Live solar power in real time 🔋 Daily, monthly, yearly and total yield ⚡ Daily peak power and all-time peak power 💶 Feed-in income and CO₂ savings, if configured in the portal 🔁 Adjustable polling interval directly in Home Assistant 🌍 Interface available in English, German, Dutch, Portuguese, Polish, Russian and C",
+   "domain": "envertech_solar",
+   "name": "Envertech Solar",
+   "iot_class": "cloud_polling",
+   "version": "1.4.5",
+   "fetched_at": "2026-11-21T14:46:32Z"
+  },
+  {
+   "repo": "upgreydd/homeassistant-mikrotik-push",
+   "category": "integration",
+   "pr": 14623,
+   "pr_url": "https://github.com/hacs/default/pull/14623",
+   "title": "Adds upgreydd/homeassistant-mikrotik-push",
+   "state": "open",
+   "submitter": "upgreydd",
+   "created_at": "2026-11-21T08:57:19Z",
+   "updated_at": "2026-11-21T08:57:19Z",
+   "repo_status": "ok",
+   "description": "Home Assistant integration for MikroTik RouterOS 7: presence, ports, traffic and system data pushed by the router instead of polled",
+   "topics": [
+    "device-tracker",
+    "hacs",
+    "hacs-integration",
+    "home-assistant",
+    "homeassistant",
+    "local-push",
+    "mikrotik",
+    "routeros"
+   ],
+   "stars": 0,
+   "pushed_at": "2026-11-21T10:13:57Z",
+   "homepage": "",
+   "readme_excerpt": "MikroTik Push for Home Assistant Presence tracking for MikroTik RouterOS 7 that listens to the router instead of polling it: devices appear the moment the router learns them. One devicetracker per DHCP-leased host. Arrival is near-instant; departure takes about 5-8 minutes (bridge ageing plus a grace period). Trackers of leases without a comment that are not static start disabled, as Home Assistant does for unknown devices; enable the ones you want. Router preparation (generated script, permissions): docs/ROUTERSETUP.md Design, presence definition and limitations: docs/DESIGN.md Presence (alwa",
+   "domain": "mikrotik_push",
+   "name": "MikroTik Push",
+   "iot_class": "local_push",
+   "version": "0.2.0",
+   "fetched_at": "2026-11-21T14:45:34Z"
+  },
+  {
+   "repo": "artech-lab/ha-bed-sleep-score",
+   "category": "integration",
+   "pr": 14622,
+   "pr_url": "https://github.com/hacs/default/pull/14622",
+   "title": "Adds new integration [artech-lab/ha-bed-sleep-score]",
+   "state": "open",
+   "submitter": "artech-lab",
+   "created_at": "2026-11-21T08:50:38Z",
+   "updated_at": "2026-11-21T08:50:38Z",
+   "repo_status": "ok",
+   "description": "Nightly 0-100 sleep quality score from a bed accelerometer, with a bundled dashboard card for Home Assistant",
+   "topics": [
+    "accelerometer",
+    "esphome",
+    "hacs",
+    "home-assistant",
+    "homeassistant-integration",
+    "lovelace-card",
+    "sleep",
+    "sleep-tracking"
+   ],
+   "stars": 0,
+   "pushed_at": "2026-11-21T08:30:18Z",
+   "homepage": "",
+   "readme_excerpt": "A nightly 0–100 sleep quality score from an accelerometer on your bed — for example an MPU6050 on an ESP32 running ESPHome. Pick the acceleration sensors, add the card: the integration does the whole analysis. No helpers, no templates, no automations, no YAML. Everything runs locally inside Home Assistant. The interface is available in English and Italian. One package contains every step: Signal analysis — the integration reads the raw acceleration axes, computes the magnitude and its 2-minute standard deviation, and detects movement episodes with hysteresis. Night tracking — inside the sleep ",
+   "domain": "bed_sleep_score",
+   "name": "Bed Sleep Score",
+   "iot_class": "calculated",
+   "version": "1.1.0",
+   "fetched_at": "2026-11-21T14:45:35Z"
+  },
+  {
+   "repo": "artech-lab/ha-hazard-analysis",
+   "category": "integration",
+   "pr": 14621,
+   "pr_url": "https://github.com/hacs/default/pull/14621",
+   "title": "Adds new integration [artech-lab/ha-hazard-analysis]",
+   "state": "open",
+   "submitter": "artech-lab",
+   "created_at": "2026-11-21T08:07:30Z",
+   "updated_at": "2026-11-21T08:07:35Z",
+   "repo_status": "ok",
+   "description": "AI safety monitoring of a lab, workshop or garage from its cameras, with a bundled dashboard card for Home Assistant",
+   "topics": [
+    "ai-task",
+    "computer-vision",
+    "hacs",
+    "hazard-detection",
+    "home-assistant",
+    "homeassistant-integration",
+    "lovelace-card",
+    "safety"
+   ],
+   "stars": 0,
+   "pushed_at": "2026-11-21T07:30:59Z",
+   "homepage": "",
+   "readme_excerpt": "AI safety monitoring for a lab, workshop or garage from the cameras you already have. An AI vision model looks at the area on a dynamic schedule, scores five hazard categories from 0 to 4, explains why and suggests what to do. Pick the cameras and the AI engine, add the card: no helpers, no templates, no The interface is available in English and Italian; the AI writes its summary in the language of Home One package contains every step: Analysis — the integration sends the camera images and the optional sensor readings to an AI Task entity with a detailed safety prompt and a structured output: ",
+   "domain": "hazard_analysis",
+   "name": "Hazard Analysis",
+   "iot_class": "calculated",
+   "version": "1.0.0",
+   "fetched_at": "2026-11-21T14:45:35Z"
+  },
+  {
+   "repo": "RockJesus/ha-ai",
+   "category": "integration",
+   "pr": 14620,
+   "pr_url": "https://github.com/hacs/default/pull/14620",
+   "title": "Adds new integration [RockJesus/ha-ai]",
+   "state": "open",
+   "submitter": "RockJesus",
+   "created_at": "2026-11-21T07:12:30Z",
+   "updated_at": "2026-11-21T07:12:36Z",
+   "repo_status": "ok",
+   "description": "Home Assistant ai_task 提供者：数据生成、附件、图像生成、决策评估一次补齐（Pollinations / 硅基流动 / 火山方舟 / OpenAI 兼容）",
+   "topics": [
+    "ai",
+    "hacs",
+    "home-assistant",
+    "integration",
+    "openai"
+   ],
+   "stars": 0,
+   "pushed_at": "2026-11-21T07:05:03Z",
+   "homepage": "",
+   "readme_excerpt": "把任意 OpenAI 兼容服务接进 Home Assistant，补齐 AI 建议与语音助手需要的能力。 HA AI 是一个「能力提供者」型集成，不绑定单一厂商。填入一个 Base URL、一个 Key、若干模型 ID，就能同时得到： AI 建议页面需要的 aitask：生成数据、读附件、生成图像、决策评估 语音助手 → AI 页面需要的 conversation / stt / tts：对话、语音转文字、文字转语音 实体按配置动态创建：填了文本模型才有对话与数据能力，填了图像模型才有生图能力，语音模型同理。一个条目可以只做一件事，也可以全部打开。 aitask | 生成文本 / 结构化 JSON | POST {baseurl}/chat/completions | aitask | 图片附件 | 图片转 base64 交给文本模型 | aitask | 生成图像 | POST {baseurl}/images/generations；Pollinations 走免 Key 接口 | aitask | 决策评估 | 文本模型输出 JSON 概率 / 选项 / 评分 | conversation | 对话代理，可控制设备 | chat/completions + HA LLM API 工具调用（最多 10 轮） | stt | 语音转文字 | POST {baseurl}/audi",
+   "domain": "ha_ai",
+   "name": "HA AI",
+   "iot_class": "cloud_polling",
+   "version": "1.2.5",
+   "fetched_at": "2026-11-21T14:45:36Z"
+  },
+  {
+   "repo": "Katzeee/dreame-pb20-integration",
+   "category": "integration",
+   "pr": 14619,
+   "pr_url": "https://github.com/hacs/default/pull/14619",
+   "title": "Adds new integration [Katzeee/dreame-pb20-integration]",
+   "state": "open",
+   "submitter": "Katzeee",
+   "created_at": "2026-11-21T07:07:53Z",
+   "updated_at": "2026-11-21T07:08:00Z",
+   "repo_status": "ok",
+   "description": "Home Assistant integration for the Dreame PB20 air purifier",
+   "topics": [
+    "air-purifier",
+    "dreame",
+    "hacs",
+    "home-assistant"
+   ],
+   "stars": 0,
+   "pushed_at": "2026-11-21T07:07:27Z",
+   "homepage": "",
+   "readme_excerpt": "Dreame PB20 for Home Assistant 追觅 Air Purifier PB20 的 Home Assistant 自定义集成，支持型号 dreame.airp.u2605。 三种模式：AI Purify、Sleep、Custom。 自定义风速：1–10 档，对应 HA 的 10%–100%；调整风速会进入自定义模式。 温度、湿度、PM2.5、PM10、甲醛、空气质量、追觅 AQ 指数、滤芯余量及剩余天数。 UVC、童锁、关机后持续监测；更换滤芯后的寿命重置按钮默认禁用，按需启用。 默认每 30 秒通过追觅云服务更新，可在集成选项中调整为 15–300 秒。 需要 Home Assistant 2026.11.0 或更新版本，以及已经在追觅 App 中绑定 PB20 的追觅账号。 当前集成使用云端通信，需要联网；没有其他追觅集成的依赖。 Home Assistant 2026.11 起，HACS 以 Marketplace 的形式内置。在 设置 → Marketplace 中连接 GitHub，并添加自定义存储库： 类别选择 Integration，下载 Dreame PB20，然后重启 Home Assistant。 这是自定义存储库安装方式，不代表已被默认目录收录。无需安装旧版 HACS。 将仓库中的 customcomponents/dreamepb20",
+   "domain": "dreame_pb20",
+   "name": "Dreame PB20",
+   "iot_class": "cloud_polling",
+   "version": "0.2.1",
+   "fetched_at": "2026-11-21T14:45:37Z"
+  },
+  {
+   "repo": "TomGrozev/ha-soniox",
+   "category": "integration",
+   "pr": 14618,
+   "pr_url": "https://github.com/hacs/default/pull/14618",
+   "title": "Adds new integration [TomGrozev/ha-soniox]",
+   "state": "open",
+   "submitter": "TomGrozev",
+   "created_at": "2026-11-21T06:42:11Z",
+   "updated_at": "2026-11-21T06:42:18Z",
+   "repo_status": "ok",
+   "description": "Integration for Soniox to Home Assistant. ",
+   "topics": [
+    "hacs",
+    "home-assistant",
+    "integration"
+   ],
+   "stars": 0,
+   "pushed_at": "2026-11-21T06:21:52Z",
+   "homepage": "",
+   "readme_excerpt": "A custom Home Assistant integration maintained by Tom Grozev that exposes Soniox as both a speech-to-text and a text-to-speech provider for the Assist voice pipeline. Disclaimer: This is an unofficial project and is not affiliated with, endorsed by, or maintained by Soniox. The Soniox name and logo are used with permission for the purpose of this community integration. This fork continues Francesco Masaia's original ha-soniox and carries significant changes on top of it. Compared with the original, this Ends an Assist turn as soon as Soniox endpoint detection fires, so the pipeline stops liste",
+   "domain": "soniox",
+   "name": "Soniox",
+   "iot_class": "cloud_polling",
+   "version": "0.3.1",
+   "fetched_at": "2026-11-21T14:45:38Z"
+  },
+  {
+   "repo": "Antarikfox/obsidian-6-card",
+   "category": "plugin",
+   "pr": 14617,
+   "pr_url": "https://github.com/hacs/default/pull/14617",
+   "title": "Adds new plugin [Antarikfox/obsidian-6-card]",
+   "state": "open",
+   "submitter": "Antarikfox",
+   "created_at": "2026-11-21T05:01:18Z",
+   "updated_at": "2026-11-21T05:01:23Z",
+   "repo_status": "ok",
+   "description": "OBSIDIAN-6 | Biomechanical Nixie Clock for Home Assistant & browsers. Xenomorph-inspired design, realistic glow and interactive controls. By Antarikfox.",
+   "topics": [
+    "custom-card",
+    "hacs",
+    "home-assistant",
+    "nixie-clock"
+   ],
+   "stars": 2,
+   "pushed_at": "2026-11-21T04:51:38Z",
+   "homepage": "",
+   "readme_excerpt": "OBSIDIAN-6 · by Antarikfox A six-tube IN-1 Nixie clock with amber illumination and a static biomechanical case. Available as a Home Assistant dashboard card and a standalone offline HTML file. English, Russian, German, Italian, French, Simplified Chinese and Japanese. Automatic uses Home Assistant’s language inside the dashboard and the browser’s preferred language in the standalone page. English is the fallback for unsupported languages. To override it, tap the fox logo or OBSIDIAN-6, then select Display → Language. The selection is stored in the browser. The artwork and engraved markings are",
+   "fetched_at": "2026-11-21T14:45:38Z"
+  },
+  {
+   "repo": "HarleyGaniere/cozy-control",
+   "category": "integration",
+   "pr": 14615,
+   "pr_url": "https://github.com/hacs/default/pull/14615",
+   "title": "Adds new integration [HarleyGaniere/cozy-control]",
+   "state": "open",
+   "submitter": "HarleyGaniere",
+   "created_at": "2026-11-21T04:32:03Z",
+   "updated_at": "2026-11-21T04:32:08Z",
+   "repo_status": "ok",
+   "description": "Home Assistant integration that sets your thermostat from the outdoor temperature, with away mode, window sensors and safety limits",
+   "topics": [
+    "hacs",
+    "home-assistant",
+    "integration",
+    "nest",
+    "thermostat"
+   ],
+   "stars": 0,
+   "pushed_at": "2026-11-21T04:28:30Z",
+   "homepage": "",
+   "readme_excerpt": "Cozy Control for Home Assistant Keeps your house comfortable by moving your thermostat's target temperature with the weather outside. The Nest (and most other) schedules are fixed by time of day. Cozy Control instead looks at the outdoor temperature on a schedule you choose, and sets the thermostat from a table you edit in Home Assistant. For example: 20 outside gives 20 inside, 0 outside gives 22, 30 outside gives 17. It works with any thermostat that appears as a climate entity, and any weather provider or temperature sensor Home Assistant can read (Met.no, NWS, your own sensor in the garden",
+   "domain": "cozy_control",
+   "name": "Cozy Control",
+   "iot_class": "calculated",
+   "version": "0.1.0",
+   "fetched_at": "2026-11-21T14:45:39Z"
+  },
+  {
+   "repo": "cchip201/pikvm-control-homeassistant",
+   "category": "integration",
+   "pr": 14614,
+   "pr_url": "https://github.com/hacs/default/pull/14614",
+   "title": "Adds new integration [cchip201/pikvm-control-homeassistant]",
+   "state": "open",
+   "submitter": "cchip201",
+   "created_at": "2026-11-21T03:06:27Z",
+   "updated_at": "2026-11-21T03:08:32Z",
+   "repo_status": "ok",
+   "description": "Home Assistant integration for PiKVM control",
+   "topics": [
+    "custom-component",
+    "home-assistant",
+    "home-assistant-custom-component",
+    "home-assistant-integration",
+    "pikvm"
+   ],
+   "stars": 0,
+   "pushed_at": "2026-11-21T02:54:54Z",
+   "homepage": "",
+   "readme_excerpt": "PiKVM Control Home Assistant A fully polished, advanced Home Assistant integration to monitor and control PiKVM V3/V4 hardware ATX states, running services, temperature, fan speed, and diagnostics. 🔌 Physical ATX Control & Buttons Trigger real-time physical button presses on your target computer: Power Button Click: Performs a standard momentary power button press. Reset Button Click: Performs a standard momentary reset button press. Advanced Power Actions: Execute persistent states such as On, Off (Graceful), Hard Off (Force power-down), and Hard Reset. 📊 Advanced Diagnostics (New in v2.0.0) ",
+   "domain": "pikvm_custom",
+   "name": "PiKVM Control Home Assistant",
+   "iot_class": "local_polling",
+   "version": "2.0.4",
+   "fetched_at": "2026-11-21T14:45:40Z"
+  },
+  {
+   "repo": "ayn/ha-strava-automation",
+   "category": "integration",
+   "pr": 14613,
+   "pr_url": "https://github.com/hacs/default/pull/14613",
+   "title": "Adds new integration [ayn/ha-strava-automation]",
+   "state": "open",
+   "submitter": "ayn",
+   "created_at": "2026-11-21T02:03:40Z",
+   "updated_at": "2026-11-21T14:36:09Z",
+   "repo_status": "ok",
+   "description": "Independent Home Assistant integration for Strava webhooks, durable automations, workout classification and historical AQI/UV.",
+   "topics": [
+    "air-quality",
+    "automation",
+    "coros",
+    "custom-integration",
+    "fitness",
+    "garmin",
+    "hacs",
+    "home-assistant",
+    "homeassistant",
+    "python",
+    "strava",
+    "uv-index",
+    "webhooks"
+   ],
+   "stars": 0,
+   "pushed_at": "2026-11-21T14:31:10Z",
+   "homepage": "",
+   "readme_excerpt": "An independent, MIT-licensed Home Assistant integration for Strava automations. Process new uploads through webhooks, preview changes, and retry saved work after connection failures. No activity polling or separate server is needed. This repository was formerly Strava Activity Tools. Strava Automation manages its own Strava authorization and webhook. Install it as a custom repository Strava must be able to reach the integration's webhook over public HTTPS. Strava sends a GET request to verify the webhook during setup and POST requests to deliver activity events. Pick one way to make that endpo",
+   "domain": "ha_strava_automation",
+   "name": "Strava Automation",
+   "iot_class": "cloud_push",
+   "version": "0.7.5",
+   "fetched_at": "2026-11-21T14:45:40Z"
+  },
+  {
+   "repo": "yanke7/Home-Assistant-weather",
+   "category": "integration",
+   "pr": 14612,
+   "pr_url": "https://github.com/hacs/default/pull/14612",
+   "title": "Adds new integration [yanke7/Home-Assistant-weather]",
+   "state": "open",
+   "submitter": "yanke7",
+   "created_at": "2026-11-20T23:31:45Z",
+   "updated_at": "2026-11-20T23:31:52Z",
+   "repo_status": "ok",
+   "description": "Standalone Home Assistant weather integration, dashboard, and location sensors",
+   "topics": [
+    "hacs",
+    "home-assistant",
+    "home-assistant-integration",
+    "weather"
+   ],
+   "stars": 1,
+   "pushed_at": "2026-11-21T05:09:50Z",
+   "homepage": "",
+   "readme_excerpt": "Atmosphere Weather for Home Assistant Atmosphere bundles a weather dashboard, worldwide Open-Meteo forecasts, recent precipitation radar, and native Home Assistant entities. Each saved location updates independently, even with all dashboards closed. Tap the preview to open the full-resolution video. https://github.com/user-attachments/assets/d705aa0d-a89f-4dd0-9074-667555b3e00b Download the 25-second demo (MP4). See the dashboard, radar, city cameras, themes, and language settings, plus an example of using weather entities in an automation. Atmosphere targets Home Assistant 2026.11 or later. 1",
+   "domain": "atmosphere_weather",
+   "name": "Atmosphere Weather",
+   "iot_class": "cloud_polling",
+   "version": "0.1.47",
+   "fetched_at": "2026-11-21T14:45:41Z"
+  },
+  {
+   "repo": "davidfi01/ha-esi-r2d7",
+   "category": "integration",
+   "pr": 14611,
+   "pr_url": "https://github.com/hacs/default/pull/14611",
+   "title": "Adds new integration [davidfi01/ha-esi-r2d7]",
+   "state": "open",
+   "submitter": "davidfi01",
+   "created_at": "2026-11-20T23:30:56Z",
+   "updated_at": "2026-11-20T23:31:03Z",
+   "repo_status": "ok",
+   "description": "Home Assistant integration for ESI R2D7 RS-232 blind controllers, via a Connect AUX-2 serial proxy or a local serial port",
+   "topics": [
+    "blinds",
+    "esi-r2d7",
+    "esphome",
+    "hacs",
+    "home-assistant",
+    "home-assistant-integration",
+    "rs232"
+   ],
+   "stars": 0,
+   "pushed_at": "2026-11-20T23:29:28Z",
+   "homepage": "",
+   "readme_excerpt": "ESI R2D7 Serial — Home Assistant custom integration Home Assistant integration for ESI R2D7 RS-232 blind controllers. It follows the configuration, connection and entity design of Home Assistant's Denon RS-232 integration. It works with the stock Home Assistant Connect AUX-2 ESPHome serial proxy through the Home Assistant serial port selector, and with a local serial port. No AUX-2 firmware change is required; Bluetooth proxy, audio, Z-Wave proxy and other AUX-2 functions remain intact. Requires Home Assistant 2026.11.0 or newer. The integration uses the serialx version that Home Assistant its",
+   "domain": "esi_r2d7",
+   "name": "ESI R2D7 Serial",
+   "iot_class": "assumed_state",
+   "version": "0.3.1",
+   "fetched_at": "2026-11-21T14:45:41Z"
+  },
+  {
+   "repo": "MulletBoy/sleeprings",
+   "category": "integration",
+   "pr": 14610,
+   "pr_url": "https://github.com/hacs/default/pull/14610",
+   "title": "Adds new integration [MulletBoy/sleeprings]",
+   "state": "open",
+   "submitter": "MulletBoy",
+   "created_at": "2026-11-20T23:29:14Z",
+   "updated_at": "2026-11-20T23:29:22Z",
+   "repo_status": "ok",
+   "description": "Apple-Watch-style sleep score for Home Assistant: integration plus dashboard card with rings, sleep stages, heart rate and history.",
+   "topics": [
+    "apple-health",
+    "hacs",
+    "home-assistant",
+    "home-assistant-custom-component",
+    "lovelace-card",
+    "sleep"
+   ],
+   "stars": 1,
+   "pushed_at": "2026-11-21T00:43:39Z",
+   "homepage": "",
+   "readme_excerpt": "A sleep score for Home Assistant in the style of the Apple Watch Sleep Score: 0 to 100, made of Duration (50), Bedtime consistency (30) and Interruptions (20), with a dashboard card that shows it as rings, a scorecard, the night's sleep stages, sleeping heart rate and a 30-night SleepRings is one install: a custom integration that calculates the score, and a card that the integration loads into your dashboards by itself. SleepRings is free and stays free. If it earns a place on your dashboard, you can buy me a coffee on Ko-fi. ☕ Sleep stages | Sleeping heart rate | 30 nights | Hover or tap a s",
+   "domain": "sleep_rings",
+   "name": "SleepRings",
+   "iot_class": "calculated",
+   "version": "1.1.1",
+   "fetched_at": "2026-11-21T14:45:42Z"
+  },
+  {
+   "repo": "ma-schmitz/eq3-max-thermostat-card",
+   "category": "plugin",
+   "pr": 14609,
+   "pr_url": "https://github.com/hacs/default/pull/14609",
+   "title": "Adds new plugin [ma-schmitz/eq3-max-thermostat-card]",
+   "state": "open",
+   "submitter": "ma-schmitz",
+   "created_at": "2026-11-20T23:22:14Z",
+   "updated_at": "2026-11-20T23:22:19Z",
+   "repo_status": "ok",
+   "description": "Lovelace card for eQ-3 MAX! thermostats of the eq3_max Home Assistant integration – valve, battery, radio, window, settings and week program in a pop-up",
+   "topics": [
+    "custom-card",
+    "eq3",
+    "eq3-max",
+    "hacs",
+    "heating",
+    "home-assistant",
+    "lovelace",
+    "lovelace-card",
+    "max",
+    "thermostat"
+   ],
+   "stars": 1,
+   "pushed_at": "2026-11-20T22:43:07Z",
+   "homepage": "https://ma-schmitz.github.io/eq3_max/handbuch/karte/",
+   "readme_excerpt": "A Lovelace card for eQ-3 MAX! radiator and wall thermostats of the eq3max integration (requires eq3max 0.8.0 and Home Assistant 2026.8 or newer). Ring – drag to set | Tile | Settings pop-up | Week program | Current and target temperature, −/+ and the modes Manual, Auto, Comfort, Eco, Boost, Off Valve position, battery, radio reception, linked window, links, operation lock and pending commands as symbols Settings in a pop-up, without leaving the dashboard: temperatures, window, boost & valve (wall thermostat: boost & display set/current), week program and device info Three layouts: kompakt (def",
+   "fetched_at": "2026-11-21T14:45:43Z"
+  },
+  {
+   "repo": "AlphaLima/ha-entity-inventory",
+   "category": "integration",
+   "pr": 14608,
+   "pr_url": "https://github.com/hacs/default/pull/14608",
+   "title": "Adds new integration [AlphaLima/ha-entity-inventory]",
+   "state": "open",
+   "submitter": "AlphaLima",
+   "created_at": "2026-11-20T23:13:20Z",
+   "updated_at": "2026-11-20T23:13:27Z",
+   "repo_status": "ok",
+   "description": "All Home Assistant entities at a glance – by type, with photos, documents and print",
+   "topics": [
+    "csv-export",
+    "customcomponents",
+    "dashboard",
+    "documentation",
+    "entities",
+    "hacs",
+    "home-assistant",
+    "homeassistant",
+    "pdf-generation",
+    "printing",
+    "sidebar"
+   ],
+   "stars": 0,
+   "pushed_at": "2026-11-21T13:30:20Z",
+   "homepage": "",
+   "readme_excerpt": "Entity Inventory for Home Assistant One overview of every entity in your smart home, sorted by type – with live values, units, read / write access, photos, documents, comments and a printable documentation. Made for installations with thousands of entities, where nobody remembers any more which sensor measures what, where it sits and which contract or manual belongs to it. Deutsche Bedienungsanleitung: siehe unten. Sister project of Device Inventory: the same look, the same column editor, the same print layout, the same phone behaviour – Device Inventory lists the devices, Entity Inventory lis",
+   "domain": "entity_inventory",
+   "name": "Entity Inventory",
+   "iot_class": "calculated",
+   "version": "0.3.2b6",
+   "fetched_at": "2026-11-21T14:45:43Z"
+  },
+  {
+   "repo": "adkulik/ha-birdfy",
+   "category": "integration",
+   "pr": 14607,
+   "pr_url": "https://github.com/hacs/default/pull/14607",
+   "title": "Adds new integration [adkulik/ha-birdfy]",
+   "state": "open",
+   "submitter": "adkulik",
+   "created_at": "2026-11-20T23:00:17Z",
+   "updated_at": "2026-11-20T23:08:19Z",
+   "repo_status": "ok",
+   "description": "Home Assistant integration for Birdfy bird feeder cameras: bird visit events and species",
+   "topics": [
+    "birdfy",
+    "hacs",
+    "hacs-integration",
+    "home-assistant"
+   ],
+   "stars": 0,
+   "pushed_at": "2026-11-20T23:16:27Z",
+   "homepage": "",
+   "readme_excerpt": "A Home Assistant integration for Birdfy bird feeder cameras (made by Netvue). It brings bird visits into Home Assistant: which species visited, when, a photo, a daily count, and a live view of the camera. Status: early test version (0.5), tested on a Birdfy Cam 2 Pro. The Birdfy cloud API is not public; this integration uses what the community has reverse-engineered. It has not yet been confirmed on every Birdfy model. For each camera on the account: event. birdvisit | Fires on every new bird visit. Attributes: species (main species), speciesen (English name), specieslist, birdcount, confidenc",
+   "domain": "birdfy",
+   "name": "Birdfy",
+   "iot_class": "cloud_polling",
+   "version": "0.5.1",
+   "fetched_at": "2026-11-21T14:45:44Z"
+  },
+  {
+   "repo": "GONilsen/TriGON",
+   "category": "integration",
+   "pr": 14606,
+   "pr_url": "https://github.com/hacs/default/pull/14606",
+   "title": "Adds new integration [GONilsen/TriGON]",
+   "state": "open",
+   "submitter": "GONilsen",
+   "created_at": "2026-11-20T22:58:58Z",
+   "updated_at": "2026-11-20T22:59:03Z",
+   "repo_status": "ok",
+   "description": "Indoor room-level and x/y positioning for Home Assistant, built on Bermuda BLE – trilateration + fingerprinting with a floor plan editor.",
+   "topics": [
+    "bermuda",
+    "ble",
+    "bluetooth",
+    "custom-component",
+    "hacs",
+    "hacs-integration",
+    "home-assistant",
+    "homeassistant",
+    "indoor-positioning",
+    "presence-detection",
+    "trilateration"
+   ],
+   "stars": 0,
+   "pushed_at": "2026-11-21T09:32:20Z",
+   "homepage": "",
+   "readme_excerpt": "Indoor positioning for Home Assistant Floor, room and x/y position for every person – built on Bermuda BLE data and your own floor plan. Bermuda tells you which area a phone is closest to. TriGON goes a step further and works out where in the house the phone is: Trilateration – distances from every Bluetooth proxy that hears the phone are combined (weighted least squares in 3D, with proxy heights and floor levels), so the position is not just \"nearest proxy\". Fingerprinting – stand still for 20 seconds at a few known spots per room. TriGON learns what the signal looks like there and blends thi",
+   "domain": "trigon",
+   "name": "TriGON",
+   "iot_class": "local_polling",
+   "version": "0.9.3",
+   "fetched_at": "2026-11-21T14:45:45Z"
+  },
+  {
+   "repo": "Fab29-690/ha-shutter-pilot",
+   "category": "integration",
+   "pr": 14605,
+   "pr_url": "https://github.com/hacs/default/pull/14605",
+   "title": "Adds new integration [Fab29-690/ha-shutter-pilot]",
+   "state": "open",
+   "submitter": "Fab29-690",
+   "created_at": "2026-11-20T22:57:19Z",
+   "updated_at": "2026-11-20T22:57:28Z",
+   "repo_status": "ok",
+   "description": "Smart shutter/cover automation for Home Assistant: time profiles, astro, sun protection, window contacts, alarms – with sidebar panel.",
+   "topics": [
+    "hacs",
+    "home-assistant-custom-component",
+    "home-assistant-integration",
+    "home-automation"
+   ],
+   "stars": 0,
+   "pushed_at": "2026-11-20T22:53:53Z",
+   "homepage": "",
+   "readme_excerpt": "Automatic shutter, blind and awning control for Home Assistant – time profiles, sunrise/sunset, golden hour, sun protection by sun position and temperature, window contacts with lockout protection, alarms (fire, rain, wind, frost), holidays and vacations – all configured in a Inspired by the excellent ioBroker adapter shuttercontrol, rebuilt natively for Home Assistant. Time profiles | Three areas (living, sleeping, children) with workday and weekend times. Fixed time, sunrise/sunset or golden hour, always limited by an earliest/latest opening and a latest closing time. Friday closes with week",
+   "domain": "shutter_pilot",
+   "name": "Shutter Pilot",
+   "iot_class": "calculated",
+   "version": "1.0.0",
+   "fetched_at": "2026-11-21T14:45:45Z"
+  },
+  {
+   "repo": "moelolinet/kuangyuan_gas",
+   "category": "integration",
+   "pr": 14602,
+   "pr_url": "https://github.com/hacs/default/pull/14602",
+   "title": "Adds new integration [moelolinet/kuangyuan_gas]",
+   "state": "open",
+   "submitter": "moelolinet",
+   "created_at": "2026-11-20T22:26:46Z",
+   "updated_at": "2026-11-20T22:36:41Z",
+   "repo_status": "ok",
+   "description": "Home Assistant integration for Kuangyuan Energy gas balance, usage and recharge history (read-only)",
+   "topics": [
+    "custom-component",
+    "gas",
+    "hacs",
+    "hacs-integration",
+    "home-assistant",
+    "homeassistant",
+    "integration",
+    "utility"
+   ],
+   "stars": 0,
+   "pushed_at": "2026-11-20T21:39:04Z",
+   "homepage": "",
+   "readme_excerpt": "Home Assistant integration for the Kuangyuan Energy customer portal Read the gas balance, cumulative usage, locally computed daily/monthly usage and recharge history of every meter bound to your Kuangyuan Energy online account (www.kynyyyt.com) directly in Home Assistant. This integration only calls the read-only endpoints of the portal (login, meter list, balance query, recharge history). It never starts a payment, a recharge, a phone-number change or a meter removal. Multiple accounts: every account is its own config entry with its own credentials and settings Choose which meters (户号) to exp",
+   "domain": "kuangyuan_gas",
+   "name": "Kuangyuan Gas",
+   "iot_class": "cloud_polling",
+   "version": "1.2.3",
+   "fetched_at": "2026-11-21T14:45:46Z"
+  },
+  {
+   "repo": "moelolinet/tuqiangol_fuel",
+   "category": "integration",
+   "pr": 14601,
+   "pr_url": "https://github.com/hacs/default/pull/14601",
+   "title": "Adds new integration [moelolinet/tuqiangol_fuel]",
+   "state": "open",
+   "submitter": "moelolinet",
+   "created_at": "2026-11-20T22:26:44Z",
+   "updated_at": "2026-11-20T22:36:34Z",
+   "repo_status": "ok",
+   "description": "Home Assistant integration for Tuqiangol fuel circuit control (cut / restore)",
+   "topics": [
+    "custom-component",
+    "gps-tracker",
+    "hacs",
+    "hacs-integration",
+    "home-assistant",
+    "homeassistant",
+    "integration",
+    "vehicle"
+   ],
+   "stars": 0,
+   "pushed_at": "2026-11-20T21:39:01Z",
+   "homepage": "",
+   "readme_excerpt": "Home Assistant integration for the fuel relay of Tuqiangol GPS trackers Control the external relay fuel circuit of Tuqiangol (tuqiangol.com) GPS trackers directly from Home Assistant. One feature only: cut the fuel circuit / restore it. Per-device parameters that never affect each other Switch icon follows the actual fuel circuit state Optional state inversion, per device Dedicated domain, so it does not clash with other integrations No third-party dependencies Each enabled device creates one switch. off | Fuel circuit restored | With invert enabled the meaning is reversed. 1. HACS → ⋮ → Custo",
+   "domain": "tuqiangol_fuel",
+   "name": "Tuqiangol Fuel",
+   "iot_class": "cloud_polling",
+   "version": "1.1.4",
+   "fetched_at": "2026-11-21T14:45:47Z"
+  },
+  {
+   "repo": "sobelman/ha-smartgrade",
+   "category": "integration",
+   "pr": 14600,
+   "pr_url": "https://github.com/hacs/default/pull/14600",
+   "title": "Add sobelman/ha-smartgrade",
+   "state": "open",
+   "submitter": "sobelman",
+   "created_at": "2026-11-20T21:57:09Z",
+   "updated_at": "2026-11-20T22:34:13Z",
+   "repo_status": "ok",
+   "description": "Unofficial Home Assistant integration for SmartGrade Secure (IoTech Verticals / Dealor) Wi-Fi switches and boiler controllers — cloud-based, installable via HACS.",
+   "topics": [
+    "custom-component",
+    "dealor",
+    "hacs",
+    "home-assistant",
+    "homeassistant",
+    "homeassistant-integration",
+    "iotech",
+    "israel",
+    "smart-switch",
+    "smartgrade",
+    "water-heater"
+   ],
+   "stars": 0,
+   "pushed_at": "2026-11-21T11:59:57Z",
+   "homepage": "https://github.com/sobelman/ha-smartgrade",
+   "readme_excerpt": "SmartGrade Secure ל-Home Assistant שליטה וניטור של המפסקים החכמים של SmartGrade (IoTech Verticals / דילאור) מתוך Home Assistant. זוהי אינטגרציה לא-רשמית שנבנתה על ידי הקהילה. היא אינה קשורה ל-IoTech Verticals או לדילאור, ואינה נתמכת או מאושרת על ידן. ראו הסתייגות. SmartGrade Secure היא האפליקציה (אנדרואיד/iOS) של המפסקים החכמים מבוססי Wi-Fi של IoTech Verticals, שנמכרים בישראל על ידי דילאור. המוצר המוכר ביותר הוא המתג החכם לדוד עם פאנל מגע מזכוכית. המכשירים מדברים רק עם הענן של היצרן, ואין להם ממשק מקומי. האינטגרציה (domain: smartgrade) מתחברת לאותו ענן שהאפליקציה משתמשת בו, עם מספר הטלפון שלך ",
+   "domain": "smartgrade",
+   "name": "SmartGrade Secure (unofficial)",
+   "iot_class": "cloud_polling",
+   "version": "0.2.0",
+   "fetched_at": "2026-11-21T14:45:47Z"
+  },
+  {
+   "repo": "dabo53ck/patchmon-hass",
+   "category": "integration",
+   "pr": 14599,
+   "pr_url": "https://github.com/hacs/default/pull/14599",
+   "title": "Adds new integration [dabo53ck/patchmon-hass]",
+   "state": "open",
+   "submitter": "dabo53ck",
+   "created_at": "2026-11-20T21:09:37Z",
+   "updated_at": "2026-11-20T21:09:37Z",
+   "repo_status": "ok",
+   "description": "Read-only Home Assistant integration for PatchMon: patch status, security updates and required restarts of your hosts",
+   "topics": [
+    "hacs",
+    "hacs-integration",
+    "home-assistant",
+    "home-assistant-integration",
+    "homeassistant",
+    "linux-updates",
+    "patch-management",
+    "patchmon"
+   ],
+   "stars": 0,
+   "pushed_at": "2026-11-20T21:07:14Z",
+   "homepage": "",
+   "readme_excerpt": "PatchMon for Home Assistant An unofficial, read-only Home Assistant integration for PatchMon: see the patch status of every host PatchMon monitors (pending and security updates, required restarts, agent check-ins) in Home Assistant. This project is not affiliated with or endorsed by the PatchMon project. The integration only uses the official PatchMon Integration API with the host:get permission. It never patches hosts, approves updates or deletes anything, and it never asks for more than host:get. Home Assistant 2026.9.0 or newer PatchMon 2.x server reachable from Home Assistant Create an API",
+   "domain": "patchmon_hass",
+   "name": "PatchMon",
+   "iot_class": "local_polling",
+   "version": "0.1.0",
+   "fetched_at": "2026-11-21T14:45:48Z"
+  },
+  {
+   "repo": "seb5594/hass-escpos-thermal-printing-designer-integration",
+   "category": "integration",
+   "pr": 14598,
+   "pr_url": "https://github.com/hacs/default/pull/14598",
+   "title": "Add seb5594/hass-escpos-thermal-printing-designer-integration",
+   "state": "open",
+   "submitter": "seb5594",
+   "created_at": "2026-11-20T20:05:52Z",
+   "updated_at": "2026-11-20T20:05:52Z",
+   "repo_status": "ok",
+   "description": "Design and print labels, shopping lists, QR codes and notes on ESC/POS thermal printers – with a Material designer panel for Home Assistant.",
+   "topics": [
+    "escpos",
+    "escpos-designer",
+    "hacs-custom-component",
+    "hacs-integration",
+    "home-assistant",
+    "home-assistant-custom-component",
+    "home-assistant-frontend",
+    "home-assistant-hacs",
+    "label-designer",
+    "label-maker",
+    "label-printer",
+    "lovelace",
+    "lovelace-ui",
+    "qr-code",
+    "receipt-printer",
+    "shopping-list",
+    "thermal-printer",
+    "todo",
+    "todo-list"
+   ],
+   "stars": 0,
+   "pushed_at": "2026-11-20T22:20:55Z",
+   "homepage": "https://seb5594.github.io/hass-escpos-thermal-printing-designer-integration/",
+   "readme_excerpt": "ESC/POS Thermal Printer Designer ▶ Try the live demo – the real designer in your browser, no installation needed. Nothing is printed there; \"Print\" saves a PNG. Design labels, shopping lists, QR codes, best-before stickers and love letters in a modern web designer inside Home Assistant, and print them on your ESC/POS thermal printers. 🎨 A real designer in your sidebar. Material 3 interface that follows your Home Assistant theme, light or dark, on desktop, tablet and phone. 👀 WYSIWYG preview. The preview is rendered by the same engine that prints, so what you see is what comes out of the printe",
+   "domain": "escpos_designer",
+   "name": "ESC/POS Thermal Printer Designer",
+   "iot_class": "calculated",
+   "version": "2026.11.20.1",
+   "fetched_at": "2026-11-21T14:45:49Z"
+  },
+  {
+   "repo": "narcisbodea/hass-smstunnel",
+   "category": "integration",
+   "pr": 14597,
+   "pr_url": "https://github.com/hacs/default/pull/14597",
+   "title": "Adds new integration [narcisbodea/hass-smstunnel]",
+   "state": "open",
+   "submitter": "narcisbodea",
+   "created_at": "2026-11-20T19:56:42Z",
+   "updated_at": "2026-11-20T19:56:49Z",
+   "repo_status": "ok",
+   "description": "Send texts from Home Assistant through your own Android phone and SIM. They reach any phone, even one with no mobile data or app.",
+   "topics": [
+    "hacs",
+    "home-assistant",
+    "home-automation",
+    "homeassistant",
+    "integration",
+    "notifications",
+    "sms",
+    "smstunnel"
+   ],
+   "stars": 0,
+   "pushed_at": "2026-11-20T19:55:17Z",
+   "homepage": "https://smstunnel.io/integrations/home-assistant/",
+   "readme_excerpt": "SMSTunnel for Home Assistant Send SMS from Home Assistant through your own Android phone, using your own SIM card. No per-message fees and no SMS provider in between: the phone you already own sends the texts, from your number. And a text reaches the person you alert even when their phone has no mobile data and no app. Why this fits Home Assistant Push notifications can fail when you need them most: no data connection, battery saver, an app the phone's system has closed. A text needs none of that on the receiving phone. Home Assistant and the phone that sends still need to reach SMSTunnel over",
+   "domain": "smstunnel",
+   "name": "SMSTunnel",
+   "iot_class": "cloud_push",
+   "version": "1.0.2",
+   "fetched_at": "2026-11-21T14:45:50Z"
+  },
+  {
+   "repo": "getaivi/home-assistant",
+   "category": "integration",
+   "pr": 14596,
+   "pr_url": "https://github.com/hacs/default/pull/14596",
+   "title": "Adds new integration [getaivi/home-assistant]",
+   "state": "open",
+   "submitter": "kjagiello",
+   "created_at": "2026-11-20T19:40:50Z",
+   "updated_at": "2026-11-20T19:42:39Z",
+   "repo_status": "ok",
+   "description": "Show Home Assistant entities in iPhone widgets and Live Activities with the Aivi app",
+   "topics": [
+    "aivi",
+    "hacs",
+    "hacs-integration",
+    "home-assistant",
+    "home-assistant-custom-component",
+    "homeassistant-integration",
+    "ios",
+    "ios-widgets",
+    "iphone",
+    "live-activities",
+    "widgets"
+   ],
+   "stars": 0,
+   "pushed_at": "2026-11-01T16:10:21Z",
+   "homepage": "https://docs.getaivi.app/home-assistant/integration/",
+   "readme_excerpt": "Show your Home Assistant entities in iPhone widgets and Live Activities, Design a widget in the app, choose the entities that feed it in the Aivi panel in Home Assistant, and it stays up to date. No YAML, no automations. Home Assistant 2025.4 or newer, with HACS The Aivi app on an iPhone (iOS 26 for widgets, iOS 18.4 for Live Activities) An Aivi subscription: $2.99 a month or $23.99 a year, The integration itself is free and open source. It needs no Home Assistant Cloud, remote access or open port. setup step by step, Live Activities, buttons on your Home Screen, troubleshooting and removal. 1",
+   "domain": "aivi",
+   "name": "Aivi",
+   "iot_class": "cloud_push",
+   "version": "0.1.0",
+   "fetched_at": "2026-11-21T14:45:50Z"
+  },
+  {
+   "repo": "fabioscarparo/ha-nnounce",
+   "category": "integration",
+   "pr": 14595,
+   "pr_url": "https://github.com/hacs/default/pull/14595",
+   "title": "Adds new integration [fabioscarparo/ha-nnounce]",
+   "state": "open",
+   "submitter": "fabioscarparo",
+   "created_at": "2026-11-20T19:27:52Z",
+   "updated_at": "2026-11-20T19:28:02Z",
+   "repo_status": "ok",
+   "description": "Record your voice from your phone or browser and play it on your Home Assistant speakers: Google Home, Nest, Sonos, ESPHome and more.",
+   "topics": [
+    "announcements",
+    "esphome",
+    "google-cast",
+    "google-home",
+    "hacs",
+    "hacs-integration",
+    "home-assistant",
+    "home-assistant-custom-component",
+    "homeassistant",
+    "intercom",
+    "lovelace-custom-card",
+    "sonos",
+    "voice-messages"
+   ],
+   "stars": 21,
+   "pushed_at": "2026-11-21T12:24:45Z",
+   "homepage": "",
+   "readme_excerpt": "Record your voice from your phone or browser, and play it locally on your Home Assistant speakers. HA-nnounce turns Home Assistant mediaplayer entities into a local, whole-home announcement system. Audio is recorded on your device, processed locally by Home Assistant, and delivered directly to speakers via media-source://hannounce/... with no cloud services involved. Choose the speakers, hold the microphone button, talk, and release to send. UI: Dedicated sidebar panel and custom:hannounce-card (no dashboard resource to add, visual editor, chime preview, EN/IT/DE/FR/ES/NL, light/dark themes). ",
+   "domain": "hannounce",
+   "name": "HA-nnounce",
+   "iot_class": "local_push",
+   "version": "0.2.0",
+   "fetched_at": "2026-11-21T14:45:51Z"
+  },
+  {
+   "repo": "shed-crypto/lovelace-ua-outages-card",
+   "category": "plugin",
+   "pr": 14594,
+   "pr_url": "https://github.com/hacs/default/pull/14594",
+   "title": "Adds new plugin [shed-crypto/lovelace-ua-outages-card]",
+   "state": "open",
+   "submitter": "shed-crypto",
+   "created_at": "2026-11-20T18:21:09Z",
+   "updated_at": "2026-11-20T18:21:16Z",
+   "repo_status": "ok",
+   "description": "Custom Home Assistant Lovelace cards for Ukrainian power outage schedules",
+   "topics": [
+    "dtek",
+    "hacs",
+    "home-assistant",
+    "lovelace",
+    "lovelace-card",
+    "ukraine"
+   ],
+   "stars": 0,
+   "pushed_at": "2026-11-20T17:50:59Z",
+   "homepage": "",
+   "readme_excerpt": "UA Outages Card (lovelace-ua-outages-card) Custom Home Assistant Lovelace cards for visualizing Ukrainian electricity outage schedules from ha-ua-outages (uaoutages integration) as well as third-party sensors exposing 48-slot schedules or outage interval attributes. Includes two cards in a single lightweight bundle (dist/ua-outages-card.js): 1. custom:ua-outages-card — daily operational card (today & tomorrow schedule, live local countdown, progress bar, address outage banner, and optional battery indicator). 2. custom:ua-outages-weekly-card — 7x24 weekly schedule matrix in DTEK table style wi",
+   "fetched_at": "2026-11-21T14:45:52Z"
+  },
+  {
+   "repo": "shed-crypto/ha-ua-outages",
+   "category": "integration",
+   "pr": 14593,
+   "pr_url": "https://github.com/hacs/default/pull/14593",
+   "title": "Adds new integration [shed-crypto/ha-ua-outages]",
+   "state": "open",
+   "submitter": "shed-crypto",
+   "created_at": "2026-11-20T18:13:54Z",
+   "updated_at": "2026-11-20T18:14:02Z",
+   "repo_status": "ok",
+   "description": "Multi-region Ukrainian power outage schedules (DTEK & CEK) for Home Assistant",
+   "topics": [
+    "dtek",
+    "hacs",
+    "home-assistant",
+    "power-outage",
+    "ukraine"
+   ],
+   "stars": 0,
+   "pushed_at": "2026-11-17T11:00:18Z",
+   "homepage": "",
+   "readme_excerpt": "Ukraine Power Outages (uaoutages) Multi-region Home Assistant custom integration for monitoring planned, probable, and emergency electricity outage schedules in Ukraine, built on dtek-blackout-client. 5 DTEK regions supported out of the box: kem (Kyiv city), krem (Kyiv oblast), dnem (Dnipropetrovsk oblast), dem (Donetsk oblast), and oem (Odesa oblast) Address-based or group-only monitoring: full street/building lookup (including emergency banners and external operator detection) or standalone group monitoring Blackout-resilient .storage cache: survives Home Assistant restarts without internet ",
+   "domain": "ua_outages",
+   "name": "Ukraine Power Outages",
+   "iot_class": "cloud_polling",
+   "version": "0.1.1",
+   "fetched_at": "2026-11-21T14:45:52Z"
+  },
+  {
+   "repo": "HRadhi4/Roost-Atelier",
+   "category": "integration",
+   "pr": 14591,
+   "pr_url": "https://github.com/hacs/default/pull/14591",
+   "title": "Adds new integration [HRadhi4/Roost-Atelier]",
+   "state": "open",
+   "submitter": "HRadhi4",
+   "created_at": "2026-11-20T17:47:34Z",
+   "updated_at": "2026-11-20T17:47:40Z",
+   "repo_status": "ok",
+   "description": "Build your home in realistic 3D by drag and drop, then watch it live on your Home Assistant dashboards: lights, curtains, ACs, doors and people.",
+   "topics": [
+    "3d",
+    "floor-plan",
+    "hacs",
+    "home-assistant",
+    "lovelace",
+    "threejs"
+   ],
+   "stars": 0,
+   "pushed_at": "2026-11-21T13:36:51Z",
+   "homepage": "",
+   "readme_excerpt": "Build your home in realistic 3D by drag and drop, then watch it live on your Home Assistant dashboards: lights, curtains, ACs, doors and people. Roost Atelier is a home designer that lives inside Home Assistant. You draw the rooms with your finger, drop in furniture and devices, and you get a lifelike 3D model of your home. Put that model on any dashboard and it comes alive: lamps glow and light the floor, curtains slide, doors swing open, the AC blows air, the TV plays, and the sun moves across the rooms at the real time of day. You don't need to know any design software or write code. It is ",
+   "domain": "roost_atelier",
+   "name": "Roost Atelier",
+   "iot_class": "calculated",
+   "version": "0.21.0",
+   "fetched_at": "2026-11-21T14:45:53Z"
+  },
+  {
+   "repo": "HRadhi4/Roost-card",
+   "category": "plugin",
+   "pr": 14590,
+   "pr_url": "https://github.com/hacs/default/pull/14590",
+   "title": "Adds new plugin [HRadhi4/Roost-card]",
+   "state": "open",
+   "submitter": "HRadhi4",
+   "created_at": "2026-11-20T17:27:36Z",
+   "updated_at": "2026-11-20T17:27:48Z",
+   "repo_status": "ok",
+   "description": "Beautiful, customisable dashboard cards for Home Assistant: tiles, rooms, nav bar, clock, prayer times, energy and more, in light and dark.",
+   "topics": [
+    "custom-cards",
+    "dashboard",
+    "hacs",
+    "home-assistant",
+    "home-automation",
+    "lovelace",
+    "lovelace-custom-card"
+   ],
+   "stars": 0,
+   "pushed_at": "2026-11-21T13:36:41Z",
+   "homepage": "",
+   "readme_excerpt": "A finished, app-like Home Assistant dashboard for your phone and wall tablet, without building it card by card. Ready in one tap from your own rooms and devices · real controls you drag and slide · no code Built-in cards and other card sets give you clean building blocks, and you assemble the dashboard yourself. Roost gives you the finished thing: 1 · A whole dashboard in one tap Install, open Home Assistant, tap Make them: Roost builds a phone dashboard and a tablet dashboard from your own areas and devices, and keeps them up to date as you add things. Change anything later in the visual edit",
+   "fetched_at": "2026-11-21T14:45:53Z"
+  },
+  {
+   "repo": "akentner/homeassistant-traefik-proxy-integration",
+   "category": "integration",
+   "pr": 14589,
+   "pr_url": "https://github.com/hacs/default/pull/14589",
+   "title": "Adds new integration [akentner/homeassistant-traefik-proxy-integration]",
+   "state": "open",
+   "submitter": "akentner",
+   "created_at": "2026-11-20T17:04:46Z",
+   "updated_at": "2026-11-20T17:04:54Z",
+   "repo_status": "ok",
+   "description": "Home Assistant integration exposing Traefik reverse-proxy state (routers, services, TLS certs) as entities.",
+   "topics": [
+    "hacs",
+    "hass",
+    "home-assistant",
+    "integration",
+    "traefik"
+   ],
+   "stars": 0,
+   "pushed_at": "2026-11-20T23:51:55Z",
+   "homepage": "",
+   "readme_excerpt": "Traefik Proxy for Home Assistant A custom Home Assistant integration that reads the API of a Traefik reverse proxy and shows its state as entities: which HTTP routers and services are healthy, which have problems, and which TLS certificates expire soon. It only reads; it never changes Traefik. One sensor per Traefik HTTP router and per HTTP service with the Traefik status (enabled, warning, error, disabled) or missing when the item Problem binary sensors for routers, services, middlewares and certificates, enabled by default, with the names of the affected items as attributes. Certificate expi",
+   "domain": "traefik_proxy",
+   "name": "Traefik Proxy",
+   "iot_class": "local_polling",
+   "version": "1.0.1",
+   "fetched_at": "2026-11-21T14:45:54Z"
+  },
+  {
+   "repo": "ajtudela/hass-smartbox",
+   "category": "integration",
+   "pr": 14587,
+   "pr_url": "https://github.com/hacs/default/pull/14587",
+   "title": "Adds new integration [ajtudela/hass-smartbox]",
+   "state": "open",
+   "submitter": "jandado",
+   "created_at": "2026-11-20T16:35:52Z",
+   "updated_at": "2026-11-20T16:36:02Z",
+   "repo_status": "ok",
+   "description": "Home Assistant integration for Smartbox/Helki heating systems from Haverland, Lucht LHZ, Elnur, Climastar, Technotherm, Electrorad, iHeat, Valderoma, HJM, Perry, Tevolve, SmartControl, and Electric Heating Company.",
+   "topics": [
+    "climastar",
+    "climate",
+    "electric-heating-company",
+    "electrorad",
+    "elnur-gabarron",
+    "hacs",
+    "haverland",
+    "helki",
+    "hjm",
+    "home-assistant",
+    "home-automation",
+    "iheater",
+    "lucht-lhz",
+    "perry",
+    "smartbox",
+    "technotherm",
+    "tevolve",
+    "valderoma"
+   ],
+   "stars": 14,
+   "pushed_at": "2026-11-20T15:10:25Z",
+   "homepage": "",
+   "readme_excerpt": "Home Assistant integration for Haverland (and other brands) heating smartboxes. Home Assistant 2026.5.0 or newer. A Smartbox account with one of the supported resellers. HACS for the recommended installation; the manual route works without it. The setup flow offers these providers. The link identifies the brand/account; most providers dial the shared API host (users-api.helki.com), Elnur dials api-elnur.helki.com, and the legacy EHC app stays on its own host, so the link is not the integration's endpoint. Several names share a tenant/backend with another brand, as noted. Brand | Provider link ",
+   "domain": "smartbox",
+   "name": "Smartbox",
+   "iot_class": "cloud_push",
+   "version": "3.2.1",
+   "fetched_at": "2026-11-21T14:45:55Z"
+  },
+  {
+   "repo": "gazoodle/casa-mia-tablet-layout",
+   "category": "plugin",
+   "pr": 14586,
+   "pr_url": "https://github.com/hacs/default/pull/14586",
+   "title": "Adds new plugin [gazoodle/casa-mia-tablet-layout]",
+   "state": "open",
+   "submitter": "gazoodle",
+   "created_at": "2026-11-20T15:59:04Z",
+   "updated_at": "2026-11-20T15:59:04Z",
+   "repo_status": "ok",
+   "description": "A Home Assistant view that fits the screen exactly. No scrolling, nothing hanging off the edge, on any tablet or desktop, in portrait or landscape. On a phone it becomes Home Assistant's own sections view instead (see On a phone).",
+   "topics": [
+    "dashboard",
+    "hacs",
+    "home-assistant",
+    "lovelace"
+   ],
+   "stars": 0,
+   "pushed_at": "2026-11-20T15:50:57Z",
+   "homepage": "",
+   "readme_excerpt": "A Home Assistant view that fits the screen exactly. No scrolling, nothing hanging off the edge, on any tablet or desktop, in portrait or landscape. On a phone it becomes Home Assistant's own sections view instead (see On a phone). Maturity: Beta. Complete and used every day; its features have settled. Please report what breaks in your setup. (The levels) It is Home Assistant's own Sections view, so the header, footer, badges, sections, cards, visibility conditions and card editors all work as you know them. What it adds is the arrangement: its sections become panels round a main panel, sized t",
+   "fetched_at": "2026-11-21T14:45:55Z"
+  },
+  {
+   "repo": "forreggbor/ha-GlowStat",
+   "category": "plugin",
+   "pr": 14585,
+   "pr_url": "https://github.com/hacs/default/pull/14585",
+   "title": "Adds new plugin [forreggbor/ha-GlowStat]",
+   "state": "open",
+   "submitter": "forreggbor",
+   "created_at": "2026-11-20T15:53:30Z",
+   "updated_at": "2026-11-20T15:53:38Z",
+   "repo_status": "ok",
+   "description": "Glowing, compact Home Assistant dashboard cards for thermometers and climate control – live state-colored backgrounds, sparkline, playful weather emoji, GUI editor included.",
+   "topics": [
+    "climate",
+    "custom-card",
+    "dashboard",
+    "hacs",
+    "home-assistant",
+    "lovelace",
+    "lovelace-card",
+    "temperature",
+    "thermostat"
+   ],
+   "stars": 0,
+   "pushed_at": "2026-11-20T18:25:59Z",
+   "homepage": "",
+   "readme_excerpt": "Compact, glowing Home Assistant dashboard cards for thermometers, heating and air conditioners. The background and the accents take the color of the current state, and everything is set up from the dashboard editor, no YAML Thermometer | Climate: heating | Thermometer, Hungarian texts | Climate: air conditioner | custom:glowstat-thermometer-card Temperature with a state-colored glow, humidity, battery, a temperature scale, a history graph, a trend arrow and an animated emoji in the background that follows the temperature (a penguin below 10 °C, a flame above 30 °C). Tapping the humidity or bat",
+   "fetched_at": "2026-11-21T14:45:56Z"
+  },
   {
    "repo": "pietroguidetti02/ha-home-wrapped",
    "category": "integration",
@@ -774,10 +2360,10 @@
    "pr": 14551,
    "pr_url": "https://github.com/hacs/default/pull/14551",
    "title": "Adds new integration [rubo77/homeassistant-apps]",
-   "state": "draft",
+   "state": "open",
    "submitter": "rubo77",
    "created_at": "2026-11-20T05:05:28Z",
-   "updated_at": "2026-11-20T14:01:23Z",
+   "updated_at": "2026-11-21T01:36:10Z",
    "repo_status": "ok",
    "description": "App store for Home Assistant Core — installs add-ons without Home Assistant OS",
    "topics": [
@@ -788,14 +2374,14 @@
     "homeassistant-addons"
    ],
    "stars": 1,
-   "pushed_at": "2026-11-20T05:04:08Z",
+   "pushed_at": "2026-11-21T00:15:07Z",
    "homepage": "",
    "readme_excerpt": "An app store for Home Assistant Core on Debian/Ubuntu/Raspbian. No Home Assistant OS required. It browses the official home-assistant/addons and hassio-addons/repository catalogs and installs add-ons on your existing Home Assistant Core instance. Made for HA Core installs (hass in a venv, systemd unit) where the built-in \"Apps\" section is missing. Sidebar panel \"Apps\" inside Home Assistant: catalog, search, per-app detail page with inline docs, ports, options and download Tag, install-status and installable-only filters; the filter state and active tags persist across panel reloads. Install/Up",
    "domain": "ha_apps",
    "name": "HA Apps",
    "iot_class": "local_polling",
-   "version": "0.2.27",
-   "fetched_at": "2026-11-20T15:34:42Z"
+   "version": "0.2.30",
+   "fetched_at": "2026-11-21T14:45:56Z"
   },
   {
    "repo": "mb26-dev/ha-magmarium",
@@ -954,10 +2540,10 @@
    "pr": 14545,
    "pr_url": "https://github.com/hacs/default/pull/14545",
    "title": "Adds new integration [moelolinet/kuangyuan_gas]",
-   "state": "open",
+   "state": "closed",
    "submitter": "moelolinet",
    "created_at": "2026-11-20T00:06:27Z",
-   "updated_at": "2026-11-20T13:54:16Z",
+   "updated_at": "2026-11-20T22:23:58Z",
    "repo_status": "ok",
    "description": "Home Assistant integration for Kuangyuan Energy gas balance, usage and recharge history (read-only)",
    "topics": [
@@ -971,14 +2557,14 @@
     "utility"
    ],
    "stars": 0,
-   "pushed_at": "2026-11-20T00:03:36Z",
+   "pushed_at": "2026-11-20T21:39:04Z",
    "homepage": "",
    "readme_excerpt": "Home Assistant integration for the Kuangyuan Energy customer portal Read the gas balance, cumulative usage, locally computed daily/monthly usage and recharge history of every meter bound to your Kuangyuan Energy online account (www.kynyyyt.com) directly in Home Assistant. This integration only calls the read-only endpoints of the portal (login, meter list, balance query, recharge history). It never starts a payment, a recharge, a phone-number change or a meter removal. Multiple accounts: every account is its own config entry with its own credentials and settings Choose which meters (户号) to exp",
    "domain": "kuangyuan_gas",
    "name": "Kuangyuan Gas",
    "iot_class": "cloud_polling",
-   "version": "1.2.2",
-   "fetched_at": "2026-11-20T15:34:44Z"
+   "version": "1.2.3",
+   "fetched_at": "2026-11-21T14:46:32Z"
   },
   {
    "repo": "seb5594/hass-google_translator-integration",
@@ -989,7 +2575,7 @@
    "state": "open",
    "submitter": "seb5594",
    "created_at": "2026-11-19T23:56:26Z",
-   "updated_at": "2026-11-20T13:46:14Z",
+   "updated_at": "2026-11-20T18:09:10Z",
    "repo_status": "ok",
    "description": "Google Translator for Home Assistant",
    "topics": [
@@ -1007,14 +2593,14 @@
     "translator"
    ],
    "stars": 0,
-   "pushed_at": "2026-11-20T00:15:50Z",
+   "pushed_at": "2026-11-21T11:27:43Z",
    "homepage": "",
    "readme_excerpt": "Use Google Translate from anywhere in Home Assistant: translate texts and structured files from automations, scripts, dashboards or other integrations, and keep an eye on how many characters you have used this month. It works without an account, and with an API key for the official Cloud Translation API if you want a service with a contract. It is the counterpart of DeepL Translator and answers in the same shape, so the Custom Integration Translator can use either of them, or both. googletranslator.translatetext: one or many texts in, translations out. The result is returned to the caller, so ",
    "domain": "google_translator",
    "name": "Google Translator",
    "iot_class": "cloud_polling",
    "version": "2026.11.20",
-   "fetched_at": "2026-11-20T15:34:44Z"
+   "fetched_at": "2026-11-21T14:45:57Z"
   },
   {
    "repo": "moelolinet/tuqiangol_fuel",
@@ -1022,10 +2608,10 @@
    "pr": 14543,
    "pr_url": "https://github.com/hacs/default/pull/14543",
    "title": "Adds new integration [moelolinet/tuqiangol_fuel]",
-   "state": "open",
+   "state": "closed",
    "submitter": "moelolinet",
    "created_at": "2026-11-19T23:53:39Z",
-   "updated_at": "2026-11-20T13:54:13Z",
+   "updated_at": "2026-11-20T22:23:56Z",
    "repo_status": "ok",
    "description": "Home Assistant integration for Tuqiangol fuel circuit control (cut / restore)",
    "topics": [
@@ -1039,14 +2625,14 @@
     "vehicle"
    ],
    "stars": 0,
-   "pushed_at": "2026-11-19T23:50:24Z",
+   "pushed_at": "2026-11-20T21:39:01Z",
    "homepage": "",
    "readme_excerpt": "Home Assistant integration for the fuel relay of Tuqiangol GPS trackers Control the external relay fuel circuit of Tuqiangol (tuqiangol.com) GPS trackers directly from Home Assistant. One feature only: cut the fuel circuit / restore it. Per-device parameters that never affect each other Switch icon follows the actual fuel circuit state Optional state inversion, per device Dedicated domain, so it does not clash with other integrations No third-party dependencies Each enabled device creates one switch. off | Fuel circuit restored | With invert enabled the meaning is reversed. 1. HACS → ⋮ → Custo",
    "domain": "tuqiangol_fuel",
    "name": "Tuqiangol Fuel",
    "iot_class": "cloud_polling",
-   "version": "1.1.3",
-   "fetched_at": "2026-11-20T15:34:45Z"
+   "version": "1.1.4",
+   "fetched_at": "2026-11-21T14:46:33Z"
   },
   {
    "repo": "zubir2k/homeassistant-iwk",
@@ -1054,10 +2640,10 @@
    "pr": 14542,
    "pr_url": "https://github.com/hacs/default/pull/14542",
    "title": "Adds new integration [zubir2k/homeassistant-iwk]",
-   "state": "draft",
+   "state": "open",
    "submitter": "zubir2k",
    "created_at": "2026-11-19T23:50:59Z",
-   "updated_at": "2026-11-20T14:18:01Z",
+   "updated_at": "2026-11-21T03:34:58Z",
    "repo_status": "ok",
    "description": "Home Assistant integration for IWK (Indah Water Konsortium) sewerage accounts: amount due, bills, payments and bill PDFs.",
    "topics": [
@@ -1078,7 +2664,7 @@
    "name": "IWK (Indah Water)",
    "iot_class": "cloud_polling",
    "version": "0.1.1",
-   "fetched_at": "2026-11-20T15:34:45Z"
+   "fetched_at": "2026-11-21T14:45:58Z"
   },
   {
    "repo": "moelolinet/staggered-switch",
@@ -1284,7 +2870,7 @@
    "state": "merged",
    "submitter": "grotteru",
    "created_at": "2026-11-19T20:17:59Z",
-   "updated_at": "2026-11-20T13:44:08Z",
+   "updated_at": "2026-11-20T16:21:55Z",
    "repo_status": "ok",
    "description": "Home Assistant plugin to get a functional keyboard when casting dashboard with Google Cast to Nest Hub",
    "topics": [
@@ -1296,10 +2882,10 @@
     "on-screen-keyboard"
    ],
    "stars": 0,
-   "pushed_at": "2026-11-20T04:44:20Z",
+   "pushed_at": "2026-11-21T13:54:37Z",
    "homepage": "",
    "readme_excerpt": "An on-screen keyboard for Home Assistant dashboards on devices that have no usable keyboard, such as Nest Hub / Google Cast. Tap any text field (for example \"Summary\" when adding an event in a calendar card) and a keyboard appears at the bottom of the screen. Appears automatically on Google Cast. It does nothing on normal browsers and phones. Works inside dialogs and popovers, where most keyboards on top of the page fail. Follows your Home Assistant language: English, Norwegian, Danish, Swedish, Finnish, German, Dutch, French, Spanish, Italian, Portuguese, Polish and Russian. Unsupported langu",
-   "fetched_at": "2026-11-20T15:36:11Z"
+   "fetched_at": "2026-11-21T14:46:33Z"
   },
   {
    "repo": "raine-works/ha-warden",
@@ -1345,7 +2931,7 @@
    "state": "open",
    "submitter": "JoeRu",
    "created_at": "2026-11-19T19:51:29Z",
-   "updated_at": "2026-11-19T22:00:28Z",
+   "updated_at": "2026-11-20T17:37:47Z",
    "repo_status": "ok",
    "description": "Live (1 s) inverter and grid-meter values from an LG ESS over HTTP/JSON - for Home Assistant and evcc",
    "topics": [
@@ -1364,7 +2950,7 @@
    "name": "LG ESS Live",
    "iot_class": "local_polling",
    "version": "0.2.2",
-   "fetched_at": "2026-11-20T15:34:47Z"
+   "fetched_at": "2026-11-21T14:45:58Z"
   },
   {
    "repo": "alidonet/ha-royal-clima-card",
@@ -1825,7 +3411,7 @@
    "state": "draft",
    "submitter": "MithUK1",
    "created_at": "2026-11-19T15:35:27Z",
-   "updated_at": "2026-11-19T21:37:54Z",
+   "updated_at": "2026-11-21T01:04:01Z",
    "repo_status": "ok",
    "description": "Home Assistant integration that adds divider, spacer, section and web link rows to the Entities card as entities you pick from the list.",
    "topics": [
@@ -1835,14 +3421,14 @@
     "lovelace"
    ],
    "stars": 0,
-   "pushed_at": "2026-11-19T15:32:00Z",
+   "pushed_at": "2026-11-21T00:50:12Z",
    "homepage": "",
-   "readme_excerpt": "Entity Extras adds the extra row types of the Entities card as real entities. Pick Divider from the entity list in the dashboard editor and you get the same result Entity | Same as | Set up on the row | ee.divider | type: divider | Nothing to set up | ee.spacer | An empty gap between rows | Nothing to set up | ee.section | type: section | Heading text | ee.weblink | type: weblink | Text, URL and icon | All entities use the ee. prefix, so typing ee in the entity picker filters down to them. You can add the same entity as many times as you like. Here is how they look in an Entities card: 1. Open",
+   "readme_excerpt": "Entity Extras adds the extra row types of the Entities card as real entities. Pick Divider from the entity list in the dashboard editor and you get the same result Entity | Same as | Set up on the row | sensor.divider | type: divider | Nothing to set up | sensor.spacer | An empty gap between rows | Nothing to set up | sensor.section | type: section | Heading text | sensor.weblink | type: weblink | Text, URL and icon | Search the entity picker for Divider, Spacer, Section or Web link to find them. You can add the same entity as many times as you like. If you already had an entity with one of th",
    "domain": "entity_extras",
    "name": "Entity Extras",
    "iot_class": "calculated",
-   "version": "1.0.0",
-   "fetched_at": "2026-11-20T15:34:49Z"
+   "version": "1.1.0",
+   "fetched_at": "2026-11-21T14:45:59Z"
   },
   {
    "repo": "Type7178/ha-kursometr",
@@ -1853,7 +3439,7 @@
    "state": "merged",
    "submitter": "Type7178",
    "created_at": "2026-11-19T15:33:55Z",
-   "updated_at": "2026-11-20T13:30:40Z",
+   "updated_at": "2026-11-20T17:28:13Z",
    "repo_status": "ok",
    "description": "Небольшая интеграция для Home Assistant, которая позволяет видеть курсы любых валют в вашем HA (создает сенсоры). Данные берет из API ЦБ РФ.",
    "topics": [
@@ -1879,14 +3465,14 @@
     "russian-language"
    ],
    "stars": 0,
-   "pushed_at": "2026-11-20T08:54:33Z",
+   "pushed_at": "2026-11-20T18:39:46Z",
    "homepage": "https://type7178.github.io/ha-kursometr/",
-   "readme_excerpt": "Небольшая интеграция для Home Assistant, которая позволяет видеть курсы любых валют в вашем HA (создает сенсоры). Данные берет из API ЦБ РФ. Важно: часть кода интеграции создана с участием ИИ. Возможны баги. Установка с помощью Marketplace (HACS) 1. Перейдите в Настройки → Marketplace. 2. Нажмите \"Добавить по ссылке\". 3. Введите https://github.com/Type7178/ha-kursometr/ 4. Перейдите в раздел \"Просмотр\" и введите \"Курсометр\". 5. Установите интеграцию (⋮ → Установить). 6. Перед вами должно открыться окно мастера настройки. Если оно не открылось, перейдите в Настройки → Устройства и службы → Доба",
+   "readme_excerpt": "Небольшая интеграция для Home Assistant, которая позволяет видеть курсы любых валют в вашем HA (создает сенсоры). Данные берет из API ЦБ РФ. Важно: часть кода интеграции создана с участием ИИ. Возможны баги. Способ 1: Установка с помощью Marketplace (рекомендуется) 1. Перейдите в Настройки → Marketplace. 2. Нажмите \"Добавить по ссылке\". 3. Введите https://github.com/Type7178/ha-kursometr/ 4. Перейдите в раздел \"Просмотр\" и введите \"Курсометр\". 5. Установите интеграцию (⋮ → Установить). 6. Перед вами должно открыться окно мастера настройки. Если оно не открылось, перейдите в Настройки → Устройс",
    "domain": "kursometr",
    "name": "Курсометр",
    "iot_class": "cloud_polling",
-   "version": "1.0.2",
-   "fetched_at": "2026-11-20T15:36:18Z"
+   "version": "1.0.3",
+   "fetched_at": "2026-11-21T14:46:33Z"
   },
   {
    "repo": "plhery/peek-ha",
@@ -2076,7 +3662,7 @@
    "state": "open",
    "submitter": "mavksoft",
    "created_at": "2026-11-19T11:29:39Z",
-   "updated_at": "2026-11-19T21:21:57Z",
+   "updated_at": "2026-11-20T16:58:54Z",
    "repo_status": "ok",
    "description": "Integración de Home Assistant para exponer entidades a Amazon Alexa vía HassDNS Cloud — panel visual de selección, sin Nabu Casa ni YAML",
    "topics": [
@@ -2094,7 +3680,7 @@
    "name": "HassDNS Alexa",
    "iot_class": "cloud_push",
    "version": "0.1.5",
-   "fetched_at": "2026-11-20T15:34:51Z"
+   "fetched_at": "2026-11-21T14:46:00Z"
   },
   {
    "repo": "palmeXx/ha-unifi-policy-switches",
@@ -2230,7 +3816,7 @@
    "state": "draft",
    "submitter": "mousawm",
    "created_at": "2026-11-19T09:29:16Z",
-   "updated_at": "2026-11-20T06:41:33Z",
+   "updated_at": "2026-11-21T02:25:26Z",
    "repo_status": "ok",
    "description": "Interactive 3D home dashboard card for Home Assistant",
    "topics": [
@@ -2238,11 +3824,11 @@
     "lovelace",
     "marketplace"
    ],
-   "stars": 4,
-   "pushed_at": "2026-11-20T10:49:20Z",
+   "stars": 5,
+   "pushed_at": "2026-11-21T14:21:03Z",
    "homepage": "",
    "readme_excerpt": "Your home as an interactive 3D model in Home Assistant. Tap a room to see and switch what is in it. Tabs cover security, climate, energy, water, media and your home lab. 3D house: walls, windows, doors that swing open with their contact sensors, furniture, glowing lights (ceiling lights, spots, LED strips, TV backlight), AC airflow, motion pulses and lock badges. Three views: Lights, Climate and Presence. Works with no setup: without any configuration it builds a simple house from your Home Assistant areas. Draw your real floor plan in the card editor, or load your own .glb model. Panels, each",
-   "fetched_at": "2026-11-20T15:34:52Z"
+   "fetched_at": "2026-11-21T14:46:00Z"
   },
   {
    "repo": "StrausbergAutomationWorks/LiveTrackAircraft",
@@ -2253,7 +3839,7 @@
    "state": "open",
    "submitter": "LeeS773-prog",
    "created_at": "2026-11-19T09:15:19Z",
-   "updated_at": "2026-11-19T21:18:30Z",
+   "updated_at": "2026-11-21T04:46:18Z",
    "repo_status": "ok",
    "description": "Live aircraft tracking for Home Assistant. Real-time ADS-B flight positions overhead on your map. Free data, no API key.",
    "topics": [
@@ -2279,14 +3865,14 @@
     "planespotting"
    ],
    "stars": 0,
-   "pushed_at": "2026-11-19T09:05:38Z",
+   "pushed_at": "2026-11-21T09:55:28Z",
    "homepage": "",
    "readme_excerpt": "English · Deutsch · Français · Nederlands · 简体中文 · Español · Italiano · Dansk · All languages Aircraft for Home Assistant, on one map. Live Track Aircraft puts the aircraft flying over your home, or over any place in the world you choose, on your Home Assistant map: each one drawn as its own type, turned to the direction it flies, with who operates it and, when known, where it is going. It can also follow chosen aircraft and flights wherever they are, and watch for military aircraft in areas you name. Live Track Aircraft is one module of Live Track, a family of Home Assistant integrations that",
    "domain": "live_track_aircraft",
    "name": "Live Track Aircraft",
    "iot_class": "cloud_polling",
-   "version": "0.1.2",
-   "fetched_at": "2026-11-20T15:34:53Z"
+   "version": "0.1.5",
+   "fetched_at": "2026-11-21T14:46:01Z"
   },
   {
    "repo": "StrausbergAutomationWorks/LiveTrackWeather",
@@ -2294,10 +3880,10 @@
    "pr": 14500,
    "pr_url": "https://github.com/hacs/default/pull/14500",
    "title": "Adds new integration [StrausbergAutomationWorks/LiveTrackWeather]",
-   "state": "draft",
+   "state": "open",
    "submitter": "LeeS773-prog",
    "created_at": "2026-11-19T09:05:04Z",
-   "updated_at": "2026-11-19T21:29:46Z",
+   "updated_at": "2026-11-21T04:46:14Z",
    "repo_status": "ok",
    "description": "Weather alerts, storms, earthquakes, floods, wildfires and live weather for Home Assistant, on one map: NWS and MET Norway warnings, hurricanes and typhoons, USGS earthquakes and volcanoes, river floods, storm reports, and alerts and forecasts that follow your home, phones and camper.",
    "topics": [
@@ -2323,14 +3909,14 @@
     "wildfire"
    ],
    "stars": 0,
-   "pushed_at": "2026-11-19T07:05:21Z",
+   "pushed_at": "2026-11-21T04:50:34Z",
    "homepage": "",
    "readme_excerpt": "English · Deutsch · Français · Nederlands · 简体中文 · Español · Italiano · Dansk · Kalaallisut · All languages Weather alerts, storms, earthquakes, floods, wildfires, radar and live weather for Home Assistant, on one map. Live Track Weather puts official weather warnings, hurricanes and typhoons, earthquakes, volcanoes, river floods, storm and snow reports, wildfire and smoke data, marine forecasts and weather stations on your Home Assistant map, and watches your home, your family's phones and your camper for danger. Storms, earthquakes, radar and forecasts cover the whole world; the United State",
    "domain": "live_track_weather",
    "name": "Live Track Weather",
    "iot_class": "cloud_polling",
-   "version": "0.1.0",
-   "fetched_at": "2026-11-20T15:34:53Z"
+   "version": "0.1.2",
+   "fetched_at": "2026-11-21T14:46:02Z"
   },
   {
    "repo": "StrausbergAutomationWorks/LiveTrackShips",
@@ -2338,10 +3924,10 @@
    "pr": 14499,
    "pr_url": "https://github.com/hacs/default/pull/14499",
    "title": "Adds new integration [StrausbergAutomationWorks/LiveTrackShips]",
-   "state": "draft",
+   "state": "open",
    "submitter": "LeeS773-prog",
    "created_at": "2026-11-19T09:04:55Z",
-   "updated_at": "2026-11-19T21:18:31Z",
+   "updated_at": "2026-11-21T04:46:09Z",
    "repo_status": "ok",
    "description": "AIS vessel tracking for Home Assistant. Ships near you as geo_location entities on your map, from aisstream.io, Fintraffic Digitraffic or BarentsWatch.",
    "topics": [
@@ -2355,14 +3941,14 @@
     "vessel-tracking"
    ],
    "stars": 0,
-   "pushed_at": "2026-11-19T07:05:27Z",
+   "pushed_at": "2026-11-21T04:50:34Z",
    "homepage": "",
    "readme_excerpt": "English · Deutsch · Français · Nederlands · 简体中文 · Español · Italiano · Dansk · Kalaallisut · All languages Ships and boats for Home Assistant, on one map. Live Track Ships puts ships, boats and everything else that broadcasts AIS (the radio signal vessels use to say where they are) on your Home Assistant map, near you or anywhere in the world you choose. It also follows chosen vessels wherever they go, and tells your automations when a ship comes into your area or leaves it. Live Track Ships is one module of Live Track, a family of Home Assistant integrations that draw everything that moves, ",
    "domain": "live_track_ships",
    "name": "Live Track Ships",
    "iot_class": "cloud_push",
-   "version": "0.1.0",
-   "fetched_at": "2026-11-20T15:34:54Z"
+   "version": "0.1.2",
+   "fetched_at": "2026-11-21T14:46:03Z"
   },
   {
    "repo": "StrausbergAutomationWorks/LiveTrackSALT",
@@ -2373,7 +3959,7 @@
    "state": "closed",
    "submitter": "LeeS773-prog",
    "created_at": "2026-11-19T09:04:43Z",
-   "updated_at": "2026-11-19T09:15:13Z",
+   "updated_at": "2026-11-21T04:46:03Z",
    "repo_status": "ok",
    "description": "Immigration enforcement on your Home Assistant map: ICE, CBP, DHS, Military and other agencies' aircraft and ships.",
    "topics": [
@@ -2388,14 +3974,14 @@
     "map"
    ],
    "stars": 0,
-   "pushed_at": "2026-11-19T07:43:05Z",
+   "pushed_at": "2026-11-21T04:50:34Z",
    "homepage": "",
    "readme_excerpt": "English · Español · All languages Immigration enforcement for Home Assistant, on one map. Live Track SALT puts the aircraft used in immigration enforcement on your Home Assistant map wherever they fly: the aircraft of ICE, CBP and other federal agencies, the airliners that fly ICE Air charters, and state and local agencies with a sourced role in that work. It also draws every aircraft in one area you choose, and, with a free key, the Coast Guard vessels used in immigration work where that work happens. Live Track SALT is one module of Live Track, a family of Home Assistant integrations that dr",
    "domain": "live_track_salt",
    "name": "Live Track SALT",
    "iot_class": "cloud_polling",
-   "version": "0.1.0",
-   "fetched_at": "2026-11-19T15:54:56Z"
+   "version": "0.1.2",
+   "fetched_at": "2026-11-21T14:46:34Z"
   },
   {
    "repo": "StrausbergAutomationWorks/LiveTrackIntercityRail",
@@ -2403,10 +3989,10 @@
    "pr": 14497,
    "pr_url": "https://github.com/hacs/default/pull/14497",
    "title": "Adds new integration [StrausbergAutomationWorks/LiveTrackIntercityRail]",
-   "state": "draft",
+   "state": "open",
    "submitter": "LeeS773-prog",
    "created_at": "2026-11-19T09:04:35Z",
-   "updated_at": "2026-11-19T21:18:26Z",
+   "updated_at": "2026-11-21T04:45:59Z",
    "repo_status": "ok",
    "description": "Intercity and long-distance trains live on your Home Assistant map: Amtrak, VIA Rail, Brightline, VR, SJ and Sweden's railroads, Vy, Renfe, Irish Rail, NS, NSW TrainLink, V/Line, Journey Beyond, Queensland Rail Travel. One railroad per config entry. Part of Live Track.",
    "topics": [
@@ -2420,14 +4006,14 @@
     "trains"
    ],
    "stars": 0,
-   "pushed_at": "2026-11-19T08:44:01Z",
+   "pushed_at": "2026-11-21T04:50:34Z",
    "homepage": "",
    "readme_excerpt": "English · Deutsch · Français · Nederlands · 简体中文 · Español · Italiano · Dansk · Suomi · Svenska · Norsk bokmål · Gaeilge · All languages Intercity trains for Home Assistant, on one map. Live Track Intercity Rail puts every train of the intercity and long-distance railroads you choose on your Home Assistant map: where it is, its number, whether it is late by the railroad's own rule, and its next stop. Each railroad is added on its own, from its own published data. Live Track Intercity Rail is one module of Live Track, a family of Home Assistant integrations that draw everything that moves, and ",
    "domain": "live_track_intercity_rail",
    "name": "Live Track Intercity Rail",
    "iot_class": "cloud_polling",
-   "version": "0.1.1",
-   "fetched_at": "2026-11-20T15:34:55Z"
+   "version": "0.1.3",
+   "fetched_at": "2026-11-21T14:46:03Z"
   },
   {
    "repo": "StrausbergAutomationWorks/LiveTrackCommuterRail",
@@ -2435,10 +4021,10 @@
    "pr": 14496,
    "pr_url": "https://github.com/hacs/default/pull/14496",
    "title": "Adds new integration [StrausbergAutomationWorks/LiveTrackCommuterRail]",
-   "state": "draft",
+   "state": "open",
    "submitter": "LeeS773-prog",
    "created_at": "2026-11-19T09:04:22Z",
-   "updated_at": "2026-11-19T21:18:23Z",
+   "updated_at": "2026-11-21T04:45:56Z",
    "repo_status": "ok",
    "description": "Live commuter trains on your Home Assistant map, in real time: Metra, South Shore Line, Renfe Cercanias and Rodalies, VR/HSL, Vy, Flytoget, SL Pendeltag, NS Sprinter, Irish Rail, Queensland Rail, NSW TrainLink, V/Line. Part of Live Track.",
    "topics": [
@@ -2464,14 +4050,14 @@
     "train-tracking"
    ],
    "stars": 0,
-   "pushed_at": "2026-11-19T06:57:51Z",
+   "pushed_at": "2026-11-21T04:50:34Z",
    "homepage": "",
    "readme_excerpt": "English · Suomi · Svenska · Norsk bokmål · Español · Nederlands · Gaeilge · All languages Commuter trains for Home Assistant, on one map. Live Track Commuter Rail puts every train of the commuter railroads you choose on your Home Assistant map, live: where it is, its train number or line, whether it is late, and its next stop. Each railroad is added on its own, from its own open data. Live Track Commuter Rail is one module of Live Track, a family of Home Assistant integrations that draw everything that moves, and the weather it moves through, on one shared map: aircraft, ships, trains and weat",
    "domain": "live_track_commuter_rail",
    "name": "Live Track Commuter Rail",
    "iot_class": "cloud_polling",
-   "version": "0.1.4",
-   "fetched_at": "2026-11-20T15:34:56Z"
+   "version": "0.1.6",
+   "fetched_at": "2026-11-21T14:46:04Z"
   },
   {
    "repo": "papicy/aqualoop-homeassistant",
@@ -2701,10 +4287,10 @@
    "pr": 14485,
    "pr_url": "https://github.com/hacs/default/pull/14485",
    "title": "Adds new plugin [matthiasnattke/fritzdect-thermostat-card]",
-   "state": "draft",
+   "state": "open",
    "submitter": "matthiasnattke",
    "created_at": "2026-11-18T22:52:46Z",
-   "updated_at": "2026-11-19T21:01:26Z",
+   "updated_at": "2026-11-20T22:06:18Z",
    "repo_status": "ok",
    "description": "FRITZ!DECT radiator thermostat as a dial – Home Assistant card",
    "topics": [
@@ -2713,10 +4299,10 @@
     "lovelace"
    ],
    "stars": 0,
-   "pushed_at": "2026-11-19T23:43:21Z",
+   "pushed_at": "2026-11-20T22:04:22Z",
    "homepage": "",
    "readme_excerpt": "FRITZ!DECT Thermostat Card A radiator thermostat as a big dial – made for AVM FRITZ!DECT thermostats (301, 302, Comet DECT), and usable with any climate entity. Room temperature in the middle, target as an arc; the arc pulses while heating. −/+ buttons (0.5 °C steps, debounced), Comfort / Eco / Off presets with their temperatures. Chips for window open, summer mode, holiday mode and low battery. Next scheduled change (“From 18:00: Eco 17.0°”). 24-hour chart of room and target temperature. Several thermostats in one room via members. HACS (recommended): open HACS, search for FRITZ!DECT Thermost",
-   "fetched_at": "2026-11-20T15:34:56Z"
+   "fetched_at": "2026-11-21T14:46:05Z"
   },
   {
    "repo": "matthiasnattke/fritzbox-call-card",
@@ -2949,7 +4535,7 @@
    "state": "draft",
    "submitter": "krystianokris",
    "created_at": "2026-11-18T21:00:09Z",
-   "updated_at": "2026-11-19T21:33:12Z",
+   "updated_at": "2026-11-21T08:49:09Z",
    "repo_status": "ok",
    "description": "A living 3D house dashboard for Home Assistant – rooms light up, TVs glow, sky follows the sun and weather. Rooms mosaic with full room views. HACS, PL/EN.",
    "topics": [
@@ -2963,10 +4549,10 @@
     "smart-home"
    ],
    "stars": 26,
-   "pushed_at": "2026-11-19T21:32:24Z",
+   "pushed_at": "2026-11-21T09:13:55Z",
    "homepage": "https://github.com/krystianokris/living-house-card",
-   "readme_excerpt": "A living 3D house dashboard for Home Assistant. Your home as an isometric 3D picture that reacts in real time: rooms go dark when you switch the lights off, TVs glow, LED strips tint the room in their colour, the sky follows the sun and the weather – and every room opens into a beautiful control view. ▶ Live demo · 🇵🇱 Polska wersja · Configuration · Calibration · Make your own 3D house Status: beta (v0.5). It works great on the author's home – now it needs yours. Please report bugs and ideas in Issues. 💡 Real light on the picture | Every room has its own outline. Lights off → the room goes dar",
-   "fetched_at": "2026-11-20T15:34:58Z"
+   "readme_excerpt": "A living 3D house dashboard for Home Assistant. Your home as an isometric 3D picture that reacts in real time: rooms go dark when you switch the lights off, TVs glow, LED strips tint the room in their colour, the sky follows the sun and the weather – and every room opens into a beautiful control view. ▶ Live demo · 🇵🇱 Polska wersja · Configuration · Calibration · Make your own 3D house Status: beta (v0.6). It works great on the author's home – now it needs yours. Please report bugs and ideas in Issues. 💡 Real light on the picture | Every room has its own outline. Lights off → the room goes dar",
+   "fetched_at": "2026-11-21T14:46:05Z"
   },
   {
    "repo": "sibartlett/ha-solar-illuminance",
@@ -3081,7 +4667,7 @@
    "state": "merged",
    "submitter": "agapovmax",
    "created_at": "2026-11-18T18:31:08Z",
-   "updated_at": "2026-11-19T20:45:14Z",
+   "updated_at": "2026-11-20T16:18:49Z",
    "repo_status": "ok",
    "description": "HA integration for CE208/CE308",
    "topics": [
@@ -3101,7 +4687,7 @@
    "name": "Энергомера BLE (CE208/CE308)",
    "iot_class": "local_polling",
    "version": "0.5.3",
-   "fetched_at": "2026-11-20T15:36:28Z"
+   "fetched_at": "2026-11-21T14:46:35Z"
   },
   {
    "repo": "bisman-automations/ha-shared-album-mgmt",
@@ -3769,7 +5355,7 @@
    "state": "open",
    "submitter": "schlusenbaum",
    "created_at": "2026-11-18T09:24:11Z",
-   "updated_at": "2026-11-19T20:21:28Z",
+   "updated_at": "2026-11-20T17:05:07Z",
    "repo_status": "ok",
    "description": "Einbruchmeldeanlage für Home Assistant – Alarmprofile, Auslöseregeln, Keypads, Sirenen mit Brandsperre, Testmodus. Intrusion alarm for Home Assistant (beta).",
    "topics": [
@@ -3784,14 +5370,14 @@
     "zigbee2mqtt"
    ],
    "stars": 0,
-   "pushed_at": "2026-11-20T15:31:00Z",
+   "pushed_at": "2026-11-21T13:33:15Z",
    "homepage": "",
-   "readme_excerpt": "Einbruchmeldeanlage für Home Assistant – frei definierbare Alarmprofile, Auslöseregeln wie „Tür, dann Keller“, Benutzer mit PIN und RFID-Karte, Zigbee-Keypads, Sirenen mit Brandsperre und ein Testmodus, in dem garantiert keine Sirene losgeht. Und weil Hauswacht alles, was es weiß, als Entitäten, Attribute und Ereignisse bereitstellt, verbindest du es mit allem, was Home Assistant kann – Licht, Kameras, Rollläden, Heizung, Lautsprecher. Status: 0.58.2 – Beta. Im eigenen Haus im Einsatz; Rückmeldungen sind ausdrücklich erwünscht. Die echte Sirenenansteuerung ist nach der Installation gesperrt un",
+   "readme_excerpt": "Einbruchmeldeanlage für Home Assistant – frei definierbare Alarmprofile, Auslöseregeln wie „Tür, dann Keller“, Benutzer mit PIN und RFID-Karte, Zigbee-Keypads, Sirenen mit Brandsperre und ein Testmodus, in dem garantiert keine Sirene losgeht. Und weil Hauswacht alles, was es weiß, als Entitäten, Attribute und Ereignisse bereitstellt, verbindest du es mit allem, was Home Assistant kann – Licht, Kameras, Rollläden, Heizung, Lautsprecher. Status: 0.58.3 – Beta. Im eigenen Haus im Einsatz; Rückmeldungen sind ausdrücklich erwünscht. Die echte Sirenenansteuerung ist nach der Installation gesperrt un",
    "domain": "hauswacht",
    "name": "Hauswacht",
    "iot_class": "calculated",
-   "version": "0.58.2",
-   "fetched_at": "2026-11-20T15:35:03Z"
+   "version": "0.58.3",
+   "fetched_at": "2026-11-21T14:46:06Z"
   },
   {
    "repo": "rsundin/planview-dash",
@@ -5112,7 +6698,7 @@
    "state": "open",
    "submitter": "souhaibtouati",
    "created_at": "2026-11-17T13:55:44Z",
-   "updated_at": "2026-11-17T13:55:53Z",
+   "updated_at": "2026-11-21T08:46:04Z",
    "repo_status": "ok",
    "description": "Home Assistant custom integration for Kospel PPE4.M electric instantaneous water heater",
    "topics": [
@@ -5130,7 +6716,7 @@
    "name": "Kospel PPE4.M Water Heater",
    "iot_class": "local_polling",
    "version": "2.2.0",
-   "fetched_at": "2026-11-17T16:10:13Z"
+   "fetched_at": "2026-11-21T14:46:07Z"
   },
   {
    "repo": "taylorsegell/backend-butler",
@@ -5594,7 +7180,7 @@
    "state": "merged",
    "submitter": "Marlboro62",
    "created_at": "2026-11-17T10:13:56Z",
-   "updated_at": "2026-11-20T13:23:07Z",
+   "updated_at": "2026-11-20T19:35:16Z",
    "repo_status": "ok",
    "description": "Intégration Home Assistant de la qualité de l'eau du robinet en France : derniers résultats du contrôle sanitaire (Orobnat / ARS), un capteur par paramètre et une carte Lovelace. Démo en ligne.",
    "topics": [
@@ -5611,14 +7197,14 @@
     "water-quality"
    ],
    "stars": 3,
-   "pushed_at": "2026-11-20T12:12:33Z",
+   "pushed_at": "2026-11-20T19:36:26Z",
    "homepage": "https://marlboro62.github.io/ha-qualite-eau/",
    "readme_excerpt": "☕ Si cette intégration vous est utile, vous pouvez soutenir le projet : Qualité de l'eau potable (Orobnat) pour Home Assistant Suivez la qualité de l'eau du robinet de votre commune, avec les derniers résultats du contrôle sanitaire publiés par les ARS sur orobnat.sante.gouv.fr : nitrates, chlore, pH, dureté, bactéries, conformité… Ces données sont souvent plus récentes (quelques jours) que celles de l'API Hub'Eau (plusieurs mois de décalage). Configuration entièrement à la souris : région → département → commune → réseau Un capteur par paramètre analysé, avec unité et historique (graphiques) ",
    "domain": "orobnat",
    "name": "Qualité de l'eau (Orobnat)",
    "iot_class": "cloud_polling",
-   "version": "1.3.1",
-   "fetched_at": "2026-11-20T15:36:52Z"
+   "version": "1.3.2",
+   "fetched_at": "2026-11-21T14:46:36Z"
   },
   {
    "repo": "Haulund83/home-assistant_xolta-modbus",
@@ -6303,9 +7889,9 @@
    "state": "open",
    "submitter": "ToolAndDieGuy",
    "created_at": "2026-11-17T03:37:47Z",
-   "updated_at": "2026-11-20T03:28:09Z",
+   "updated_at": "2026-11-20T20:51:08Z",
    "repo_status": "ok",
-   "description": "A whiteboard per function for Home Assistant: the automations, scripts, helpers and devices behind each job in your home, wired together from their own configs, with a debugger and tests. Prototype.",
+   "description": "See each job your Home Assistant does as one board: the automations, scripts, helpers, devices and Node-RED flows behind it, wired from their own configs. Import finds the systems you've built; then debug runs, test in a sandbox, save versions, and edit the wiring with Home Assistant's own editors.",
    "topics": [
     "automation",
     "custom-component",
@@ -6314,17 +7900,19 @@
     "home-assistant",
     "home-assistant-hacs",
     "home-automation",
+    "lovelace-card",
+    "node-red",
     "visualization"
    ],
-   "stars": 11,
-   "pushed_at": "2026-11-20T14:12:29Z",
+   "stars": 12,
+   "pushed_at": "2026-11-21T13:12:33Z",
    "homepage": "https://github.com/ToolAndDieGuy/functions-board#a-tour",
    "readme_excerpt": "A sidebar page for Home Assistant that shows each function in your home (the garage, the morning routine, the furnace filter) as one board: every automation, script, helper and device that makes it work, wired together from their own configs. Prototype. It runs on a real, busy setup, but expect rough edges. Issues and ideas are welcome. Home Assistant files things by type: automations in one list, scripts in another, helpers in a third. A job in your home cuts across all of them, and after a while it gets hard to see what drives what. This started as a WTH (\"What the heck?\") post on the Home A",
    "domain": "functions_board",
    "name": "Functions Board",
    "iot_class": "calculated",
-   "version": "0.10.0",
-   "fetched_at": "2026-11-20T15:35:18Z"
+   "version": "0.11.0",
+   "fetched_at": "2026-11-21T14:46:07Z"
   },
   {
    "repo": "Lean724/simple-clock",
@@ -8393,7 +9981,7 @@
    "state": "open",
    "submitter": "shakin89",
    "created_at": "2026-11-16T07:56:50Z",
-   "updated_at": "2026-11-17T05:07:39Z",
+   "updated_at": "2026-11-20T18:42:33Z",
    "repo_status": "ok",
    "description": "HydroFlow Garden: Smart and Unlimited — plan Irrigation Unlimited from the Home Assistant UI (per-zone weekdays, eco, fill, preflight, Smart Irrigation, rain skip, generated dashboard)",
    "topics": [
@@ -8405,14 +9993,14 @@
     "irrigation-unlimited"
    ],
    "stars": 1,
-   "pushed_at": "2026-11-17T09:50:36Z",
+   "pushed_at": "2026-11-20T18:31:43Z",
    "homepage": "",
    "readme_excerpt": "HydroFlow Garden: Smart and Unlimited HydroFlow Garden joins Irrigation Unlimited and Smart Irrigation into one irrigation system you configure and run from the Home Assistant UI. Irrigation Unlimited is a solid scheduler and valve sequencer. It does not know how much water your plants need, and you configure it in YAML. Smart Irrigation calculates how long each zone should water from weather and evapotranspiration. It does not drive your valves on your own multi-zone schedule. Making the two work together usually takes a pile of hand-written automations: copy durations into IU before each run",
    "domain": "hydroflow_garden",
    "name": "HydroFlow Garden: Smart and Unlimited",
    "iot_class": "calculated",
-   "version": "0.4.0-beta.3",
-   "fetched_at": "2026-11-17T16:11:01Z"
+   "version": "0.4.0",
+   "fetched_at": "2026-11-21T14:46:08Z"
   },
   {
    "repo": "Robote7701/console-crt-theme",
@@ -9418,10 +11006,10 @@
    "pr": 14236,
    "pr_url": "https://github.com/hacs/default/pull/14236",
    "title": "Adds new integration [guybw/PylontechToESPHome]",
-   "state": "draft",
+   "state": "open",
    "submitter": "guybw",
    "created_at": "2026-11-15T16:04:26Z",
-   "updated_at": "2026-11-19T18:04:32Z",
+   "updated_at": "2026-11-20T21:50:39Z",
    "repo_status": "ok",
    "description": "This project allows you to monitor Pylontech US2000/3000/5000 via ESPHome",
    "topics": [
@@ -9434,14 +11022,14 @@
     "pylontech-monitoring"
    ],
    "stars": 17,
-   "pushed_at": "2026-11-17T09:58:39Z",
+   "pushed_at": "2026-11-20T21:47:40Z",
    "homepage": "",
    "readme_excerpt": "Monitor a Pylontech battery stack in Home Assistant with a cheap ESP8266 or ESP32 running ESPHome. You get per-module and per-cell data, a cell-health verdict and the battery's own event log. Works with any Pylontech that has a Console port and speaks the \"Type C\" text protocol: US2000B, US2000C, US2KBPL, US3000, US3000C, US3000D, US5000 and similar. High-voltage towers (Force H, PowerCube) are Don't want to build one? I sell ready-made, pre-flashed units (UK, £20 + postage). See Ready-made units for sale. 1. Connect an ESP to the battery's Console port (through an RS232 adapter). 2. Flash it ",
    "domain": "pylontech",
    "name": "Pylontech (ESPHome bridge)",
    "iot_class": "local_polling",
-   "version": "0.5.0",
-   "fetched_at": "2026-11-20T15:35:22Z"
+   "version": "0.5.1",
+   "fetched_at": "2026-11-21T14:46:09Z"
   },
   {
    "repo": "jgyates/genmon-ha",
@@ -9483,7 +11071,7 @@
    "state": "merged",
    "submitter": "NLthijs48",
    "created_at": "2026-11-15T15:45:13Z",
-   "updated_at": "2026-11-19T18:05:34Z",
+   "updated_at": "2026-11-20T21:10:01Z",
    "repo_status": "ok",
    "description": "Home Assistant integration for crisp.nl",
    "topics": [
@@ -9491,14 +11079,14 @@
     "home-assistant"
    ],
    "stars": 0,
-   "pushed_at": "2026-11-17T21:06:58Z",
+   "pushed_at": "2026-11-20T21:08:23Z",
    "homepage": "",
    "readme_excerpt": "[![GitHub Release][releases-shield]][releases] [![GitHub Activity][commits-shield]][commits] [![License][license-shield]](LICENSE) ![Project Maintenance][maintenance-shield] Integration to integrate with [Crisp][crisp]. An instance of this integration provides information about a single Crisp account into Home Assistant. The integration can be set up multiple times if you want to track multiple accounts. An account is represented as a device. The next order is represented as a separate \"Next order\" device linked to the account device. Order count total | int | Total number of orders in your Cr",
    "domain": "crisp",
    "name": "Crisp",
    "iot_class": "cloud_polling",
    "version": "1.6.0-dev",
-   "fetched_at": "2026-11-20T15:37:05Z"
+   "fetched_at": "2026-11-21T14:46:36Z"
   },
   {
    "repo": "RogerSelwyn/GeniusHub",
@@ -10921,7 +12509,7 @@
    "state": "open",
    "submitter": "vjt",
    "created_at": "2026-11-14T20:48:08Z",
-   "updated_at": "2026-11-17T03:18:26Z",
+   "updated_at": "2026-11-20T22:37:24Z",
    "repo_status": "ok",
    "description": "Batocera as a Home Assistant media player, with per-machine play-time limits",
    "topics": [
@@ -10934,15 +12522,15 @@
     "mqtt",
     "retrogaming"
    ],
-   "stars": 6,
-   "pushed_at": "2026-11-15T21:45:38Z",
+   "stars": 7,
+   "pushed_at": "2026-11-20T17:50:30Z",
    "homepage": "",
-   "readme_excerpt": "Your Batocera retro-gaming box in Home Assistant: search its games from your phone and launch them on the TV, see what gets played and for how long, watch the TV live, quit a stuck game, and set daily playtime limits. A Batocera page in Home Assistant's sidebar: the box's games with their covers, favourites, recently played, one tile per system and per ROM folder (ROMs sorted into folders, by genre or anything else, are browsed as such). Each place says how many games it holds. A search that works at every level, by name first, then apart by what the descriptions say; and the games filtered by",
+   "readme_excerpt": "Your Batocera retro-gaming box in Home Assistant: search its games from your phone and launch them on the TV, see what gets played and for how long, watch the TV live, quit a stuck game, and set daily playtime limits. A Batocera page in Home Assistant's sidebar: the box's games with their covers, favourites, recently played, one tile per system and per ROM folder (ROMs sorted into folders, by genre or anything else, are browsed as such, as EmulationStation's folder view shows them). Each place says how many games it holds. A search that works at every level, by name first, then apart by what t",
    "domain": "batocera",
    "name": "Batocera",
    "iot_class": "local_push",
-   "version": "0.9.2",
-   "fetched_at": "2026-11-17T16:11:37Z"
+   "version": "0.10.0",
+   "fetched_at": "2026-11-21T14:46:10Z"
   },
   {
    "repo": "SocrateMobile/DomoLink-Tado-Light",
@@ -11497,7 +13085,7 @@
    "state": "open",
    "submitter": "guybw",
    "created_at": "2026-11-14T17:46:40Z",
-   "updated_at": "2026-11-14T17:46:46Z",
+   "updated_at": "2026-11-20T21:51:31Z",
    "repo_status": "ok",
    "description": "Home Assistant integration for the Indra Smart PRO EV charger (formerly Kaluza/ChargedEV)",
    "topics": [
@@ -11507,14 +13095,14 @@
     "smartpro"
    ],
    "stars": 7,
-   "pushed_at": "2026-11-15T12:44:41Z",
+   "pushed_at": "2026-11-16T23:28:48Z",
    "homepage": "",
    "readme_excerpt": "Indra Smart PRO - Home Assistant Integration A custom Home Assistant integration for the Indra Smart PRO EV charger (7.4kW home charger). Also works with chargers previously branded as Kaluza, ChargedEV, or Indra Smart. The Indra Smart PRO is a 7.4kW single-phase smart EV charger made by Indra Renewable Technologies Ltd, a British manufacturer. Key features include: 7.4kW / 32A single-phase charging (charge 60kWh in under 9 hours) Solar integration - charge using excess solar power without additional hardware Smart tariff support - integrates with thousands of electricity tariffs Type 2 connec",
    "domain": "indra",
    "name": "Indra EV Charger",
    "iot_class": "cloud_polling",
    "version": "1.1.4",
-   "fetched_at": "2026-11-15T14:02:07Z"
+   "fetched_at": "2026-11-21T14:46:10Z"
   },
   {
    "repo": "datamindzio/ha-energy-compass",
@@ -12675,15 +14263,15 @@
     "smart-home",
     "ventilation"
    ],
-   "stars": 38,
-   "pushed_at": "2026-11-13T20:49:07Z",
+   "stars": 41,
+   "pushed_at": "2026-11-19T06:03:27Z",
    "homepage": "https://freshairiq.com/",
    "readme_excerpt": "🌐 Language / Sprache: Deutsch · English Your home can tell you when ventilation is actually worthwhile. FreshAirIQ is a Home Assistant integration for intelligent, explainable ventilation decisions. Instead of merely displaying relative humidity, it combines absolute humidity, the amount of water in room air, indoor/outdoor climate, room volume, window states, weather, temperature trends, presence, and learned building behavior into a concrete recommendation. Wait → Ventilate → Keep ventilating → Close. For individual rooms, floors, or the whole home. FreshAirIQ is currently in public beta. We",
    "domain": "freshairiq",
    "name": "FreshAirIQ",
    "iot_class": "calculated",
-   "version": "0.26.7.0",
-   "fetched_at": "2026-11-14T13:38:47Z"
+   "version": "0.26.7.1",
+   "fetched_at": "2026-11-21T14:46:11Z"
   },
   {
    "repo": "rupascha/freshairiq",
@@ -12706,15 +14294,15 @@
     "smart-home",
     "ventilation"
    ],
-   "stars": 38,
-   "pushed_at": "2026-11-13T20:49:07Z",
+   "stars": 41,
+   "pushed_at": "2026-11-19T06:03:27Z",
    "homepage": "https://freshairiq.com/",
    "readme_excerpt": "🌐 Language / Sprache: Deutsch · English Your home can tell you when ventilation is actually worthwhile. FreshAirIQ is a Home Assistant integration for intelligent, explainable ventilation decisions. Instead of merely displaying relative humidity, it combines absolute humidity, the amount of water in room air, indoor/outdoor climate, room volume, window states, weather, temperature trends, presence, and learned building behavior into a concrete recommendation. Wait → Ventilate → Keep ventilating → Close. For individual rooms, floors, or the whole home. FreshAirIQ is currently in public beta. We",
    "domain": "freshairiq",
    "name": "FreshAirIQ",
    "iot_class": "calculated",
-   "version": "0.26.7.0",
-   "fetched_at": "2026-11-14T13:39:36Z"
+   "version": "0.26.7.1",
+   "fetched_at": "2026-11-21T14:46:37Z"
   },
   {
    "repo": "Robote7701/carburant-ledcard",
@@ -12862,14 +14450,14 @@
     "lovelace-card"
    ],
    "stars": 0,
-   "pushed_at": "2026-11-14T12:22:30Z",
+   "pushed_at": "2026-11-19T18:02:02Z",
    "homepage": "",
    "readme_excerpt": "Baby Tracker for Home Assistant Track diaper changes, feedings and sleep from Home Assistant: one tap on a dashboard, a button on your phone's home screen, a watch, a voice assistant or an automation. Everything is stored locally in Home Assistant. Diapers: wet, dirty or both, with a count for today. Feedings: left, right or bottle (with an optional amount in ml). Entries logged within the same feeding window (45 minutes by default) of the previous one count as a side switch in the same feeding, so a feeding can be Left → Right → Left. A side logged afterwards for a time just before a feeding ",
    "domain": "baby_logger",
    "name": "Baby Tracker",
    "iot_class": "calculated",
-   "version": "1.2.0",
-   "fetched_at": "2026-11-14T13:39:37Z"
+   "version": "1.5.0",
+   "fetched_at": "2026-11-21T14:46:37Z"
   },
   {
    "repo": "jesmak/feed_entries",
@@ -13029,14 +14617,14 @@
     "rs232"
    ],
    "stars": 0,
-   "pushed_at": "2026-11-13T19:01:22Z",
+   "pushed_at": "2026-11-16T01:46:08Z",
    "homepage": "",
    "readme_excerpt": "ADA RS-232 for Home Assistant Local control of the Audio Design Associates PTM-1645 over its PAC RS-232 connection. This is an installable custom integration, with a UI setup flow It requires Home Assistant 2026.11.0 or newer. The stable release includes the documented PAC serial commands, automatic amplifier discovery, and hardware setup actions. Zone switches and automatic discovery were tested on a physical PTM-1645 through ESPHome. Setup actions, daisy chains, and PTM-8100 support have automated coverage and still need hardware Eight stereo-zone power switches for PTM-1645, or four for PTM",
    "domain": "ada_rs232",
    "name": "ADA RS-232",
    "iot_class": "local_polling",
    "version": "0.2.2",
-   "fetched_at": "2026-11-14T13:38:53Z"
+   "fetched_at": "2026-11-21T14:46:12Z"
   },
   {
    "repo": "KillSwitchIO/pecklist-card",
@@ -13074,7 +14662,7 @@
    "state": "draft",
    "submitter": "KillSwitchIO",
    "created_at": "2026-11-13T18:30:55Z",
-   "updated_at": "2026-11-20T04:06:09Z",
+   "updated_at": "2026-11-21T03:28:09Z",
    "repo_status": "ok",
    "description": "PeckList for Home Assistant: to-do lists, a calendar, sensors, actions and reminders from your self-hosted PeckList server.",
    "topics": [
@@ -13087,14 +14675,14 @@
     "todo"
    ],
    "stars": 0,
-   "pushed_at": "2026-11-20T04:04:58Z",
+   "pushed_at": "2026-11-21T14:21:13Z",
    "homepage": "https://pecklist.com",
    "readme_excerpt": "PeckList for Home Assistant Connects PeckList, the self-hosted task app, to Home Assistant. Each PeckList list becomes a to-do list, dated tasks show on a calendar, and sensors and actions let automations add, complete and count tasks: \"when the dishwasher finishes, add Empty the To-do lists: one per PeckList list. Add, edit, check off and delete from Home Assistant's To-do card, or by voice with Assist (\"add milk to shopping\"). Calendar: every open task with a date, all-day or timed. Sensors: due today, overdue, upcoming, assigned to me and open tasks. Actions: pecklist.addtask reads a line t",
    "domain": "pecklist",
    "name": "PeckList",
    "iot_class": "local_push",
    "version": "0.2.1",
-   "fetched_at": "2026-11-20T15:35:26Z"
+   "fetched_at": "2026-11-21T14:46:13Z"
   },
   {
    "repo": "wattie2k1/power-flow-theme",
@@ -13170,10 +14758,10 @@
     "home-assistant-theme"
    ],
    "stars": 0,
-   "pushed_at": "2026-11-13T17:44:37Z",
+   "pushed_at": "2026-11-17T18:58:32Z",
    "homepage": "",
-   "readme_excerpt": "Power Flow – Home Assistant Theme A custom Home Assistant theme (tested with HA OS, Core 2026.11) with card-mod styling for every dashboard card. Power Flow Dark | dark | blue | Power Flow Light | light | blue | Power Flow | automatic (follows the device) | blue | Power Flow Dark/Light Smaragd | dark / light | emerald green | Power Flow Dark/Light Violett | dark / light | violet | Power Flow Dark/Light Türkis | dark / light | turquoise | Power Flow Dark/Light Koralle | dark / light | coral red | All accent variants have the same luminance as the original blue, so the WCAG contrast ratios stay ",
-   "fetched_at": "2026-11-14T13:39:37Z"
+   "readme_excerpt": "Power Flow – Home Assistant Theme A custom Home Assistant theme (tested with HA OS, Core 2026.11). With card-mod installed, it also adds extra styling to every dashboard card. Power Flow Dark | dark | blue | Power Flow Light | light | blue | Power Flow | automatic (follows the device) | blue | Power Flow Dark/Light Smaragd | dark / light | emerald green | Power Flow Dark/Light Violett | dark / light | violet | Power Flow Dark/Light Türkis | dark / light | turquoise | Power Flow Dark/Light Koralle | dark / light | coral red | Power Flow Smaragd / Violett / Türkis / Koralle | automatic (follows ",
+   "fetched_at": "2026-11-21T14:46:38Z"
   },
   {
    "repo": "GOG23-Software-Studio/f1-paddock",
@@ -13237,10 +14825,10 @@
    "pr": 14098,
    "pr_url": "https://github.com/hacs/default/pull/14098",
    "title": "Adds new integration [kevin-mitipi/KEVIN]",
-   "state": "draft",
+   "state": "open",
    "submitter": "kevin-mitipi",
    "created_at": "2026-11-13T16:20:47Z",
-   "updated_at": "2026-11-17T09:36:16Z",
+   "updated_at": "2026-11-20T15:56:37Z",
    "repo_status": "ok",
    "description": "Home Assistant integration for KEVIN® presence simulators via the Kevin API, with the KEVIN® Presence Lovelace card.",
    "topics": [
@@ -13261,7 +14849,7 @@
    "name": "KEVIN®",
    "iot_class": "cloud_polling",
    "version": "0.7.5",
-   "fetched_at": "2026-11-17T16:12:04Z"
+   "fetched_at": "2026-11-21T14:46:13Z"
   },
   {
    "repo": "clarkent86/ha-wyze-floor-lamp",
@@ -13403,14 +14991,14 @@
     "zeroconf"
    ],
    "stars": 0,
-   "pushed_at": "2026-11-13T23:09:17Z",
+   "pushed_at": "2026-11-21T12:16:36Z",
    "homepage": "",
    "readme_excerpt": "ratgdo Mgmt finds ratgdo garage door controllers on your network and opens each one's web page from a sidebar panel. It covers ratgdo v2.5, ratgdo32, and ratgdo32 disco, on ESPHome firmware or on HomeKit firmware. Opening, closing, and the light stay on the ESPHome integration or on HomeKit Controller. This integration is the management page, the firmware version, and a reboot. Home Assistant 2026.10 or newer. A ratgdo on the same network, running ratgdo Mgmt is not in the default catalog yet. Add this repository, then install it. Marketplace (Home Assistant 2026.11 and newer) 1. Select the bu",
    "domain": "ratgdo_mgmt",
    "name": "ratgdo Mgmt",
    "iot_class": "local_polling",
-   "version": "0.1.3",
-   "fetched_at": "2026-11-14T13:39:02Z"
+   "version": "0.1.6",
+   "fetched_at": "2026-11-21T14:46:14Z"
   },
   {
    "repo": "bisman-automations/ha-kiosk-mgmt",
@@ -13562,14 +15150,14 @@
     "voice-assistant"
    ],
    "stars": 0,
-   "pushed_at": "2026-11-14T01:46:03Z",
+   "pushed_at": "2026-11-17T22:03:45Z",
    "homepage": "",
    "readme_excerpt": "Better Assistant for Home Assistant A Google Assistant-style voice assistant for Home Assistant's Assist: timers, alarms, reminders, notes, calendar, music, rooms and lights, the bed, cameras, a health report and more, set up automatically from the devices you already have. With an optional Brave Search API key it also answers everyday questions out loud from the web, without an AI model writing the answer. Unofficial community integration. This project is not made, endorsed or supported by Brave Software. It uses the public Brave Search API with your own key. Put it behind Home Assistant's ow",
    "domain": "better_assistant",
    "name": "Better Assistant",
    "iot_class": "cloud_polling",
-   "version": "0.2.2b8",
-   "fetched_at": "2026-11-14T13:39:38Z"
+   "version": "0.2.6",
+   "fetched_at": "2026-11-21T14:46:38Z"
   },
   {
    "repo": "gazoodle/casa-mia-love-or-loathe",
@@ -15067,7 +16655,7 @@
    "state": "draft",
    "submitter": "kaaribou",
    "created_at": "2026-11-12T20:26:17Z",
-   "updated_at": "2026-11-17T01:07:19Z",
+   "updated_at": "2026-11-21T09:29:18Z",
    "repo_status": "ok",
    "description": "Toutes les températures d'un étage en un coup d'œil : trop chaud, trop froid, trop humide, et l'évolution — collection HOLM",
    "topics": [
@@ -15079,11 +16667,11 @@
     "lovelace-card",
     "temperature"
    ],
-   "stars": 5,
-   "pushed_at": "2026-11-01T09:47:36Z",
+   "stars": 6,
+   "pushed_at": "2026-11-21T09:27:10Z",
    "homepage": "",
    "readme_excerpt": "Toutes les températures d'un étage en un coup d'œil : où il fait trop chaud, trop froid, trop humide, et comment ça évolue. HOLM Floor Card regroupe les sondes de température (et d'humidité) d'un étage dans une seule carte colorée : une bande thermique place chaque pièce sur une échelle de couleurs, et chaque pièce a sa tuile avec sa tendance sur 1 h et sa mini-courbe sur 24 h. Un toucher sur une pièce ouvre son graphique détaillé. ✨ Zéro YAML, aucun helper. Les courbes viennent directement des statistiques de Home Assistant. Tout se règle dans l'éditeur visuel. 🌡️ En-tête : moyenne de l'étage",
-   "fetched_at": "2026-11-17T16:12:24Z"
+   "fetched_at": "2026-11-21T14:46:14Z"
   },
   {
    "repo": "kaaribou/holm-family-card",
@@ -15094,7 +16682,7 @@
    "state": "draft",
    "submitter": "kaaribou",
    "created_at": "2026-11-12T20:26:05Z",
-   "updated_at": "2026-11-17T00:55:09Z",
+   "updated_at": "2026-11-21T09:56:55Z",
    "repo_status": "ok",
    "description": "Qui est où : présence, lieu, distance, sens du trajet et batterie du téléphone — collection HOLM",
    "topics": [
@@ -15107,10 +16695,10 @@
     "presence"
    ],
    "stars": 2,
-   "pushed_at": "2026-11-01T09:47:23Z",
+   "pushed_at": "2026-11-21T09:56:02Z",
    "homepage": "",
    "readme_excerpt": "Qui est où, en un coup d'œil : à la maison, en route, à l'école… avec la distance, le sens du trajet et la batterie du téléphone. HOLM Family Card affiche les membres de la famille à partir de leurs entités person. Pour chacun : un avatar entouré de sa couleur, le lieu et depuis quand, l'adresse, la source de la position (GPS ou Wi-Fi de la maison) et des pastilles distance / direction / batterie. ✨ Zéro YAML. On choisit les personnes dans l'éditeur visuel : batterie et adresse du téléphone (application Home Assistant) et capteurs de l'intégration Proximité sont trouvés automatiquement. 🏠 Résu",
-   "fetched_at": "2026-11-17T16:12:25Z"
+   "fetched_at": "2026-11-21T14:46:15Z"
   },
   {
    "repo": "kaaribou/holm-energy-cards",
@@ -15121,7 +16709,7 @@
    "state": "open",
    "submitter": "kaaribou",
    "created_at": "2026-11-12T20:25:52Z",
-   "updated_at": "2026-11-17T00:55:39Z",
+   "updated_at": "2026-11-21T09:43:19Z",
    "repo_status": "ok",
    "description": "Six cartes énergie pour Home Assistant : bilan, appareils, production, chauffage, années — collection HOLM",
    "topics": [
@@ -15133,11 +16721,11 @@
     "lovelace-card",
     "solar"
    ],
-   "stars": 2,
-   "pushed_at": "2026-11-07T09:59:54Z",
+   "stars": 3,
+   "pushed_at": "2026-11-21T09:42:08Z",
    "homepage": "",
    "readme_excerpt": "Six cartes pour comprendre votre énergie : ce que vous produisez, achetez et revendez, ce que coûte chaque appareil, le chauffage pièce par pièce, et l'évolution année après année. HOLM Energy Cards s'appuie sur le tableau de bord Énergie de Home Assistant : sources, appareils et prix sont repris automatiquement. Les cartes suivent le sélecteur de date du tableau Énergie (jour, semaine, mois, année), comme les cartes officielles. ✨ Un seul fichier, six cartes, toutes réglables dans l'éditeur visuel (sauf les Totaux annuels, en YAML). Carte | Type | Ce qu'elle montre | Bilan énergétique | custo",
-   "fetched_at": "2026-11-17T16:12:25Z"
+   "fetched_at": "2026-11-21T14:46:15Z"
   },
   {
    "repo": "kaaribou/holm-ecojoko-card",
@@ -15148,7 +16736,7 @@
    "state": "open",
    "submitter": "kaaribou",
    "created_at": "2026-11-12T20:25:40Z",
-   "updated_at": "2026-11-17T01:01:41Z",
+   "updated_at": "2026-11-21T09:34:01Z",
    "repo_status": "ok",
    "description": "Cadran de consommation électrique pour Home Assistant : puissance en direct, coût du jour, semaine, comparaison — collection HOLM",
    "topics": [
@@ -15161,10 +16749,10 @@
     "lovelace-card"
    ],
    "stars": 3,
-   "pushed_at": "2026-11-12T20:13:17Z",
+   "pushed_at": "2026-11-21T09:33:41Z",
    "homepage": "",
    "readme_excerpt": "Le célèbre cadran de consommation, dans Home Assistant : la puissance en direct, le coût du jour, la semaine, et si vous consommez plus ou moins que d'habitude. HOLM Ecojoko Card reprend l'esprit du cadran Ecojoko : une grande jauge de puissance à échelle logarithmique, un disque central qui fait défiler plusieurs informations, et une petite jauge qui indique si aujourd'hui vous consommez plus ou moins que d'habitude. Elle fonctionne avec n'importe quel compteur (Ecojoko, Linky, pince ampèremétrique…) et a aussi un mode production solaire. ✨ Aucun helper. Les chiffres du jour et de la semaine ",
-   "fetched_at": "2026-11-17T16:12:26Z"
+   "fetched_at": "2026-11-21T14:46:16Z"
   },
   {
    "repo": "kaaribou/climate-card-holm",
@@ -15175,7 +16763,7 @@
    "state": "draft",
    "submitter": "kaaribou",
    "created_at": "2026-11-12T20:25:16Z",
-   "updated_at": "2026-11-17T00:55:38Z",
+   "updated_at": "2026-11-21T09:49:35Z",
    "repo_status": "ok",
    "description": "Carte clim / chauffage compacte et animée pour Home Assistant : roue de consigne, modes, ventilation, oscillation, ambiance braises / flocons. Zéro YAML.",
    "topics": [
@@ -15187,11 +16775,11 @@
     "lovelace-card",
     "thermostat"
    ],
-   "stars": 12,
-   "pushed_at": "2026-11-04T18:08:38Z",
+   "stars": 14,
+   "pushed_at": "2026-11-21T09:49:01Z",
    "homepage": "",
    "readme_excerpt": "Une carte clim / chauffage compacte et vivante : on voit tout de suite si ça chauffe, si ça refroidit, et on règle la consigne d'un geste. HOLM Climate Card remplace la carte thermostat pour vos entités climate (climatiseurs, pompes à chaleur, radiateurs connectés…). Elle tient à deux côte à côte sur un téléphone, s'étale joliment en pleine largeur, et son ambiance change selon ce que fait l'appareil : braises qui montent quand il chauffe, flocons quand il refroidit, brume grise qui respire quand il est éteint. ✨ Zéro YAML. On l'ajoute depuis le sélecteur de cartes, on choisit son appareil : c",
-   "fetched_at": "2026-11-17T16:12:27Z"
+   "fetched_at": "2026-11-21T14:46:16Z"
   },
   {
    "repo": "marcelveldt/zha-scenes",
@@ -16359,7 +17947,7 @@
    "name": "Mitipi Kevin",
    "iot_class": "cloud_polling",
    "version": "0.7.2",
-   "fetched_at": "2026-11-14T13:39:38Z"
+   "fetched_at": "2026-11-21T14:46:39Z"
   },
   {
    "repo": "luigi-regolo/home-return-card",
@@ -18782,7 +20370,7 @@
    "state": "open",
    "submitter": "himgang",
    "created_at": "2026-11-11T02:31:54Z",
-   "updated_at": "2026-11-17T08:31:18Z",
+   "updated_at": "2026-11-21T07:56:30Z",
    "repo_status": "ok",
    "description": "Home Assistant Integration for Qubo Smart Plug",
    "topics": [
@@ -18790,14 +20378,14 @@
     "home-assistant"
    ],
    "stars": 0,
-   "pushed_at": "2026-11-11T02:30:35Z",
+   "pushed_at": "2026-11-21T07:28:12Z",
    "homepage": "",
    "readme_excerpt": "Qubo Smart Plug Community for Home Assistant A custom integration for Home Assistant that allows you to control and monitor your Hero Electronix Qubo Smart Plug 10A via their cloud API. This community-maintained fork is based on Anonymous-AAA/ha-qubo, originally created by Alen Antony. It retains the original MIT license and copyright notice in LICENSE. This integration connects directly to Qubo's cloud servers and establishes a persistent MQTT connection to give you instant switch control and real-time energy metrics. UI Setup: Fully configure the integration via the Home Assistant UI (Config",
-   "domain": "qubo",
+   "domain": "qubo_community",
    "name": "Qubo Smart Plug Community",
    "iot_class": "cloud_push",
-   "version": "0.2.0",
-   "fetched_at": "2026-11-17T16:13:09Z"
+   "version": "0.3.0",
+   "fetched_at": "2026-11-21T14:46:17Z"
   },
   {
    "repo": "chedim/babyseat",
@@ -20441,14 +22029,14 @@
     "theme-builder"
    ],
    "stars": 0,
-   "pushed_at": "2026-11-10T16:36:18Z",
+   "pushed_at": "2026-11-15T16:37:37Z",
    "homepage": "",
    "readme_excerpt": "Das Theme-Studio für Home Assistant. Visuell bauen, live im Dashboard verfeinern. Glaswerk Styler ist ein eigenes Panel in der Seitenleiste von Home Assistant. Damit baust du ein komplettes Theme, ohne YAML anzufassen – aufgesetzt auf die Farbebene von Home Assistant 2026. Dazu kommt eine Steuerleiste für deine Dashboards: Transparenz, Unschärfe, Schrift, Kartenstil, Palette und Hintergrund stellst du direkt dort ein, wo du sie siehst. Am Ende steht eine ganz normale Theme-Datei. Glaswerk Styler in 2½ Minuten – vom Studio bis zur Steuerleiste: Studio | Panel in der Seitenleiste: Theme öffnen, ",
    "domain": "glaswerk",
    "name": "Glaswerk",
    "iot_class": "local_polling",
    "version": "1.1.0",
-   "fetched_at": "2026-11-14T13:39:39Z"
+   "fetched_at": "2026-11-21T14:46:40Z"
   },
   {
    "repo": "formiification/ha-zyc-simpo",
@@ -23102,14 +24690,14 @@
     "powershuffle"
    ],
    "stars": 1,
-   "pushed_at": "2026-11-14T06:14:28Z",
+   "pushed_at": "2026-11-17T06:07:37Z",
    "homepage": "https://github.com/The-Power-0/PowerLink",
-   "readme_excerpt": "The Home Assistant companion for PowerPlay. Connect your Fire TVs, move playback between rooms, and power smarter show shuffling. An independent, open-source Home Assistant integration built for PowerPlay. Install · PowerShuffle · Devices · Handoffs · Dashboards · Actions PowerLink is the Home Assistant companion for PowerPlay. It handles device control, PowerShuffle history and verified handoffs so your Fire TVs can focus on playback. Install the integration | HACS setup. | Enable smarter episode rotation | PowerShuffle. | Connect another Fire TV | Device registration and pairing. | Continue ",
+   "readme_excerpt": "The Home Assistant companion for PowerPlay. Connect your Fire TVs, move playback between rooms, and power smarter show shuffling. An independent, open-source Home Assistant integration built for PowerPlay. Install · PowerShuffle · Devices · Handoffs · Dashboards · Actions PowerLink is the Home Assistant companion for PowerPlay. It handles device control, PowerShuffle history and verified handoffs so your Fire TVs can focus on playback. Install the integration | Marketplace / HACS setup. | Enable smarter episode rotation | PowerShuffle. | Connect another Fire TV | Device registration and pairin",
    "domain": "powerlink",
    "name": "PowerLink",
    "iot_class": "local_push",
    "version": "1.0.4",
-   "fetched_at": "2026-11-14T13:39:10Z"
+   "fetched_at": "2026-11-21T14:46:18Z"
   },
   {
    "repo": "gomble/enigma2-remote",
@@ -23130,7 +24718,7 @@
     "home-assistant-custom-component",
     "integration"
    ],
-   "stars": 7,
+   "stars": 8,
    "pushed_at": "2026-11-09T01:49:59Z",
    "homepage": "",
    "readme_excerpt": "Enigma2 Remote Control Integration for Home Assistant A complete Home Assistant integration for controlling Enigma2 set-top boxes (e.g. Dreambox, VU+) via the OpenWebif API. 🎮 Full Remote Control — All essential buttons implemented 🖥️ Modern Lovelace Card — Beautiful, responsive design for all devices ⏻ Power State Control — All 6 OpenWebif power options (Standby Umschalten, Ausschalten, Receiver Neustart, GUI Neustart, Wake Up, Standby) ⚙️ Config Flow — Easy setup through the Home Assistant UI 🔘 Long Key Presses — Hold-function support (500 ms) 🌐 OpenWebif API — Uses the standard API, no addi",
@@ -23138,7 +24726,7 @@
    "name": "Enigma2 Remote Control",
    "iot_class": "local_polling",
    "version": "1.7.5",
-   "fetched_at": "2026-11-14T13:39:40Z"
+   "fetched_at": "2026-11-21T14:46:41Z"
   },
   {
    "repo": "danielmoore/homeassistant-vornado-transom-infrared",
@@ -27394,7 +28982,7 @@
    "name": "Frieda Postfach",
    "iot_class": "cloud_push",
    "version": "1.0.46",
-   "fetched_at": "2026-11-14T13:39:14Z"
+   "fetched_at": "2026-11-21T14:46:18Z"
   },
   {
    "repo": "nadeo360/friedafetch",
@@ -27512,14 +29100,14 @@
     "smarthome"
    ],
    "stars": 1,
-   "pushed_at": "2026-11-12T00:35:15Z",
+   "pushed_at": "2026-11-15T13:40:11Z",
    "homepage": "",
    "readme_excerpt": "rusthinq for Home Assistant Local control of LG ThinQ appliances in Home Assistant through rusthinq, without an MQTT broker or an add-on. Home Assistant runs the rusthinq daemon itself; the appliances connect to it instead of LG's cloud, and their drivers' output becomes Home Assistant devices and entities through an embedded Home Assistant 2025.1.3 or later. LG appliances must be able to reach this Home Assistant host on TCP 443 (or an alternative port via router DNAT; For new installations, see Connecting appliances. Appliances already provisioned for an existing rusthinq can keep their CA a",
    "domain": "rusthinq",
    "name": "rusthinq",
    "iot_class": "local_push",
-   "version": "0.1.3",
-   "fetched_at": "2026-11-14T13:39:41Z"
+   "version": "0.1.4rc1",
+   "fetched_at": "2026-11-21T14:46:41Z"
   },
   {
    "repo": "3735943886/rusthinq-local",
@@ -27542,14 +29130,14 @@
     "smarthome"
    ],
    "stars": 1,
-   "pushed_at": "2026-11-12T00:35:15Z",
+   "pushed_at": "2026-11-15T13:40:11Z",
    "homepage": "",
    "readme_excerpt": "rusthinq for Home Assistant Local control of LG ThinQ appliances in Home Assistant through rusthinq, without an MQTT broker or an add-on. Home Assistant runs the rusthinq daemon itself; the appliances connect to it instead of LG's cloud, and their drivers' output becomes Home Assistant devices and entities through an embedded Home Assistant 2025.1.3 or later. LG appliances must be able to reach this Home Assistant host on TCP 443 (or an alternative port via router DNAT; For new installations, see Connecting appliances. Appliances already provisioned for an existing rusthinq can keep their CA a",
    "domain": "rusthinq",
    "name": "rusthinq",
    "iot_class": "local_push",
-   "version": "0.1.3",
-   "fetched_at": "2026-11-14T13:39:41Z"
+   "version": "0.1.4rc1",
+   "fetched_at": "2026-11-21T14:46:42Z"
   },
   {
    "repo": "Phynix88/ps5-hass",
@@ -27702,7 +29290,7 @@
    "name": "HiMedia Player",
    "iot_class": "local_polling",
    "version": "1.0.16",
-   "fetched_at": "2026-11-14T13:39:42Z"
+   "fetched_at": "2026-11-21T14:46:43Z"
   },
   {
    "repo": "belikh/ha-anko-body-scale",
@@ -27800,10 +29388,10 @@
     "uplift"
    ],
    "stars": 0,
-   "pushed_at": "2026-11-09T15:35:18Z",
+   "pushed_at": "2026-11-17T01:21:44Z",
    "homepage": "",
    "readme_excerpt": "A Home Assistant dashboard card that shows your standing desk as a real-time 3D model and controls it through a DeskUp Pro (RJ12) ESPHome controller. The model follows the UPLIFT V2 2-leg frame, and the controls work like the UPLIFT Advanced keypad. A 3D desk that moves with yours. The 3-stage legs telescope as the desk rises, and the motion is smoothed to the desk's real speed between Home Assistant updates. The keypad you know. A copy of the Advanced keypad: live height display, ▲/▼, memory presets and M. Exact heights. Drag the height scale beside the desk and an outline shows where the des",
-   "fetched_at": "2026-11-14T13:39:42Z"
+   "fetched_at": "2026-11-21T14:46:43Z"
   },
   {
    "repo": "N1OF/MBTA-Home-Assistant-Integration",
@@ -27861,7 +29449,7 @@
    "name": "HiMedia Player",
    "iot_class": "local_polling",
    "version": "1.0.16",
-   "fetched_at": "2026-11-14T13:39:43Z"
+   "fetched_at": "2026-11-21T14:46:43Z"
   },
   {
    "repo": "Krystosterone/orb-dashboard",
@@ -27940,7 +29528,7 @@
    "name": "Baby Tracker",
    "iot_class": "cloud_polling",
    "version": "1.0.3",
-   "fetched_at": "2026-11-14T13:39:44Z"
+   "fetched_at": "2026-11-21T14:46:44Z"
   },
   {
    "repo": "Tropie1988/home-assistant-retro-themes",
@@ -28011,11 +29599,11 @@
     "home-assistant",
     "lovelace"
    ],
-   "stars": 1,
+   "stars": 2,
    "pushed_at": "2026-11-10T05:45:29Z",
    "homepage": "https://antarikfox.github.io/titan-climate-card/",
    "readme_excerpt": "TITAN HATCH · Climate Card Климатическая карточка для Home Assistant: температура, влажность и плавные графики за сутки в матовом MECHA-корпусе с живой подсветкой. A MECHA climate card for Home Assistant: temperature, humidity and smooth 24-hour history graphs, with a matte housing and softly animated LEDs. by Antarikfox · Русский | English · Полная инструкция · Interactive demo · Download standalone demo Превью с демонстрационными данными: 23,4 °C, влажность 48%, история за сутки. В Home Assistant карточка показывает данные твоих датчиков. Preview with simulated readings: 23.4 °C, 48% humidit",
-   "fetched_at": "2026-11-14T13:39:44Z"
+   "fetched_at": "2026-11-21T14:46:45Z"
   },
   {
    "repo": "Kasoo/vtech_baby",
@@ -28451,14 +30039,14 @@
     "home-assistant"
    ],
    "stars": 0,
-   "pushed_at": "2026-11-12T20:51:01Z",
+   "pushed_at": "2026-11-19T17:15:49Z",
    "homepage": "",
    "readme_excerpt": "Florida Power & Light electricity rates in Home Assistant. See your residential rate per kWh, know when the next off-peak window starts, and use those signals in dashboards and automations. The integration reads FPL’s public rate publications and requires no FPL account. Installation guide · Releases · Report an issue Requires Home Assistant 2026.3.0 or newer. The button above opens Marketplace on Home Assistant 2026.11 and newer, or HACS on earlier versions with HACS installed. You can add the integration as a custom repository today while its catalog submission 1. Open the repository using t",
    "domain": "fpl_rates",
    "name": "FPL Published Rates",
    "iot_class": "cloud_polling",
-   "version": "1.0.2",
-   "fetched_at": "2026-11-14T13:39:45Z"
+   "version": "1.0.3",
+   "fetched_at": "2026-11-21T14:46:45Z"
   },
   {
    "repo": "csorbalazs306/ha-gree-local",
@@ -28520,7 +30108,7 @@
    "name": "KDE for Home Assistant",
    "iot_class": "local_push",
    "version": "1.1.0",
-   "fetched_at": "2026-11-14T13:39:17Z"
+   "fetched_at": "2026-11-21T14:46:19Z"
   },
   {
    "repo": "v1k70rk4/ha-petkit-ble",
@@ -28545,14 +30133,14 @@
     "petkit"
    ],
    "stars": 6,
-   "pushed_at": "2026-11-13T16:47:27Z",
+   "pushed_at": "2026-11-19T18:18:23Z",
    "homepage": "",
    "readme_excerpt": "Petkit BLE Water Fountain — Home Assistant Integration [![GitHub Release][releases-shield]][releases] [![GitHub Activity][commits-shield]][commits] [![License][license-shield]](LICENSE) ![Maintenance][maintenance-shield] [![Ko-fi][kofi-shield]][kofi] 100% local BLE control for Petkit water fountains — no cloud, no app, no compromises. Local-only | All communication stays on your LAN via Bluetooth LE — zero cloud dependency | Full dashboard | 14 sensors, 5 switches, 3 sliders, 4 time pickers, mode selector, reset button | Multi-device | W4, W5, CTW2 & CTW3 series with automatic capability detec",
    "domain": "petkit_ble",
    "name": "Petkit BLE Water Fountain",
    "iot_class": "local_polling",
-   "version": "1.2.3",
-   "fetched_at": "2026-11-14T13:39:18Z"
+   "version": "1.2.5",
+   "fetched_at": "2026-11-21T14:46:20Z"
   },
   {
    "repo": "lgladdy/ha-octopus-charge",
@@ -28593,7 +30181,7 @@
    "state": "open",
    "submitter": "bartolije",
    "created_at": "2026-11-06T18:26:13Z",
-   "updated_at": "2026-11-17T08:37:34Z",
+   "updated_at": "2026-11-21T08:41:04Z",
    "repo_status": "ok",
    "description": "Intégration Home Assistant non officielle pour les traceurs moto GeoRide (API v2, connexion par code)",
    "topics": [
@@ -28606,14 +30194,14 @@
     "motorcycle"
    ],
    "stars": 1,
-   "pushed_at": "2026-11-11T18:16:30Z",
+   "pushed_at": "2026-11-21T08:39:05Z",
    "homepage": "",
    "readme_excerpt": "GeoRide pour Home Assistant Intégration Home Assistant non officielle pour les traceurs GPS moto GeoRide. GeoRide est un traceur antivol français avec verrouillage, alerte vibration, détection de chute et angle d'inclinaison. L'intégration branche ton compte GeoRide à Home Assistant pour que chaque moto y apparaisse comme un appareil avec : 📍 sa position sur la carte 🔒 un verrou à distance (GeoRide 1 ; le GeoRide 3 se verrouille seul avec le badge ou le téléphone) 🚨 des événements HA quand l'alarme se déclenche (vibration, mouvement…), avec environ 1 min de délai 🔋 sa batterie en %, son compte",
-   "domain": "georide",
+   "domain": "georide_ha",
    "name": "GeoRide",
    "iot_class": "cloud_polling",
-   "version": "0.17.6",
-   "fetched_at": "2026-11-17T16:14:12Z"
+   "version": "0.18.0",
+   "fetched_at": "2026-11-21T14:46:20Z"
   },
   {
    "repo": "weownyourbases123/ha-microair-easytouch-cloud",
@@ -28734,7 +30322,7 @@
    "name": "Aqara FP2 Companion",
    "iot_class": "cloud_polling",
    "version": "2.0.0",
-   "fetched_at": "2026-11-14T13:39:18Z"
+   "fetched_at": "2026-11-21T14:46:21Z"
   },
   {
    "repo": "Hydradox/ha-forecast-card",
@@ -29005,7 +30593,7 @@
    "name": "ListenBrainz Scrobbler",
    "iot_class": "local_push",
    "version": "1.0.0",
-   "fetched_at": "2026-11-14T13:39:46Z"
+   "fetched_at": "2026-11-21T14:46:46Z"
   },
   {
    "repo": "Thrasher2020/home-assistant-listenbrainz-scrobbler",
@@ -29034,7 +30622,7 @@
    "name": "ListenBrainz Scrobbler",
    "iot_class": "local_push",
    "version": "1.0.0",
-   "fetched_at": "2026-11-14T13:39:46Z"
+   "fetched_at": "2026-11-21T14:46:47Z"
   },
   {
    "repo": "Thrasher2020/home-assistant-listenbrainz-scrobbler",
@@ -29063,7 +30651,7 @@
    "name": "ListenBrainz Scrobbler",
    "iot_class": "local_push",
    "version": "1.0.0",
-   "fetched_at": "2026-11-14T13:39:47Z"
+   "fetched_at": "2026-11-21T14:46:47Z"
   },
   {
    "repo": "vjt/ha-verisure-italy",
@@ -32822,7 +34410,7 @@
    "name": "Genesis Energy",
    "iot_class": "cloud_polling",
    "version": "2.0.4",
-   "fetched_at": "2026-11-14T13:39:22Z"
+   "fetched_at": "2026-11-21T14:46:22Z"
   },
   {
    "repo": "renespeaker/ha-family-task-integration",
@@ -33811,7 +35399,7 @@
    "name": "Silverblaze (Idaho Power)",
    "iot_class": "cloud_polling",
    "version": "0.1.1",
-   "fetched_at": "2026-11-14T13:39:48Z"
+   "fetched_at": "2026-11-21T14:46:48Z"
   },
   {
    "repo": "CleverPet/fluentpet-homeassistant",
@@ -38256,10 +39844,10 @@
     "rodent-trap"
    ],
    "stars": 0,
-   "pushed_at": "2026-11-05T01:47:43Z",
+   "pushed_at": "2026-11-17T01:16:10Z",
    "homepage": "",
    "readme_excerpt": "A Home Assistant dashboard card that shows the state of your smart rodent traps at a glance: catches, strikes, battery, bait, CO₂ shots left, connectivity, signal strength, when each trap was last seen and whether it needs re-arming. Each trap gets an animated illustration. There are five kinds: a snap trap, a Goodnature A24, a Goodnature Mouse Trap, a NEO Coolcam electric trap and a bait station. You can run a trap's buttons (clear kill alert, lure replaced, CO₂ canister replaced, ping) straight from the tile. Two related projects bring traps into Home Assistant for the card to show: Goodnatu",
-   "fetched_at": "2026-11-14T13:39:48Z"
+   "fetched_at": "2026-11-21T14:46:48Z"
   },
   {
    "repo": "kedube/ha-kohler-konnect",
@@ -38286,14 +39874,14 @@
     "kohler-konnect"
    ],
    "stars": 0,
-   "pushed_at": "2026-11-06T02:56:51Z",
+   "pushed_at": "2026-11-16T20:44:46Z",
    "homepage": "",
    "readme_excerpt": "Kohler Konnect for Home Assistant A custom Home Assistant integration for Kohler's connected kitchen and bath: Anthem and Anthem+ digital showers and Sensate kitchen faucets, with early support for the Smart Fan, Numi 2.0, Purewash E930, EvoCycle and Ice Bath, and a sidebar panel laid out like the Konnect app. This integration is unofficial, and isn't affiliated with or endorsed by Kohler. The underlying API may change at any time. Devices · Requirements · Install · What works · Contributing · Limitations · Documentation The Konnect app is one experience for everything Kohler connects, and so ",
    "domain": "kohler_konnect",
    "name": "Kohler Konnect",
    "iot_class": "cloud_push",
-   "version": "2.05",
-   "fetched_at": "2026-11-14T13:39:49Z"
+   "version": "2.06",
+   "fetched_at": "2026-11-21T14:46:49Z"
   },
   {
    "repo": "triosniolin/ha-priority",
@@ -47455,10 +49043,10 @@
     "lovelace-custom-card"
    ],
    "stars": 19,
-   "pushed_at": "2026-11-14T06:35:26Z",
+   "pushed_at": "2026-11-17T01:32:48Z",
    "homepage": "",
    "readme_excerpt": "Every light and outlet in your home, found automatically and shown in a 3D model of your house, rendered with real light and shadow under a sky that follows the sun. Turn the house with a finger, open a floor like a dollhouse, watch each room light up as you switch it, and control lights and outlets separately for the whole home, a floor or a single room. Your home in 3D. The card builds a model of your house from your Home Assistant floors and areas and renders it with real light: sun and moon shadows, lamps that light their rooms, glass you can see through. Every room shows through its windo",
-   "fetched_at": "2026-11-14T13:39:49Z"
+   "fetched_at": "2026-11-21T14:46:49Z"
   },
   {
    "repo": "kedube/ha-breville-cooking",
@@ -47484,14 +49072,14 @@
     "sous-vide"
    ],
    "stars": 2,
-   "pushed_at": "2026-11-03T22:02:15Z",
+   "pushed_at": "2026-11-17T03:26:49Z",
    "homepage": "",
    "readme_excerpt": "Breville+ Cooking for Home Assistant Control your Breville+ Cooking appliances from Home Assistant: start and stop cooks, change the temperature and timer, and get notified when the water is ready or the food is done. A sidebar panel draws each appliance as it is, with every control and a set of presets. It uses the same Breville cloud as the This integration is unofficial, and isn't affiliated with or endorsed by Appliances · Installation · Setup · Sidebar panel · Entities · Troubleshooting · Development Appliance | Model | Status | ChefSteps Joule Sous Vide | CSJ100 | Tested on a real applia",
    "domain": "breville_cooking",
    "name": "Breville+ Cooking",
    "iot_class": "cloud_push",
-   "version": "0.13",
-   "fetched_at": "2026-11-14T13:39:50Z"
+   "version": "0.14",
+   "fetched_at": "2026-11-21T14:46:50Z"
   },
   {
    "repo": "yusniel2010/ha-eureka-robot",
@@ -49103,10 +50691,10 @@
    "pr": 12785,
    "pr_url": "https://github.com/hacs/default/pull/12785",
    "title": "Adds new integration [Mincka/spotcast]",
-   "state": "closed",
+   "state": "open",
    "submitter": "Mincka",
    "created_at": "2026-10-27T11:26:36Z",
-   "updated_at": "2026-10-27T15:07:32Z",
+   "updated_at": "2026-11-21T10:32:27Z",
    "repo_status": "ok",
    "description": "Maintained fork. Start and transfer Spotify playback on idle Chromecast and Connect devices, on top of the official Home Assistant Spotify integration.",
    "topics": [
@@ -49119,14 +50707,14 @@
     "spotify-connect"
    ],
    "stars": 29,
-   "pushed_at": "2026-11-10T18:33:29Z",
+   "pushed_at": "2026-11-21T11:13:59Z",
    "homepage": "",
    "readme_excerpt": "Spotcast is a Home Assistant custom integration that starts Spotify playback on an idle Chromecast or Spotify Connect device, so your automations can target both device families the same way. Spotcast requires a Spotify Premium account to work. Some Spotcast features need permissions that Spotify does not grant to regular third-party applications. To obtain them, Spotcast authenticates one session under the identity of the official Spotify desktop application (this is the desktop authorization step during setup). This method is not officially supported by Spotify and may stop working without n",
    "domain": "spotcast",
    "name": "Spotcast",
    "iot_class": "cloud_polling",
    "version": "6.6.7",
-   "fetched_at": "2026-11-18T15:55:52Z"
+   "fetched_at": "2026-11-21T14:46:23Z"
   },
   {
    "repo": "andreicalinciuc/salus-cloud-ha",
@@ -52275,7 +53863,7 @@
    "name": "Light Symphony iPort",
    "iot_class": "local_push",
    "version": "1.3.3",
-   "fetched_at": "2026-11-14T13:39:50Z"
+   "fetched_at": "2026-11-21T14:46:51Z"
   },
   {
    "repo": "KAkos06/ha-ezviz-vacuum",
@@ -54426,14 +56014,14 @@
     "nmqaxe"
    ],
    "stars": 0,
-   "pushed_at": "2026-11-14T10:03:27Z",
+   "pushed_at": "2026-11-21T10:03:26Z",
    "homepage": "https://github.com/tweedge/nmaxe-ha",
    "readme_excerpt": "A read-only Home Assistant integration for NMAxe-family miners running AxeOS firmware. It polls the miner's local API and exposes hashrate, power, temperatures, blocks, shares, pool status, payout username, fans, Wi-Fi, and system health. The integration never changes miner settings. It only performs HTTP GETs against the local device. Marketplace (Home Assistant 2026.11 or newer) The Marketplace comes with Home Assistant, so there is nothing to set up. No GitHub account is needed to install or update catalog projects. 1. Go to Settings → Marketplace. 2. The first time you open it, read the no",
    "domain": "nmaxe",
    "name": "NMAxe",
    "iot_class": "local_polling",
    "version": "0.3.2",
-   "fetched_at": "2026-11-14T13:39:51Z"
+   "fetched_at": "2026-11-21T14:46:51Z"
   },
   {
    "repo": "Duffanator/ha_dartsnut",
@@ -58941,14 +60529,14 @@
     "ssl-certificates"
    ],
    "stars": 1,
-   "pushed_at": "2026-11-06T22:58:52Z",
+   "pushed_at": "2026-11-20T23:18:11Z",
    "homepage": "https://github.com/heidrickla/SSLReverseProxy",
    "readme_excerpt": "SSL Reverse Proxy for Home Assistant Monitors and controls an SSLReverseProxy control plane: the proxy's state and traffic, each proxied server's upstream health, each certificate's expiry and renewal, and Reload and Renew from Home Assistant. Setup asks for the control plane's address and an API key. A refused key leads to a screen that says how to issue one and checks again. The proxy device, captured against the test suite's recorded control-plane answers. Device | One per | Model | The installation, named after its host | config entry | the proxy engine (caddy) | A server | server the cont",
    "domain": "sslreverseproxy",
    "name": "SSL Reverse Proxy",
    "iot_class": "local_polling",
    "version": "0.1.2",
-   "fetched_at": "2026-11-14T13:39:28Z"
+   "fetched_at": "2026-11-21T14:46:23Z"
   },
   {
    "repo": "DigitalIQ/ha-guestbook",
@@ -60740,7 +62328,7 @@
    "name": "SNMP Network Manager",
    "iot_class": "local_polling",
    "version": "0.1.6",
-   "fetched_at": "2026-11-14T13:39:52Z"
+   "fetched_at": "2026-11-21T14:46:52Z"
   },
   {
    "repo": "DELACROZ/ha-custom-branding",
@@ -69568,35 +71156,6 @@
    "fetched_at": "2026-11-17T16:22:24Z"
   },
   {
-   "repo": "q848899176/home-assistant-ai-tools",
-   "category": "integration",
-   "pr": 11991,
-   "pr_url": "https://github.com/hacs/default/pull/11991",
-   "state": "draft",
-   "submitter": "q848899176",
-   "created_at": "2026-10-15T15:49:39Z",
-   "updated_at": "2026-10-24T12:26:37Z",
-   "title": "Adds new integration [q848899176/home-assistant-ai-tools]",
-   "repo_status": "ok",
-   "description": "Home Assistant 中文 AI 语音工具：提醒、自动化、天气、上下文与永久记忆",
-   "topics": [
-    "custom-integration",
-    "deepseek",
-    "hacs",
-    "home-assistant",
-    "voice-assistant"
-   ],
-   "stars": 0,
-   "pushed_at": "2026-11-06T13:05:51Z",
-   "homepage": "",
-   "readme_excerpt": "通过独立配置的 DeepSeek、OpenAI、Azure 或本地兼容模型，结合 Home Assistant 语音设备创建提醒、自动化，查询天气，并保留连续对话与永久记忆。界面为中文，业务时间统一为北京时间 Asia/Shanghai。 本地语音：独立识别/合成配置页、中文男女声试听、设备提醒音色、流水线差异预览和恢复点。Mac 服务单独安装，见 部署说明。 模型：多连接、多助手，独立客户端；可导入 Extended OpenAI Conversation 2.0.3 稳定版配置，运行时无需安装该集成。 高级函数：native、script、template、rest、scrape、composite、sqlite 七类，支持 tools 与旧 functions 协议。 图像：haaitools.queryimage 支持多张远程或 www 图片，使用所选助手的视觉模型；haaitools.changeconfig 供管理员更新连接。 提醒：一次、每天、工作日、每周；重启恢复，可查看、取消，并修改待执行提醒的播报设备。已结束记录可单条删除或批量清理。 播报：每条提醒独立选择一台或多台设备，到时仅向该条提醒选择的设备并行发送。默认设备只用于预选，修改默认设置不会改变已有提醒。 即时播报：语音要求“请播报……”时使用默认或明确指定的设备，也支持当前用户触发已保存的口令规则。统一调用",
-   "domain": "ha_ai_tools",
-   "name": "Home Assistant AI Tools",
-   "iot_class": "cloud_polling",
-   "version": "0.3.1",
-   "fetched_at": "2026-11-18T15:49:23Z"
-  },
-  {
    "repo": "cunningplay/ha-bajagas",
    "category": "integration",
    "pr": 11990,
@@ -71817,7 +73376,7 @@
    "state": "merged",
    "submitter": "JeffSteinbok",
    "created_at": "2026-10-14T01:17:26Z",
-   "updated_at": "2026-10-24T10:12:27Z",
+   "updated_at": "2026-11-21T07:30:02Z",
    "repo_status": "ok",
    "description": "Home Assistant integration for controlling an Xfinity X1 box via the Xfinity web remote API",
    "topics": [
@@ -71836,7 +73395,7 @@
    "name": "Xfinity Remote",
    "iot_class": "cloud_push",
    "version": "0.1.1",
-   "fetched_at": "2026-11-18T16:00:44Z"
+   "fetched_at": "2026-11-21T14:46:53Z"
   },
   {
    "repo": "gurrier/lifeblood",
@@ -89157,14 +90716,14 @@
     "spotify"
    ],
    "stars": 0,
-   "pushed_at": "2026-11-05T22:36:20Z",
+   "pushed_at": "2026-11-15T22:49:52Z",
    "homepage": "https://github.com/Thrasher2020/home-assistant-discogs-spotify-filter",
    "readme_excerpt": "Discogs/Spotify Calendar Filter for Home Assistant Surf the gigs around you that actually matter to you. Discogs/Spotify Calendar Filter watches the live music listings held by Gig Finder, then: highlights every upcoming gig whose band is in your Discogs collection or your Spotify playlists; exposes them as a curated calendar and sensors; optionally cross-references a secondary calendar (e.g. your iCloud/Google calendar) so gigs that clash with its events — or are by a band already booked in it — are hidden; can sync your Discogs collection to a Spotify playlist, and re-align that playlist to ",
    "domain": "discogs_spotify_calendar_filter",
    "name": "Discogs/Spotify Calendar Filter",
    "iot_class": "cloud_polling",
-   "version": "0.3.8",
-   "fetched_at": "2026-11-14T13:39:53Z"
+   "version": "0.4.0",
+   "fetched_at": "2026-11-21T14:46:53Z"
   },
   {
    "repo": "paolofaz/beacon-ble-presence",
@@ -93725,7 +95284,7 @@
    "name": "Cala",
    "iot_class": "local_push",
    "version": "0.5.2",
-   "fetched_at": "2026-11-14T13:39:33Z"
+   "fetched_at": "2026-11-21T14:46:24Z"
   },
   {
    "repo": "Home24alberto/home-assistant-niba",
@@ -93990,14 +95549,14 @@
     "power-monitoring"
    ],
    "stars": 1,
-   "pushed_at": "2026-11-06T22:58:56Z",
+   "pushed_at": "2026-11-20T23:18:07Z",
    "homepage": "",
    "readme_excerpt": "Identify what is running on a circuit from the shape of its load. A Home Assistant integration for panels with per-circuit power monitoring. It takes deviceclass: power sensors and does not care where they come from, but see What it has been tested against. Setup takes the whole-panel sensor and one sensor per breaker, pre-selected when the energy dashboard names them. With no power sensors yet, setup says what it needs and checks again on Submit. The service device fed by example power sensors: 80 W of the mains reading is on no monitored circuit. The standby figures fill in as history builds",
    "domain": "power_fingerprint",
    "name": "Power Fingerprint",
    "iot_class": "calculated",
    "version": "0.22.1",
-   "fetched_at": "2026-11-14T13:39:34Z"
+   "fetched_at": "2026-11-21T14:46:25Z"
   },
   {
    "repo": "heidrickla/ha-glkvm",
@@ -101126,14 +102685,14 @@
     "window-coverings"
    ],
    "stars": 3,
-   "pushed_at": "2026-10-30T01:53:32Z",
+   "pushed_at": "2026-11-20T16:27:59Z",
    "homepage": "",
    "readme_excerpt": "(Unofficial) Norman smart blinds for Home Assistant A custom Home Assistant integration for Norman motorized window coverings on a Norman Gen 2 Hub, the hub you set up and control with Norman's ShadeAuto app. It has not been tried with other Norman hubs. Norman's earlier Gen 1 hub, set up with the older Norman app, speaks a different protocol (on port 80, at a NORMANHUB… address); Norman-HA-Integration is a separate community integration for it. It talks to the hub directly on your local network — nothing goes through the cloud — and it is push-based: when a blind moves, whether from Home Assi",
    "domain": "norman",
    "name": "Norman",
    "iot_class": "local_push",
-   "version": "0.95",
-   "fetched_at": "2026-11-14T13:39:53Z"
+   "version": "1.00",
+   "fetched_at": "2026-11-21T14:46:54Z"
   },
   {
    "repo": "binaery82/epos",
@@ -103859,10 +105418,10 @@
    "category": "integration",
    "pr": 10692,
    "pr_url": "https://github.com/hacs/default/pull/10692",
-   "state": "draft",
+   "state": "open",
    "submitter": "getdars",
    "created_at": "2026-09-06T15:25:16Z",
-   "updated_at": "2026-10-19T20:17:40Z",
+   "updated_at": "2026-11-21T13:03:34Z",
    "title": "Adds new integration [getdars/dars-homeassistant]",
    "repo_status": "ok",
    "description": "Home Assistant integration + Lovelace map card for D.A.R.S. drone Remote ID receivers (BLE, local push).",
@@ -103881,14 +105440,14 @@
     "remote-id"
    ],
    "stars": 13,
-   "pushed_at": "2026-09-17T19:43:30Z",
+   "pushed_at": "2026-11-21T11:56:09Z",
    "homepage": "https://getdars.com",
-   "readme_excerpt": "D.A.R.S. Drone Remote ID — Home Assistant integration Bring live drone Remote ID detections from a D.A.R.S. receiver into Home Assistant over Bluetooth. The receiver passively picks up the Remote ID that nearby drones broadcast (2.4 GHz / 5 GHz Wi‑Fi and Bluetooth) and streams each detection to HA, where it becomes entities you can put on a dashboard, a map, and into automations. Local push, no cloud. The BLE link is entirely local; nothing leaves your Per receiver (one device in HA): Entity | Type | What it is | Drone detected | binarysensor (occupancy) | On while ≥ 1 drone is being detected.",
+   "readme_excerpt": "D.A.R.S. Drone Remote ID — Home Assistant integration Bring live drone Remote ID detections from a D.A.R.S. receiver into Home Assistant over Bluetooth. The receiver passively picks up the Remote ID that nearby drones broadcast (2.4 GHz / 5 GHz Wi‑Fi and Bluetooth) and streams each detection to HA, where it becomes entities you can put on a dashboard, a map, and into automations. Local push. The receiver talks to Home Assistant over a local Bluetooth link, with no D.A.R.S. cloud account or server involved. Two optional features do use the internet; both are described under Privacy and network ",
    "domain": "dars_remote_id",
    "name": "D.A.R.S. Drone Remote ID",
    "iot_class": "local_push",
-   "version": "0.9.0",
-   "fetched_at": "2026-11-18T15:51:13Z"
+   "version": "0.11.0",
+   "fetched_at": "2026-11-21T14:46:26Z"
   },
   {
    "repo": "getdars/dars-homeassistant",
@@ -117240,7 +118799,7 @@
    "name": "InLeMa",
    "iot_class": "cloud_polling",
    "version": "0.3.3",
-   "fetched_at": "2026-11-14T13:39:35Z"
+   "fetched_at": "2026-11-21T14:46:26Z"
   },
   {
    "repo": "Meteoveo/ha-meteoveo",
@@ -124995,10 +126554,10 @@
    "category": "integration",
    "pr": 9724,
    "pr_url": "https://github.com/hacs/default/pull/9724",
-   "state": "draft",
+   "state": "open",
    "submitter": "EffortlessHome",
    "created_at": "2026-08-03T17:41:34Z",
-   "updated_at": "2026-11-20T13:22:26Z",
+   "updated_at": "2026-11-20T17:27:48Z",
    "title": "Adds new integration [EffortlessHome/Oasira_B2C]",
    "repo_status": "ok",
    "description": "Advanced Home Assistant integration for security monitoring, presence detection, and smart home automation",
@@ -125012,14 +126571,14 @@
     "smart-home"
    ],
    "stars": 0,
-   "pushed_at": "2026-11-19T22:30:59Z",
+   "pushed_at": "2026-11-20T17:24:41Z",
    "homepage": "https://www.oasira.ai",
    "readme_excerpt": "The Oasira B2C integration is the Home Assistant custom integration that connects your local Home Assistant instance to the Oasira Home service (https://home.oasira.ai). Oasira B2C acts as the bridge between your Home Assistant–managed devices and automations and the broader Oasira Home experience. Its primary role is to: Expose and integrate Home Assistant devices so they can participate in the Oasira Home ecosystem. Communicate with Oasira Home services (including the Oasira Home website, mobile apps, and TV apps) to enable a more unified, accessible, and powerful smart home experience acros",
    "domain": "oasira_b2c",
    "name": "Oasira Home",
    "iot_class": "cloud_polling",
    "version": "1.0.69",
-   "fetched_at": "2026-11-20T15:35:59Z"
+   "fetched_at": "2026-11-21T14:46:27Z"
   },
   {
    "repo": "intelliThings-official/home-assistant-intellithings",
@@ -132007,7 +133566,7 @@
    "state": "draft",
    "submitter": "mycrouch",
    "created_at": "2026-07-15T13:17:44Z",
-   "updated_at": "2026-10-19T05:09:37Z",
+   "updated_at": "2026-11-21T02:36:25Z",
    "title": "Adds new plugin [mycrouch/manual-irrigation-zone-card]",
    "repo_status": "ok",
    "description": "Lovelace card for manually running irrigation zones (Holman, ESPHome, any switch/valve) — per-zone runtimes, together or in-sequence runs, server-side countdowns with one-click helper setup",
@@ -132021,10 +133580,10 @@
     "sprinkler"
    ],
    "stars": 0,
-   "pushed_at": "2026-10-19T05:09:14Z",
+   "pushed_at": "2026-11-21T02:35:40Z",
    "homepage": "",
    "readme_excerpt": "Manual Irrigation Zone Card A Home Assistant Lovelace card for manually running irrigation zones — built for controllers that expose each zone as a switch or valve (Holman, ESPHome relays, Sonoff 4CH, etc.) but have no decent manual-run UI. Select one or more zones, set a runtime each, and run them together or in sequence. Countdowns, auto-off and sequence advancement all run server-side in Home Assistant — start a run and close the app. Setting up is one step: pick your irrigation device and the card discovers its zones for you — no picking entities one by one, and hidden zone switches are fo",
-   "fetched_at": "2026-11-18T15:52:56Z"
+   "fetched_at": "2026-11-21T14:46:28Z"
   },
   {
    "repo": "cjw85/ha-glowmarkt",
@@ -135003,31 +136562,6 @@
    "fetched_at": "2026-11-19T16:05:34Z"
   },
   {
-   "repo": "dwd1/geberit_toilet",
-   "category": "integration",
-   "pr": 9042,
-   "pr_url": "https://github.com/hacs/default/pull/9042",
-   "title": "Adds new integration [dwd1/geberit_toilet]",
-   "state": "closed",
-   "submitter": "dwd1",
-   "created_at": "2026-07-07T14:31:59Z",
-   "updated_at": "2026-08-22T19:08:42Z",
-   "repo_status": "ok",
-   "description": "Geberit Toilet for Home Assistant",
-   "topics": [
-    "home-assistant-custom-integration"
-   ],
-   "stars": 1,
-   "pushed_at": "2026-11-01T10:00:48Z",
-   "homepage": "",
-   "readme_excerpt": "Geberit Toilet for Home Assistant This is an unofficial community integration. This custom integration connects Home Assistant directly to compatible Geberit BLE devices that expose the same protocol family. What this integration does This integration aims to support a broad range of Geberit toilets and other BLE-capable devices, exposing the full range of values, settings and controls available on each model and firmware version. It is designed for Geberit product families including DuoFresh, AquaClean, WC flush control systems, urinals, lavatory taps, sanitary flush units, smart sensors, con",
-   "domain": "geberit_toilet",
-   "name": "Geberit Toilet",
-   "iot_class": "local_polling",
-   "version": "1.4",
-   "fetched_at": "2026-11-19T16:05:36Z"
-  },
-  {
    "repo": "Seblin01/wolta-homeassistant",
    "category": "integration",
    "pr": 9039,
@@ -136503,14 +138037,14 @@
     "milesight-iot"
    ],
    "stars": 1,
-   "pushed_at": "2026-11-09T10:24:45Z",
+   "pushed_at": "2026-11-18T10:23:44Z",
    "homepage": "",
    "readme_excerpt": "Milesight Gateway — Home Assistant Integration A custom Home Assistant integration that bridges Milesight LoRaWAN gateways with Home Assistant, providing real-time sensor data from 130+ Milesight LoRaWAN devices. The integration uses two communication channels: Channel | Purpose | HTTP REST API | Authenticates locally with the gateway (JWT) and fetches the list of connected LoRaWAN devices from the gateway. Only online devices will be synced. | MQTT (push) | Receives real-time sensor telemetry from LoRaWAN devices via the gateway's uplink topic | Device entity definitions are matched from a bu",
    "domain": "milesight_gateway",
    "name": "Milesight Gateway",
    "iot_class": "local_push",
    "version": "1.3.0",
-   "fetched_at": "2026-11-14T13:39:35Z"
+   "fetched_at": "2026-11-21T14:46:28Z"
   },
   {
    "repo": "corgan2222/ha-clawdmeter",
@@ -136584,7 +138118,7 @@
    "created_at": "2026-06-29T11:29:19Z",
    "updated_at": "2026-10-04T05:11:36Z",
    "repo_status": "missing",
-   "fetched_at": "2026-11-14T13:39:53Z"
+   "fetched_at": "2026-11-21T14:46:54Z"
   },
   {
    "repo": "benjamin5896/hass-rpc-shutdown",
@@ -137960,40 +139494,6 @@
    "fetched_at": "2026-11-19T16:07:00Z"
   },
   {
-   "repo": "svalsemey/hassio-pws-wslink",
-   "category": "integration",
-   "pr": 8511,
-   "pr_url": "https://github.com/hacs/default/pull/8511",
-   "title": "Adds new integration [svalsemey/hassio-pws-wslink]",
-   "state": "merged",
-   "submitter": "svalsemey",
-   "created_at": "2026-06-14T23:52:49Z",
-   "updated_at": "2026-08-22T17:16:36Z",
-   "repo_status": "ok",
-   "description": "Personal Weather Station local support for Home Assistant",
-   "topics": [
-    "bresser",
-    "garni",
-    "hacs",
-    "home-assistant",
-    "home-assistant-custom-component",
-    "home-assistant-integration",
-    "personal-weather-station",
-    "sencor",
-    "weather-station",
-    "ws-api"
-   ],
-   "stars": 4,
-   "pushed_at": "2026-10-01T22:21:34Z",
-   "homepage": "https://github.com/svalsemey/hassio-pws-wslink/",
-   "readme_excerpt": "Weather Station for Home Assistant Custom integration for local weather stations. This integration supports stations that can send data to a custom server using: Personal Weather Station / WeatherUnderground API (PWS/WU) It is designed for stations such as Sencor, Bresser, Garni, and compatible models using similar payload formats. Native UI configuration flow (no YAML required) Multiple stations supported: add the integration once per station Local push architecture (iotclass: localpush) Credential validation (station ID / password), compared in constant time Supports both PWS/WU and WSLink r",
-   "domain": "pws_wslink",
-   "name": "PWS / WSLink Weather Station",
-   "iot_class": "local_push",
-   "version": "0.2.2",
-   "fetched_at": "2026-11-19T16:07:01Z"
-  },
-  {
    "repo": "simsoum95/freeform-dashboard",
    "category": "plugin",
    "pr": 8505,
@@ -138044,14 +139544,14 @@
     "integration"
    ],
    "stars": 7,
-   "pushed_at": "2026-11-03T16:43:33Z",
+   "pushed_at": "2026-11-16T20:34:36Z",
    "homepage": "",
-   "readme_excerpt": "(Unofficial) HelloFresh Integration for Home Assistant Plan your HelloFresh boxes without leaving Home Assistant. Choose each week's meals (customized like on the website) and Market extras and save them together, follow the next box to your door, tick off the pantry staples it doesn't include, plan which day you'll make each meal, browse ~10,000 recipes, and manage your plan. It all lives in one card that the integration adds to your sidebar, so there's no dashboard to build. Behind it are 50+ entities, delivery and meal calendars, pantry to-do lists and 29 services for your own automations. ",
+   "readme_excerpt": "(Unofficial) HelloFresh Integration for Home Assistant Plan your HelloFresh boxes without leaving Home Assistant. Choose each week's meals (customized like on the website) and Market extras and save them together, follow the next box to your door, tick off the pantry staples it doesn't include, plan which day you'll make each meal, browse ~10,000 recipes, and manage your plan. It all lives in one card that the integration adds to your sidebar, so there's no dashboard to build. Behind it are 50+ entities, delivery and meal calendars, pantry to-do lists and 30 services for your own automations. ",
    "domain": "hellofresh",
    "name": "HelloFresh",
    "iot_class": "cloud_polling",
-   "version": "4.25",
-   "fetched_at": "2026-11-14T13:39:54Z"
+   "version": "4.27",
+   "fetched_at": "2026-11-21T14:46:55Z"
   },
   {
    "repo": "kedube/ha-hellofresh",
@@ -138075,14 +139575,14 @@
     "integration"
    ],
    "stars": 7,
-   "pushed_at": "2026-11-03T16:43:33Z",
+   "pushed_at": "2026-11-16T20:34:36Z",
    "homepage": "",
-   "readme_excerpt": "(Unofficial) HelloFresh Integration for Home Assistant Plan your HelloFresh boxes without leaving Home Assistant. Choose each week's meals (customized like on the website) and Market extras and save them together, follow the next box to your door, tick off the pantry staples it doesn't include, plan which day you'll make each meal, browse ~10,000 recipes, and manage your plan. It all lives in one card that the integration adds to your sidebar, so there's no dashboard to build. Behind it are 50+ entities, delivery and meal calendars, pantry to-do lists and 29 services for your own automations. ",
+   "readme_excerpt": "(Unofficial) HelloFresh Integration for Home Assistant Plan your HelloFresh boxes without leaving Home Assistant. Choose each week's meals (customized like on the website) and Market extras and save them together, follow the next box to your door, tick off the pantry staples it doesn't include, plan which day you'll make each meal, browse ~10,000 recipes, and manage your plan. It all lives in one card that the integration adds to your sidebar, so there's no dashboard to build. Behind it are 50+ entities, delivery and meal calendars, pantry to-do lists and 30 services for your own automations. ",
    "domain": "hellofresh",
    "name": "HelloFresh",
    "iot_class": "cloud_polling",
-   "version": "4.25",
-   "fetched_at": "2026-11-14T13:39:55Z"
+   "version": "4.27",
+   "fetched_at": "2026-11-21T14:46:55Z"
   },
   {
    "repo": "JonasJoKuJonas/homeassistant-MySports",
@@ -140509,7 +142009,7 @@
    "state": "closed",
    "submitter": "cchip201",
    "created_at": "2026-05-26T05:15:34Z",
-   "updated_at": "2026-10-24T19:01:11Z",
+   "updated_at": "2026-11-21T03:04:54Z",
    "repo_status": "ok",
    "description": "Home Assistant integration for PiKVM control",
    "topics": [
@@ -140520,14 +142020,14 @@
     "pikvm"
    ],
    "stars": 0,
-   "pushed_at": "2026-11-18T15:28:33Z",
+   "pushed_at": "2026-11-21T02:54:54Z",
    "homepage": "",
    "readme_excerpt": "PiKVM Control Home Assistant A fully polished, advanced Home Assistant integration to monitor and control PiKVM V3/V4 hardware ATX states, running services, temperature, fan speed, and diagnostics. 🔌 Physical ATX Control & Buttons Trigger real-time physical button presses on your target computer: Power Button Click: Performs a standard momentary power button press. Reset Button Click: Performs a standard momentary reset button press. Advanced Power Actions: Execute persistent states such as On, Off (Graceful), Hard Off (Force power-down), and Hard Reset. 📊 Advanced Diagnostics (New in v2.0.0) ",
    "domain": "pikvm_custom",
    "name": "PiKVM Control Home Assistant",
    "iot_class": "local_polling",
    "version": "2.0.4",
-   "fetched_at": "2026-11-19T16:08:01Z"
+   "fetched_at": "2026-11-21T14:46:56Z"
   },
   {
    "repo": "warrenrees/ha_vidaatv",
@@ -140849,7 +142349,7 @@
    "state": "open",
    "submitter": "SyntaxSorcerer7",
    "created_at": "2026-05-23T11:32:41Z",
-   "updated_at": "2026-11-18T22:13:03Z",
+   "updated_at": "2026-11-20T16:27:27Z",
    "title": "Adds new integration [SyntaxSorcerer7/envertech-local]",
    "repo_status": "ok",
    "description": "Local TCP integration for Envertech microinverters in Home Assistant",
@@ -140871,7 +142371,7 @@
    "name": "Envertech EVT Local",
    "iot_class": "local_polling",
    "version": "1.7.7",
-   "fetched_at": "2026-11-19T15:54:53Z"
+   "fetched_at": "2026-11-21T14:46:29Z"
   },
   {
    "repo": "lawnmowerwoman/auri-ager-flow",
@@ -142216,39 +143716,6 @@
    "fetched_at": "2026-11-19T16:08:43Z"
   },
   {
-   "repo": "joelvarun/ioteverythin-display",
-   "category": "integration",
-   "pr": 6944,
-   "pr_url": "https://github.com/hacs/default/pull/6944",
-   "title": "Adds new integration [joelvarun/ioteverythin-display]",
-   "state": "closed",
-   "submitter": "joelvarun",
-   "created_at": "2026-04-12T15:47:50Z",
-   "updated_at": "2026-08-23T12:20:46Z",
-   "repo_status": "ok",
-   "description": "Touch-i: A wall-mounted Home Assistant control panel on the Waveshare ESP32-S3-Touch-LCD-4. Switches, Climate, Media, Presence. HACS integration with zero-code setup.",
-   "topics": [
-    "esp32",
-    "esp32-s3",
-    "hacs",
-    "home-assistant",
-    "iot",
-    "lvgl",
-    "smart-display",
-    "touch-panel",
-    "waveshare"
-   ],
-   "stars": 5,
-   "pushed_at": "2026-08-23T17:01:29Z",
-   "homepage": "",
-   "readme_excerpt": "A wall-mounted Home Assistant control panel on the Waveshare ESP32-S3-Touch-LCD-4 Touch-i turns a Waveshare ESP32-S3-Touch-LCD-4 (480x480 touch display) into a fully dynamic Home Assistant control panel. No entity IDs are hardcoded in firmware. Everything is configured through a custom HACS sidebar panel that pushes configuration to the device over the local network. 3-tab UI with configurable 3rd tab (Sensors, Media, or Presence) Switches tab for lights and switches grouped by room/area, with dimmer and RGB support Climate tab with live temperature/humidity gauges and AC control cards Media t",
-   "domain": "ioteverythin_display",
-   "name": "Touch-i by IoT Everythin",
-   "iot_class": "local_push",
-   "version": "1.5.1",
-   "fetched_at": "2026-11-19T16:08:44Z"
-  },
-  {
    "repo": "henristr/HA-HomeKit",
    "category": "theme",
    "pr": 6919,
@@ -143426,6 +144893,64 @@
    "iot_class": "cloud_polling",
    "version": "v0.3.1",
    "fetched_at": "2026-11-19T16:09:04Z"
+  },
+  {
+   "repo": "lizardsystems/hass-tnse",
+   "category": "integration",
+   "pr": 2386,
+   "pr_url": "https://github.com/hacs/default/pull/2386",
+   "title": "Adds new integration [lizardsystems/hass-tnse]",
+   "state": "merged",
+   "submitter": "vzagorovskiy",
+   "created_at": "2024-02-29T15:03:04Z",
+   "updated_at": "2026-11-20T15:43:13Z",
+   "repo_status": "ok",
+   "description": "Интеграция для Home Assistant, поддерживающая сервис ТНС-Энерго",
+   "topics": [
+    "energy",
+    "hacs",
+    "hacs-integration",
+    "home-assistant",
+    "tns-energo"
+   ],
+   "stars": 26,
+   "pushed_at": "2026-11-20T14:39:40Z",
+   "homepage": "",
+   "readme_excerpt": "TNS-Energo для Home Assistant Интеграция ТНС-Энерго для Home Assistant. Позволяет получать данные о лицевых счетах, показаниях счетчиков, задолженности и начислениях, а также отправлять показания и запрашивать счета через мобильный API ТНС-Энерго. Интеграция поддерживает все регионы, доступные в мобильном приложении ТНС-Энерго: Краснодарский край и Республика Адыгея (Кубань) и другие регионы, доступные через API Список регионов загружается автоматически из API при настройке интеграции. Нажмите кнопку выше → Установить → Перезагрузить Home Assistant. Способ 2. Вручную скопируйте папку tnsenergo",
+   "domain": "tns_energo",
+   "name": "TNS-Energo",
+   "iot_class": "cloud_polling",
+   "version": "2.1.1",
+   "fetched_at": "2026-11-21T14:46:57Z"
+  },
+  {
+   "repo": "lizardsystems/hass-mygas",
+   "category": "integration",
+   "pr": 2384,
+   "pr_url": "https://github.com/hacs/default/pull/2384",
+   "title": "Adds new integration [lizardsystems/hass-mygas]",
+   "state": "merged",
+   "submitter": "vzagorovskiy",
+   "created_at": "2024-02-26T07:40:06Z",
+   "updated_at": "2026-11-20T15:43:11Z",
+   "repo_status": "ok",
+   "description": "Интеграция для Home Assistant, поддерживающая сервис Мой Газ Смородина",
+   "topics": [
+    "energy",
+    "gas",
+    "hacs",
+    "hacs-integration",
+    "home-assistant"
+   ],
+   "stars": 19,
+   "pushed_at": "2026-11-20T14:39:38Z",
+   "homepage": "",
+   "readme_excerpt": "Этот репозиторий содержит настраиваемый компонент для Home Assistant для отображения данных из сервиса Мой Газ Смородина. Способ 2. Вручную скопируйте папку mygas директорию /config/customcomponents. После установки необходимо перегрузить Home Assistant Настройки &rarr; Устройства и службы &rarr; Добавить интеграцию &rarr; Поиск MyGas Появится окно настройки интеграции, укажите в нем логин и пароль для доступа в личный кабинет в Если вы ввели логин и пароль правильно, то появится сообщение об успешном окончании настройки. После подключения интеграции на закладке интеграции появится новая интег",
+   "domain": "mygas",
+   "name": "MyGas",
+   "iot_class": "cloud_polling",
+   "version": "2.5.1",
+   "fetched_at": "2026-11-21T14:46:58Z"
   },
   {
    "repo": "geertmeersman/cloudlibrary",
